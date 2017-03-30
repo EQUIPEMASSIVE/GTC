@@ -1,6 +1,7 @@
 *{
 	margin: 0px;
 	padding: 0px;
+	font-family: Tahoma;
 }
 body{
 	background-color: #fff;
@@ -245,7 +246,7 @@ section#artigos article h2{
 section#artigos article img{
 	/*Configuração imagem neymar*/
 	width: 210px;
-	height: 160px;
+	height: 135px;
 	float: left;
 	margin-top: 5px;
 	border: 4px solid #297baa;
@@ -338,7 +339,7 @@ section#widget-categorias-portal ul li {
     -mos-transition: all 0.1s ease-in-out;
     -o-transition: all 0.1s ease-in-out;
     border-radius: 4px;
-    background-color:darkgrey;
+
     margin-right: 5px;
     margin-top: 4px;    
 }
