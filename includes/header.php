@@ -15,7 +15,7 @@
   			
   			<div id="logo"> <a href="index.php"><img src="imagens/logo.png" alt="Portal de Noticias"/></a></div>
   			<div id="topo-right">
-  				<p>Olá, Seja bem-vindo <a href="login.php"> Faça Login</a> ou <a href="cadastro.php">Cadastre-se.</a></p>
+  				<p>Olá, Seja bem-vindo <a href="cp/index.php"> Faça Login</a> ou <a href="cadastro.php">Cadastre-se.</a></p>
   				<form action="buscar.php" method="GET">
   				<input type="text" name="busca-organica" id="busca-organica" required>	
   				</form>

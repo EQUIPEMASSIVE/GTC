@@ -9,13 +9,13 @@
 	$em_adm = $_POST["adm-email-up"];
 	$us_adm = $_POST["adm-user-up"];
 	$pw_adm = $_POST["adm-pass-up"];
-	//$sh_adm = $_POST["adm-pass-up"];
-	// $shcryp = hash("whiripool", $sh_adm);
+	$sh_adm = $_POST["adm-pass-up"];
+	$shcryp = hash("whirlpool", $sh_adm);
 
 	if(!empty($pw_adm)){
-		mysql_query("UPDATE administradores SET email='$em_adm', usuario='$us_adm', senha='$pw_adm' WHERE id=$id_adm ") or die(mysql_error());
+		mysql_query("UPDATE administradores SET email='$em_adm', usuario='$us_adm', senha='$shcryp' WHERE id=$id_adm ") or die(mysql_error());
 		$_SESSION["usuario"] = $us_adm;
-		$_SESSION["senha"]   = $pw_adm;
+		$_SESSION["senha"]   = $shcryp;
 		header("Location: ../alterar-perfil.php");
 
 	}else {
@@ -26,14 +26,14 @@
 	}
 
 	if(!empty($us_adm)){
-		mysql_query("UPDATE administradores SET email='$em_adm', usuario='$us_adm', senha='$pw_adm' WHERE id=$id_adm ") or die(mysql_error());
+		mysql_query("UPDATE administradores SET email='$em_adm', usuario='$us_adm', senha='$shcryp' WHERE id=$id_adm ") or die(mysql_error());
 		$_SESSION["usuario"] = $us_adm;
-		$_SESSION["senha"]   = $pw_adm;
+		$_SESSION["senha"]   = $shcryp;
 		header("Location: ../alterar-perfil.php");
 
 	}else {
 		mysql_query("UPDATE administradores SET email='$em_adm', usuario='$us_adm' WHERE id=$id_adm ") or die(mysql_error());
-		$_SESSION["usuario"] = $pw_adm;
+		$_SESSION["usuario"] = $shcryp;
 		header("Location: ../alterar-perfil.php");
 
 	}
