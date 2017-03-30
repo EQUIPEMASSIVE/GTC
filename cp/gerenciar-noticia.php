@@ -203,7 +203,7 @@ require_once "includes/header.php";
 							$autorPub_ntE  = $lh["autorPub"];
 							$tagSear_ntE   = $lh["tags"];
 							$imagem_ntE    = $lh["imagem"];
-
+						
 						}
 
 					?>
@@ -268,7 +268,7 @@ require_once "includes/header.php";
 									</tr>
 									<tr>
 			    							<td>
-											<input type="text" id="imagem-noticia-carregar"  required=""/>
+											<input type="text" id="imagem-noticia-carregar"  required="" value="<?php echo $imagem_ntE ?>"/>
 											<input type="file" hidden id="imagem-carregada" name="imagem-noticia" value="<?php echo $imagem_ntE ?>"/></td>
 									</tr>
 								</tbody>
@@ -284,7 +284,17 @@ require_once "includes/header.php";
 									<tr>
 										<td>
 											<select name="categoria-noticia" required="">
-												<option	selected="selected" value="">Selecione uma Categoria</option>
+											<?php 
+											$id_cr = $_GET['id_nt_ed'];
+												$SQL_CR = mysql_query(" SELECT * FROM noticias INNER JOIN categoria ON (noticias.Categoria = categoria.id_categoria) WHERE id_noticia='$id_cr'");
+
+												while ($cr = mysql_fetch_array($SQL_CR)) {
+													
+
+
+											 ?>
+												<option	 value="<?php echo $cr["id_categoria"]; ?>"><?php echo $cr["nome_categoria"]; ?></option>
+												<?php } ?>
 												<?php
 
 													$SQL_C = mysql_query("SELECT * FROM categoria");

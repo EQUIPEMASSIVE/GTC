@@ -69,7 +69,7 @@ $SQL = mysql_query("SELECT nome, imgPerfil FROM administradores WHERE usuario= '
 					<li>Gerenciar Comentários</li>
 					<li><a href="gerenciar-categoria.php">Gerenciar Categorias</a></li>
 					<li><a href="administracao-portal.php">Administração do Portal</a></li>
-					<li>Sair da Conta</li>
+					<li><a href="logout.php">Sair da Conta</a></li>
 				</ul>
 			</nav>
 			

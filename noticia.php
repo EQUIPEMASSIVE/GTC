@@ -1,4 +1,4 @@
-<?php require_once 'includes/header.php';  ?>
+  <?php require_once 'includes/header.php';  ?>
 
 <main>
 	
@@ -8,7 +8,7 @@
 
 				<?php
 
-					$id_rn = $_GET["id"];
+					@$id_rn = $_GET["id"];
 					$SQL_RN = mysql_query("SELECT * FROM noticias INNER JOIN categoria ON (noticias.categoria = categoria.id_categoria) WHERE id_noticia='$id_rn'");
 
 						while ($rn = mysql_fetch_array($SQL_RN)) {
