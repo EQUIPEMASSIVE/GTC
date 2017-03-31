@@ -12,10 +12,10 @@ if (isset($Usuario) && isset($Senha)){
 } 
 
 // Programa pra criptografar e ver a senha \/
-$senha = "123";
-$codificada = hash('whirlpool', $senha);
+//$senha = "123";
+//$codificada = hash('whirlpool', $senha);
 
-echo "Resultado da codificação usando whirlpool: " . $codificada;
+//echo "Resultado da codificação usando whirlpool: " . $codificada;
 
 ?>
 
