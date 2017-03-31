@@ -7,6 +7,7 @@ Fazendo testes praticos.
 dominios:
 
 www.guiatecnologico.16mb.com
+
 www.guiatecnologico.tk
 
  host: 
