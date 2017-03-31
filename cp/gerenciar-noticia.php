@@ -111,8 +111,8 @@ require_once "includes/header.php";
 								<tbody>
 									<tr>
 										<td align="left"><input type="submit" name="publicar" value="Publicar Notícia" /></td>
-										<td align="right"><input type="submit" name="salvar-rascunho" value="Salvar Notícia" /></td>
-									</tr>
+										<!--<td align="right"><input type="submit" name="salvar-rascunho" value="Salvar Notícia" /></td>
+									</tr>-->
 									<tr>
 										<td>Data Publicação:</td>
 										<td align="right"><?php echo date("d/m/Y"); ?></td>
