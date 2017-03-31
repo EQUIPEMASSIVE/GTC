@@ -1,7 +1,7 @@
 <?php 
 //PROPRIEDADES DB MYSQL
 
-define("HOST", "mysql427.umbler.com");
+define("HOST", "mysql796.umbler.com");
 define("USER",  "u263627493_root");
 define("PASS", "root123456"); 
 define("DBNAME", "u263627493_gtc");
