@@ -56,7 +56,7 @@
 				<section id="artigos">
 					<!--Categoria 1_____________________________CATEGORIA DIVERSOS______D, dv, dvn___________________________________________-->				
 					<?php
-
+                                        //Para escolher uma categoria para ser exibida no index principal é só trocar o nome_categoria pela catregoria da sua escolha
 					$SQL_F = mysql_query("SELECT * FROM categoria WHERE nome_categoria='Diversos'");
 
 					while ($ft = mysql_fetch_array($SQL_F)){
@@ -80,7 +80,7 @@
 					
 					<!--Categoria 2_________________________________CATEGORIA TECNOLOGIA___T, tc, tcn_______________________________________-->
 					<?php
-
+                                        //Para escolher uma categoria para ser exibida no index principal é só trocar o nome_categoria pela catregoria da sua escolha
 					$SQL_T = mysql_query("SELECT * FROM categoria WHERE nome_categoria='Tecnologia'");
 
 					while ($tc = mysql_fetch_array($SQL_T)){
