@@ -57,7 +57,7 @@
 					<!--Categoria 1_____________________________CATEGORIA DIVERSOS______D, dv, dvn___________________________________________-->				
 					<?php
                                         //Para escolher uma categoria para ser exibida no index principal é só trocar o nome_categoria pela catregoria da sua escolha
-					$SQL_F = mysql_query("SELECT * FROM categoria WHERE nome_categoria='Diversos'");
+					$SQL_F = mysql_query("SELECT * FROM categoria WHERE nome_categoria='Atualidades'");
 
 					while ($ft = mysql_fetch_array($SQL_F)){
 						$id_ft = $ft['id_categoria'];
