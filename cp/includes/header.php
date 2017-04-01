@@ -27,7 +27,7 @@ $SQL = mysql_query("SELECT nome, imgPerfil FROM administradores WHERE usuario= '
 		<header>
 			<div id="topo">
 				
-				<div id="logo"><img src="imagens/logo.PNG" alt="Painel de Controle - Portal WVD" /></div>
+				<div id="logo"><img src="imagens/logo.PNG " alt="Painel de Controle - Portal WVD" /></div>
 				
 				<div id="right">
 				
@@ -50,7 +50,7 @@ $SQL = mysql_query("SELECT nome, imgPerfil FROM administradores WHERE usuario= '
                         
 						Olá, <?php  echo @$nomeUser; ?> <br />
                         
-						<a href="#">Postar Notícia</a> - <a href="alterar-perfil.php">Alterar Perfil</a> - <a href="logout.php">Sair da Conta</a>
+						<a href="gerenciar-noticia.php">Postar Notícia</a> - <a href="alterar-perfil.php">Alterar Perfil</a> - <a href="logout.php">Sair da Conta</a>
 					</div>
 					
 					<div id="foto-perfil"><img src="imagens/perfil/<?php echo @$imgpUser; ?>" alt="Imagem de Perfil" width="85" height="85" /></div>
