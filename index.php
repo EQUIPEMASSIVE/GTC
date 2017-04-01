@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="pt-br">
 <head>
-	<title>* 22:35 hr  *// Victor Deploy // 31-mar-2017 --//</title>
+	<title>* 22:35 hr *| Victor | Deploy 31/mar/2017</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/default.css" media="screen"/>
 	<link rel="stylesheet" type="text/css" href="css/screen.css" media="screen"/>
