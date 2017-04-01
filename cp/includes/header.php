@@ -27,7 +27,7 @@ $SQL = mysql_query("SELECT nome, imgPerfil FROM administradores WHERE usuario= '
 		<header>
 			<div id="topo">
 				
-				<div id="logo"><img src="imagens/logo.png" alt="Painel de Controle - Portal WVD" /></div>
+				<div id="logo"><img src="imagens/logo.PNG" alt="Painel de Controle - Portal WVD" /></div>
 				
 				<div id="right">
 				
