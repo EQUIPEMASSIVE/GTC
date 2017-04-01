@@ -69,8 +69,8 @@
 						
 					?>
 
-					<article>
-					<h1><a href="categoria.php?id=<?php echo $id_ft; ?>">Diversos</a></h1>
+					<article>                        <!--Titulo da categoria que iá aparecer em cima da imagem da noticia-->
+					<h1><a href="categoria.php?id=<?php echo $id_ft; ?>">Atualidades</a></h1>
 					<a href="noticia.php?id=<?php echo $ftn['id_noticia']; ?>"><img src="cp/imagens/imgnoticia/<?php echo $ftn['imagem']; ?>" alt="<?php echo $ftn['titulo']; ?>"></a>
 					<h2><a href="noticia.php?id=<?php echo $ftn['id_noticia']; ?>"><?php echo $ftn['titulo']; ?></a></h2>
 					</article>
