@@ -339,7 +339,7 @@ section#widget-categorias-portal ul li {
     -mos-transition: all 0.1s ease-in-out;
     -o-transition: all 0.1s ease-in-out;
     border-radius: 4px;
-
+    background-color: darkgray;
     margin-right: 5px;
     margin-top: 4px;    
 }
