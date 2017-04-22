@@ -2,13 +2,17 @@
  require_once "includes/configuration.php";
  require_once "includes/header.php"
 ?>
-		<main>
-			<section id="wrapper">
-					
-					<section id="content">
-							<section id="alterar-perfil">
-								<h1>Alterar Perfil</h1>
-								<?php 
+	<div class="content-wrapper">	
+        <div class="container">
+        	<div class="row">			
+        		<div class="col-md-6 col-sm-6">
+                    <div class="panel panel-primary">
+                    
+                        <div class="panel-heading">
+                            Alterar Perfil
+                        </div>
+                        	<div class="panel-body">
+                        <?php 
 
 									$admin_log = $_SESSION["usuario"];
 									$admin_pas = $_SESSION["senha"];
@@ -24,42 +28,47 @@
 									}
 
 								?>
-								<form action="acoes/atualizar-perfil.php?id_adm=<?php echo $id_adm; ?>" method="POST" enctype="multipart/form-data">
-								<table cellpadding="0" cellspacing="0" border="0">
-									<tr>
-										<td>Nome.:</td>
-										<td><?php echo $nm_adm; ?></td>
-									</tr>
-									<tr>
-										<td>Email.:</td>
-										<td><input type="text" name="adm-email-up" value="<?php echo $em_adm; ?>"></td>
-									</tr>
-									<tr>
-										<td>Usuário.:</td>
-										<td><input type="text" name="adm-user-up" value="<?php echo $us_adm; ?>"></td>
-									</tr>
-									<tr>
-										<td>Senha.:</td>
-										<td><input type="password" name="adm-pass-up" maxlength="15" required=""></td>
-									</tr>
-									<tr>
-										<td colspan="2" align="right"><input type="submit" value="Atualizar Dados"></td>
-									</tr>
-								</table>
-								<table id="imgPerfil">
-								<tr>
-									<td><img src="imagens/perfil/<?php echo $im_adm; ?>" width="180" height="180"></td>
-								</tr>
-								<tr>
-									<td><input type="text" id="imagem-noticia-carregar" placeholder="Selecione uma imagem" required="" />
-									<input type="file" hidden id="imagem-carregada" name="adm-imgPerfil-up" /></td>
-								</tr>
-								</table>	
-								</form>
-							</section>
-
-					</section> <!--content-->
-
-			</section> <!--wrapper-->
-		</main>
+                            <form action="acoes/atualizar-perfil.php?id_adm=<?php echo $id_adm; ?>" method="POST" enctype="multipart/form-data">
+									
+                                        
+                                        <img src="imagens/perfil/<?php echo $im_adm; ?>" width="100" height="80">
+                                    	<br/>
+                                  
+                                    	<label>Nome: </label>
+										<label><?php echo $nm_adm; ?></label>
+									
+                                    <br/>						
+										<label>Email: </label>
+                                        <br/>
+										<input type="text" name="adm-email-up" value="<?php echo $em_adm; ?>" />
+									<br/>
+										<label>Usuário:</label>
+                                        <br/>
+										<input type="text" name="adm-user-up" value="<?php echo $us_adm; ?>">
+									<br/>
+										<label>Senha: </label>
+                                        <br/>
+										<input type="password" name="adm-pass-up" maxlength="15" required="">
+									<br/>
+										
+								
+                                
+								
+                                 
+                                        
+                                    	<br/>
+                                        <input type="text" id="imagem-noticia-carregar" placeholder="Selecione uma imagem" required="" />
+                                        <input type="file" hidden id="imagem-carregada" name="adm-imgPerfil-up" />
+                                   
+                                 
+                    					
+                                        <button type="submit" class="btn btn-default"><i class=" fa fa-refresh "></i> Atualizar</button>
+							</form>
+                        </div>
+                        
+                    </div>
+                </div>
+             <!--Fim div row-->   
+        </div><!--Fim container-->
+      </div> <!--div.content-wrapper--> 
 <?php require "includes/footer.php"; ?> 

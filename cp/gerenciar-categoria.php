@@ -2,38 +2,52 @@
 require_once "includes/header.php"
 ?>
   <script type="text/javascript" src="js/validacoes.js"></script>
-  <main>
-  	<section id="wrapper">
+  <div class="content-wrapper">
+        <div class="container">
+  	       <div class="row">
+  			   <div class="col-md-6 col-sm-6">
+                      <!--    Striped Rows Table  -->
+         <div class="panel panel-default">
+              <div class="panel-heading">Cadastrar nova categoria</div>
+                  <div class="panel-body">
+                      <div class="table-responsive">
   		
-  		<section id="content">
-  			
-  		<section id="cadastrar-categoria">
-  		<h1> Cadastrar nova categoria</h1>
-  		<form action="acoes/cadastrar-categoria.php" method="POST" onsubmit="return validarFormCat();">
-  		<table>
-  			<tr>
-  				<td colspan="2">Informe o nome da(s) categorias(s) abaixo</td>
-  			</tr>
-  			<tr>
-  				<td><input type="text" name="categorias-nomes" id="categorias-nomes" required="" /></td>
-  				<td><input type="submit" value="Cadastrar" id="cadastrar-cat" /></td>
-  			</tr>
-  			<tr>
-  				<td colspan="2" class="nota-table">*Sempre com virgula (,) o nome das categorias.</td>
-  			</tr>
-  		</table>
-  		</form>	
-  		</section>	
+  		    <form action="acoes/cadastrar-categoria.php" method="POST" onsubmit="return validarFormCat();">
+  		
+          <h5>Informe o nome da(s) categorias(s) abaixo</h5>
+         
+    			<input type="text" name="categorias-nomes" id="categorias-nomes" required />
+		      <button type="submit" class="btn btn-default">Cadastrar</button>
+  				<h5>Sempre com virgula (,) o nome das categorias.</h5>
+  
+  		    </form>	
 
-  		<section id="categorias-existentes">
-  		<h1 class="btm">Categorias cadastradas:</h1>
-  		<table border="0" cellpadding="0" cellspacing="0">
-  			<tr>
-  				<td>Nome da Categoria</td>
-  				<td>Nº de Artigos</td>
-  				<td>Excluir</td>
-  			</tr>	
-        <?php
+          </div>
+               </div>
+                   </div>
+                    <!--  End  Striped Rows Table  -->
+                         </div>
+               
+  			
+                
+            		<div class="col-md-6 col-sm-6">
+                      <!--    Striped Rows Table  -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Categorias Cadastradas
+                        </div>
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Nome da Categoria</th>
+                                            <th>Nº de Categorias</th>
+                                            <th>Excluir</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                         <?php
           $SQL_CT = mysql_query("SELECT * FROM categoria");
             while ($CTN = mysql_fetch_array($SQL_CT)) {
                 $id_ct = $CTN['id_categoria'];
@@ -48,13 +62,17 @@ require_once "includes/header.php"
            <td><a href="acoes/excluir-categoria.php?id_ct=<?php echo $id_ct; ?>">Excluir Categoria</a></td>
         </tr>  
         <?php } ?>
-  		</table>	
-  		</section>
-
-  		</section> <!-- id Content-->
-
-  	</section><!--id wrapper-->
-
-  </main>
-  
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  End  Striped Rows Table  -->
+                </div>
+               </div> <!--FIM ROW-->
+               
+              
+            
+	</div> <!--FIM CONTAINER-->
+</div> <!--content-wrapper-->
  <?php require "includes/footer.php"; ?> 	
