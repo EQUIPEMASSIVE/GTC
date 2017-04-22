@@ -16,6 +16,7 @@ $SQL = mysql_query("SELECT nome, imgPerfil FROM administradores WHERE usuario= '
 <html lang="pt_br">
 	<head>
 		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
 		<link rel="stylesheet" type="text/css" href="css/default.css" media="screen" />
 		<script type="text/javascript" src="jquery-1.9.1.js"></script>
