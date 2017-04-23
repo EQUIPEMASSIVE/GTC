@@ -237,7 +237,7 @@ require_once "includes/header.php";
                             <button type="submit" class="btn btn-success" name="salvar-rascunho">Salvar </button>
                         </div>
                             <div class="panel-body">
-                                <p>Data Publicação:<?php echo $dataPub_ntE; ?></p>
+                                <p>Data Publicação: <?php echo $dataPub_ntE; ?></p>
                                 <p>Autor: <?php echo $autorPub_ntE; ?></p>
                             </div>
                     	</div>
