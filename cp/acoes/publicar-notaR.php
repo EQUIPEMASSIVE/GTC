@@ -7,7 +7,7 @@ session_start();
 	$conteudo 	= $_POST["descricao-nota"];
 	$dataPub  	= date("Y-m-d");
 	$tagsSear 	= $_POST["tags-pesquisa"];
-	$categoria 	= 4;
+	$categoria 	= 8;//Voce deve escolher o id de uma categoria do banco atual para ser uma categoria
 	$imagem     = "default.png";
 
 	//Selecioando autor da noticia
