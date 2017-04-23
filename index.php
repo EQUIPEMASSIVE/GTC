@@ -30,7 +30,7 @@
                             <p>Legenda do slide um</p>
                         </li>
                         <li>
-                            <a target="_blank" href="http://mdbootstrap.com/getting-started/" class="btn btn-info btn-lg" rel="nofollow">Leia Mais!</a>
+                            <a target="_blank" href="#" class="btn btn-info btn-lg" rel="nofollow">Leia Mais!</a>
                         </li>
                     </ul>
                 </div>
@@ -46,13 +46,13 @@
                 <div class="full-bg-img flex-center white-text">
                     <ul class="animated fadeIn col-md-12">
                         <li>
-                            <h1 class="h1-responsive">1DSSD0 Reasonsloca you should spend winter holiday in mountains </h1>
+                            <h1 class="h1-responsive">1DSSD0 Reuheuhueh tgelrllrelterheuhes </h1>
                         </li>
                         <li>
-                            <p>Best atractions and winter sports!</p>
+                            <p> euheuheuh TRLELEL textooo!</p>
                         </li>
                         <li>
-                            <a target="_blank" href="http://mdbootstrap.com/bootstrap-tutorial/" class="btn btn-info btn-lg" rel="nofollow">Read more</a>
+                            <a target="_blank" href="#" class="btn btn-info btn-lg" rel="nofollow">Leia Mais</a>
                         </li>
                     </ul>
                 </div>
@@ -68,12 +68,12 @@
                 <div class="full-bg-img flex-center white-text">
                     <ul class="animated fadeIn col-md-12">
                         <li>
-                            <h1 class="h1-responsive">Weekend in the nature - the best way to relax</h1></li>
+                            <h1 class="h1-responsive">TrelelelTHEUEHUEH</h1></li>
                         <li>
-                            <p>8 Reasons why you need to spend more time in nature</p>
+                            <p>Truhrueh textotheuthu</p>
                         </li>
                         <li>
-                            <a target="_blank" href="http://mdbootstrap.com/forums/forum/support/" class="btn btn-default btn-lg" rel="nofollow">Read more</a>
+                            <a target="_blank" href="#" class="btn btn-default btn-lg" rel="nofollow">Leia Mais</a>
                         </li>
                     </ul>
                 </div>
@@ -118,7 +118,7 @@
                     <!--Categoria 1_____________________________CATEGORIA DIVERSOS______D, dv, dvn___________________________________________-->                
                     <?php
 
-                    $SQL_F = mysql_query("SELECT * FROM categoria WHERE nome_categoria='Games'");
+                    $SQL_F = mysql_query("SELECT * FROM categoria WHERE nome_categoria='Eventos'");
 
                     while ($ft = mysql_fetch_array($SQL_F)){
                         $id_ft = $ft['id_categoria'];
@@ -139,7 +139,7 @@
             <div class="jumbotron">
                 <!--Title-->
                 <h1><a><?php echo $ftn['titulo']; ?></a></h1>
-                <p><b>Categoria</b>: <a href="categoria.php?id=<?php echo $id_ft; ?>">Games</a> &nbsp &nbsp <b>Data de Publicação</b>: 26/08/2016</p>
+                <p><b>Categoria</b>: <a href="categoria.php?id=<?php echo $id_ft; ?>">Evento</a> &nbsp &nbsp <b>Data do Evento</b>: </p>
 
                             <!--Card Image-->
             <div class="card">
@@ -152,14 +152,14 @@
 
                             <!--TEXTO-->
             <div class="excerpt">
-                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.
+                <p>Descrição rápida do evento, texto texto texto texto teoxtoe texoto texoteo teoxoteoewqhiw.
                 </p>
 
                 <br> <b> 
             </div>
 
             
-            <button type="button" class="btn btn-primary btn-lg btn-block">Read More</button> </b>
+            <button type="button" class="btn btn-primary btn-lg btn-block">Leia mais</button> </b>
             </div>
             <!--/Post data-->
 
