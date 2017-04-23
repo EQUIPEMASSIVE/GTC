@@ -130,7 +130,7 @@ require_once "includes/header.php";
                             <label class="control-label" for="success">Tags de Pesquisa</label>
                         </div>
                             <div class="panel-body">
-                                <p><input type="text" name="publicar" placeholder="Tag de pesquisa" required /></p>
+                                <p><input type="text" name="tags-pesquisa" placeholder="Tag de pesquisa" required /></p>
                                 
                             </div>
                     	</div>
