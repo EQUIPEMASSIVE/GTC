@@ -47,7 +47,7 @@
 
 			</section><!-- fim conteudo-->
 
-				<section id="sidebar"><?php require_once 'includes/sidebar.php'; ?></section>
+		
 
 	</section>	<!--fim content-->
 

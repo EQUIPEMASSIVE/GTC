@@ -7,6 +7,10 @@
 			
 			<section id="conteudo">
 
+					<br>
+					<h1>Resultado da busca para:   <?php echo $termo = $_GET["busca-organica"]; ?></h1> 
+					<br>
+
 						<?php 
 
 							$termo = $_GET["busca-organica"];
@@ -16,8 +20,10 @@
 							if(mysql_num_rows($busca) !=0 ) {
 								while ($src = mysql_fetch_array($busca)) {
 							
+
 										
 						?>
+						
 						<section id="buscar">
 						<h2><?php echo $src['titulo']; ?></h2>
 						<section id="buscar-img"><img src="cp/imagens/imgnoticia/<?php echo $src['imagem'];?>" alt="<?php echo $src['titulo']; ?>" /></section>
@@ -33,7 +39,7 @@
 
 
 			</section><!--conteudo-->
-					<section id="sidebar"><?php require_once 'includes/sidebar.php';  ?></section>
+			
 		</section>	<!--content-->
 
 	</main>

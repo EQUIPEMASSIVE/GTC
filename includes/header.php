@@ -3,46 +3,167 @@
 
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-	<title>Portal de Noticias</title>
-	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="css/default.css" media="screen">
-	<script type="text/javascript" src="js/jquery-3.1.1.js"></script>
-</head>
-<body>
-  	<header>
-  		<div id="topo">
-  			
-  			<div id="logo"> <a href="index.php"><img src="imagens/logo.png" alt="Portal de Noticias"/></a></div>
-  			<div id="topo-right">
-  				<p>Olá, Seja bem-vindo <a href="#"> Faça Login</a> ou <a href="#">Cadastre-se.</a></p>
-  				<form action="buscar.php" method="GET">
-  				<input type="text" name="busca-organica" id="busca-organica" required>	
-  				</form>
-  			</div>
-  		</div>
-  	</header>
-  	<div id="menu">
-  		<nav>
-  			<ul id="menu-screen">
-  				<li>Categorias do Site
-  					<ul>
-  						<?php  
-                $SQL = mysql_query("SELECT * FROM categoria");
-                  while ($lh = mysql_fetch_assoc($SQL)) {
 
-              ?>
-              <li><a href="categoria.php?id=<?php echo $lh['id_categoria']; ?>"><?php echo $lh['nome_categoria']; ?></a></li>
-              <?php } ?>
-  					</ul>
-  				</li>
-  					
-  				<li>Publicidade</li>
-  				<li>Quem Somos</li>
-  				<li>Parceiros</li>
-  				<li>Atendimento</li>
-  			</ul>
-  		</nav>
-  	</div>
-</body>
-</html>
+<head>
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>(80% Concluido) v0.2-beta </title>
+     
+     
+     <!-- OLD Style layout antigo fixo -->
+    <link rel="stylesheet" type="text/css" href="css/default.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="css/screen.css" media="screen"/>
+
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+
+
+    <!-- SCRIPTS -->
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/tether.min.js"></script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    
+
+
+    <!-- SCRIPTS -->
+
+    <!-- Template styles -->
+    <style rel="stylesheet">
+        /* TEMPLATE STYLES */
+        /* Necessary for full page carousel*/
+        
+        html,
+        body {
+            height: 100%;
+        }
+        /* Navigation*/
+        
+        .navbar {
+            background-color: #000;
+        }
+        
+        .top-nav-collapse {
+            background-color: #000;
+        }
+        
+        footer.page-footer {
+            background-color: #000;
+        }
+        
+        @media only screen and (max-width: 768px) {
+            .navbar {
+                background-color: #000;
+            }
+        }
+        
+        .scrolling-navbar {
+            -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
+            -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
+            transition: background .5s ease-in-out, padding .5s ease-in-out;
+        }
+        /* Carousel*/
+        
+        .carousel {
+            height: 50%;
+        }
+        
+        @media (max-width: 776px) {
+            .carousel {
+                height: 100%;
+            }
+        }
+        
+        .carousel-item,
+        .active {
+            height: 100%;
+        }
+        
+        .carousel-inner {
+            height: 100%;
+        }
+        
+        /*Caption*/
+        
+        .flex-center {
+            color: #000;
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+    <!--Navbar-->
+    <nav class="navbar navbar-toggleable-md navbar-dark fixed-top scrolling-navbar">
+        <div class="container">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav1" aria-controls="navbarNav1" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <a class="navbar-brand" href="index.php">
+                <strong>GTC</strong>
+            </a>
+
+            <div class="collapse navbar-collapse" id="navbarNav1">
+
+
+
+                <ul class="navbar-nav mr-auto">
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index2.html">Inicio<span class="sr-only">(current)</span></a>
+                    </li>
+
+
+
+                    <?php  
+                    $SQL = mysql_query("SELECT * FROM categoria");
+                    while ($lh = mysql_fetch_assoc($SQL)) {
+                    ?>
+                    <li class="nav-item">
+                          <a class="nav-link" href="categoria.php?id=<?php echo $lh['id_categoria']; ?>"><?php echo $lh['nome_categoria']; ?></a> 
+                    </li>
+                    <?php } ?> 
+
+
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="cp/index.php">Login CP</a>
+                    </li>
+
+                </ul>
+
+
+                <form class="form-inline waves-effect waves-light" action="buscar.php" method="GET">
+                    <input class="form-control" type="text" placeholder="Buscar..." name="busca-organica" id="busca-organica" required>
+                    
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!--/.Navbar-->
+
+
+<br> <br> 
