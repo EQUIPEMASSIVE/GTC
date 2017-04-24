@@ -139,7 +139,7 @@
             <div class="jumbotron">
                 <!--Title-->
                 <h1><a><?php echo $ftn['titulo']; ?></a></h1>
-                <p><b>Categoria</b>: <a href="categoria.php?id=<?php echo $id_ft; ?>">Evento</a> &nbsp &nbsp <b>Data do Evento</b>: </p>
+                <p><b>Categoria</b>: <a href="categoria.php?id=<?php echo $id_ft; ?>">Evento</a> </p>
 
                             <!--Card Image-->
             <div class="card">
