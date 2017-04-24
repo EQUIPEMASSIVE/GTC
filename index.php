@@ -159,7 +159,7 @@
             </div>
 
             
-            <button type="button" class="btn btn-primary btn-lg btn-block">Leia mais</button> </b>
+           <button type="button" class="btn btn-primary btn-lg btn-block" href="noticia.php?id=<?php echo $ftn['id_noticia']; ?>">Leia mais</button> </b>
             </div>
             <!--/Post data-->
 
