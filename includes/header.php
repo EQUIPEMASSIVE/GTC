@@ -117,9 +117,8 @@
                 <a class="navbar-brand" href="index.php"><img src="img/logoindex.png" /></a>
             </button>
 
-            <a class="navbar-brand" href="index.php">
-                <strong>GTC</strong>
-            </a>
+           <a class="navbar-brand" href="index.php"><img src="img/logoindex.png" /></a>
+            
 
             <div class="collapse navbar-collapse" id="navbarNav1">
 
