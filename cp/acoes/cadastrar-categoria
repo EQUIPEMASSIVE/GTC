@@ -1,5 +1,0 @@
-<?php?
-	$CATEGORIAS_NOMES = $_POST["categorias-nomes"];
-
-	var_dump($CATEGORIAL_NOMES);
->
