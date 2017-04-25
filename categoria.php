@@ -1,17 +1,21 @@
 <?php require_once 'includes/header.php';  ?>
 
-<main>>
 
 
-        <!--Main layout-->
-                <div class="container"> 
-                        <div class="row-fluid">   
-
-             
 
 
-                            <!--Section: Blog v.4-->
-                            <section class="section section-blog-fw">
+
+
+<body>
+    <br>
+
+
+
+
+    <!--Content-->
+
+    <div class="container">
+        <div class="row">
 
 
 
@@ -66,51 +70,47 @@
 
 
 
- <br>
-    <!--First row-->
-    <div class="row-fluid">
-        <div class="col-md-14">
+ 
+            <!--First row-->
+           
+                <div class="col-md-12">
+                <!--Card-->
+                <div class="card wow fadeIn"  data-wow-delay="0.3s">
 
 
-            <!--Card Content-->
-            <div class="jumbotron">
+
+                    <!--Card image-->
+                    <div class="card collection-card">
+                    
+                        <img src="cp/imagens/imgnoticia/<?php echo $imagem_news; ?>"  class="img-responsive" alt="Titulo na Notícia" />                          
+
+                            <div class="mask waves-effect waves-light"></div>
+                        </a>
+                    </div>
+                    <!--/.Card image-->
+
                 
-                            <!--Card Image-->
+              <!--Card content-->
+                    <div class="card-block" style="text-align:center">
+                        <!--Title ARRUMA O BUG DE PUXAR CATEGORIA AQUI NESSA LINHA ABAIXO -->
+                        <h5 class="price"><a href="categoria.php?id=<?php echo $id_cat; ?>"> <span class="badge btn-elegant"> <?php echo $rn['nome_categoria']; ?></span></h5>   </a>
 
-            <div class="card collection-card">
-            
-
-                <h3><a  href="noticia.php?id=<?php echo $id_news;?>"> <?php echo $titulo_news; ?></a></h3>
-                <p> <button type="button" class="btn btn-elegant btn-sm">Categoria: <?php echo $rn["nome_categoria"]; ?></button>
-                    <button type="button" class="btn btn-elegant btn-sm">Publicado no dia: <?php echo $dataEX; ?>  </button></p>
-                <img src="cp/imagens/imgnoticia/<?php echo $imagem_news;?>" alt="Titulo na Notícia" /> 
-
-                   <div class="media-body">
-
-                   <!--Title--> <br>
-                   
-                
+                        <h1 class="h1-responsive"> <a href="noticia.php?id=<?php echo $id_news;?>" style="color: #000" class="card-title"><?php echo $titulo_news;?></h1> </a>
+                                     
 
 
-                   
+                        <!--Text-->
+                        <p style="color: #696969" class="card-text"><?php echo  substr($conteudo_news, 0, 900); ?>...</p>
+                        <a href="noticia.php?id=<?php echo $id_news; ?>" class="black-text d-flex flex-row-reverse"><h7 class="waves-effect p-2">Leia mais... <i class="fa fa-chevron-right"></i></h7></a>
+                      
+                        
+
+                        <span style="color: #C0C0C0" ><i class="fa fa-clock-o" ></i> Publicado dia: <?php echo $dataEX;?></span>
 
 
-                   
-            
-            </div>
 
 
-     
-XXXXXXXXXXXXXXX
-
-            </div>
-               
-
-                            <!--TEXTO-->
-            <div class="excerpt">
-                <p><?php echo  substr($conteudo_news, 0, 900); ?>...</p>
-                <a type="button" class="btn btn-primary btn-lg btn-block" href="noticia.php?id=<?php echo $id_news; ?>">Ler Mais...</a> 
-           </div> 
+                            
 
                 
             </div>
@@ -119,29 +119,48 @@ XXXXXXXXXXXXXXX
 
           
 
-        <?php } } else {?>
-
-        <section id="categoria-news-error">
-        <h1> Não há notícias para esta categoria! =( </h1>
-        </section>
-
-
+     <br> <br>
         
-        <?php } ?>
 
-                     </div>
-                  </div>
-              </div>
-           </div><!--/.Class="row-fluid2"-->
-        </div>     <!--/.Class="row-fluid"--> 
-    </div>    <!--/.Content Container-->
-</section> <!--/Section: Blog v.4-->
+                    
+
+
+                      
 
 
 
+                    </div>
+                    <!--/.Card content-->
+   <?php } } else {?>
 
 
 
-</main>
+            <!--First row-->
+           
+                <div class="col-md-12">
+                <!--Card-->
+                <div class="card wow fadeIn"  data-wow-delay="0.3s">
+    <!--Card content ERROR sem noticia-->
+                    <div class="card-block" style="text-align:center">
+                    <br> <br> <br> <br> <br> <br> <br> <br> <br> 
+                        <!--Title-->
+                       
+                        <h1 class="h1-responsive" class="card-title">Não há notícias para esta categoria! =(</h1> </a> 
 
-    <?php require_once 'includes/footer.php'; ?>
+                        <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
+                        </div> </div>
+
+
+                                     
+
+
+
+
+ <?php } ?> 
+
+        </div> <!--/ Row Main Layout--> 
+
+    </div>     <!--/.Container Main Layout-->  </h1></div></div></div></h1></h5></div></div></div></div></div></body>
+
+<?php require_once 'includes/footer.php'; ?>
+

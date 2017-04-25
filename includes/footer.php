@@ -1,6 +1,4 @@
-
-
-    <!--Footer-->
+<!--Footer-->
     <footer class="page-footer center-on-small-only">
 
         <!--Footer Links-->
@@ -19,11 +17,11 @@
 
                 <!--Second column-->
                 <div class="col-lg-2 offset-lg-1 hidden-lg-down">
-                    <h5 class="title">xXx</h5>
+                    <h5 class="title">.</h5>
                     <ul>
-                        <li><a href="#!">xXx</a></li>
-                        <li><a href="#!">xXx</a></li>
-                        <li><a href="#!">xXx</a></li>
+                        <li><a href="#!">.</a></li>
+                        <li><a href="#!">.</a></li>
+                        <li><a href="#!">.</a></li>
                     </ul>
                 </div>
                 <!--/.Second column-->
@@ -32,11 +30,11 @@
 
                 <!--Third column-->
                 <div class="col-lg-2 offset-lg-1 hidden-lg-down">
-                    <h5 class="title">yYy</h5>
+                    <h5 class="title">.</h5>
                     <ul>
-                        <li><a href="#!">"yYy"</a></li>
-                        <li><a href="#!">"yYy"</a></li>
-                        <li><a href="#!">"yYy"</a></li>
+                        <li><a href="#!">.</a></li>
+                        <li><a href="#!">.</a></li>
+                        <li><a href="#!">.</a></li>
                     </ul>
                 </div>
                 <!--/.Third column-->
@@ -66,13 +64,13 @@
             <h4>Assine nosso Newsletter</h4>
             <ul>
                
-                <li><a target="_blank" href="http://mdbootstrap.com/material-design-for-bootstrap/" class="btn btn-default" rel="nofollow">Deixe seu: Email</a></li>
+                <li><a target="_blank" href="#" class="btn btn-light-green" rel="nofollow">Deixe seu: Email</a></li>
             </ul>
 
         <h4>Encontrou algum bug?</h4>
             <ul>
                
-                <li><a target="_blank" href="http://mdbootstrap.com/getting-started/" class="btn btn-info" rel="nofollow">Reportar!</a></li>
+                <li><a target="_blank" href="#" class="btn btn-danger" rel="nofollow">Reportar!</a></li>
 
             </ul>
 
