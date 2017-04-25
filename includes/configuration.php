@@ -8,7 +8,6 @@ define("DBNAME", "u263627493_gtc");
 
 // As informações abaixo é para usar em offline/local, quando for subir esse arquivo para nuvem,
 // mudar para  essas definições acima: 
-
 //define("HOST", "localhost");
 //define("USER",  "root");
 //define("PASS", "");
