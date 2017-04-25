@@ -1,120 +1,226 @@
-﻿<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-	<title>(18:04 hr) {Hesron} [01/abr/2017]</title>
-	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="css/default.css" media="screen"/>
-	<link rel="stylesheet" type="text/css" href="css/screen.css" media="screen"/>
-	<script type="text/javascript" src="js/jquery-1.2.3.js"></script>
-	<script type="text/javascript" src="js/easySlider1.7.js"></script>
-</head>
-	<script type="text/javascript">
-
-
-
-		( function($) {
-    // we can now rely on $ within the safety of our “bodyguard” function
-    $(document).ready( function() {
-            $("#slider").easySlider({
-                auto: true,
-                continuous: true
-            });
-         } );
-} ) ( jQuery );
-
-
-
-
-	</script>
-<body>
-
 
 <?php
  require_once 'includes/header.php';
 ?>
-	<main>
 
 
-		<section id="content">
+
+    <!--Carousel Wrapper-->
+    <div id="carousel-example-3" class="carousel slide carousel-fade white-text" data-ride="carousel" data-interval="false">
+        <!--Indicators-->
+        <ol class="carousel-indicators">
+
+            <li data-target="#carousel-example-3" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-3" data-slide-to="1"></li>
+            <li data-target="#carousel-example-3" data-slide-to="2"></li>
+        </ol>
+        <!--/.Indicators-->
+
+        <!--Slides-->
+        <div class="carousel-inner" role="listbox">
+
+            <!-- First slide -->
+            <div class="carousel-item active view hm-black-light" style="background-image: url('img/postbg/1p.jpg'); background-repeat: no-repeat; background-size: cover;">
+                
+                <!-- Caption -->
+                <div class="full-bg-img flex-center red-text">
+                    <ul class="animated fadeIn col-md-12">
+
+                     <li>
+                          <p class="badge black">New evento treelele novinho em folha mesmewquehwqiuEHWQIEUWQHEIUWQHEWQUIeheuiheiuwqhewquiehwquiehwquiwho</p>
+                         
+                     </li>
+                        
+
+                    </ul>
+                </div>
+                <!-- /.Caption -->
+                
+            </div>
+            <!--/.First slide-->
+
+            <!-- Second slide -->
+            <div class="carousel-item view hm-black-light" style="background-image: url('img/postbg/2p.jpg'); background-repeat: no-repeat; background-size: cover;">
+                
+                <!-- Caption -->
+                <div class="full-bg-img flex-center white-text">
+                    <ul class="animated fadeIn col-md-12">
+                      
+                        <li>
+                            <p class="badge black">New evento treelele novinho em folha mesmewquehwqiuEHWQIEUWQHEIUWQHEWQUIeheuiheiuwqhewquiehwquiehwquiwho</p>
+                        </li>
+
+                    </ul>
+                </div>
+                <!-- /.Caption -->
+                
+            </div>
+            <!--/.Second slide -->
+
+            <!-- Third slide -->
+            <div class="carousel-item view hm-black-light" style="background-image: url('img/postbg/3p.png'); ;">
+                
+                <!-- Caption -->
+                <div class="full-bg-img flex-center white-text">
+                    <ul class="animated fadeIn col-md-12">
+                       
+                            <p>Nome evento vent3</p>
+                        </li>
+
+                    </ul>
+                </div>
+                <!-- /.Caption -->
+                
+            </div>
+            <!--/.Third slide-->
+        </div>
+        <!--/.Slides-->
+
+        <!--Controls-->
+        <a class="carousel-control-prev" href="#carousel-example-3" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carousel-example-3" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+        <!--/.Controls-->
+    </div>
+    <!--/.Carousel Wrapper-->
+    <br>
+
+<main>
 
 
-			<section id="conteudo">
+       
 
-				<section id=slider class="banner">
-					<ul>
-						<?php                                                       //Na ordem do recente para o ultimo
-							$SQL_B = mysql_query("SELECT id_noticia, imagem FROM noticias ORDER BY id_noticia DESC LIMIT 5");
-
-							while ($bn = mysql_fetch_array($SQL_B)) {
-							
-						?>
-						<li><a href="noticia.php?id=<?php echo $bn['id_noticia']; ?>"><img src="cp/imagens/imgnoticia/<?php echo $bn['imagem']; ?>" alt="Postagem 1"/></a></li>
-						<?php } ?>
-						</ul>
-				</section><!--Banner-->
-
-				<section id="artigos">
-					<!--Categoria 1_____________________________CATEGORIA DIVERSOS______D, dv, dvn___________________________________________-->				
-					<?php
-                                        //Para escolher uma categoria para ser exibida no index principal é só trocar o nome_categoria pela catregoria da sua escolha
-					$SQL_F = mysql_query("SELECT * FROM categoria WHERE nome_categoria='Atualidades'");
-
-					while ($ft = mysql_fetch_array($SQL_F)){
-						$id_ft = $ft['id_categoria'];
-					}
-
-					$SQL_FN = mysql_query("SELECT * FROM noticias  WHERE categoria='$id_ft' ORDER BY id_noticia DESC LIMIT 3");
-
-					while ($ftn = mysql_fetch_array($SQL_FN)) {
-						
-					?>
-
-					<article>                        <!--Titulo da categoria que iá aparecer em cima da imagem da noticia-->
-					<h1><a href="categoria.php?id=<?php echo $id_ft; ?>">Atualidades</a></h1>
-					<a href="noticia.php?id=<?php echo $ftn['id_noticia']; ?>"><img src="cp/imagens/imgnoticia/<?php echo $ftn['imagem']; ?>" alt="<?php echo $ftn['titulo']; ?>"></a>
-					<h2><a href="noticia.php?id=<?php echo $ftn['id_noticia']; ?>"><?php echo $ftn['titulo']; ?></a></h2>
-					</article>
+        <!--Main layout-->
+        <div class="container"> 
+                <div class="row-fluid">   
 
 
-					<?php } ?>
-					
-					<!--Categoria 2_________________________________CATEGORIA TECNOLOGIA___T, tc, tcn_______________________________________-->
-					<?php
-                                        //Para escolher uma categoria para ser exibida no index principal é só trocar o nome_categoria pela catregoria da sua escolha
-					$SQL_T = mysql_query("SELECT * FROM categoria WHERE nome_categoria='Tecnologia'");
-
-					while ($tc = mysql_fetch_array($SQL_T)){
-						$id_tc = $tc['id_categoria'];
-					}
-
-						
-
-					$SQL_TC = mysql_query("SELECT * FROM noticias  WHERE categoria='$id_tc' ORDER BY id_noticia DESC LIMIT 3");
-
-					while ($tcn = mysql_fetch_array($SQL_TC)) {
-						
-					?>
-
-					<article>
-					<h1><a href="categoria.php?id=<?php echo $id_tc; ?>">Tecnologia</a></h1>
-					<a href="noticia.php?id=<?php echo $tcn['id_noticia']; ?>"><img src="cp/imagens/imgnoticia/<?php echo $tcn['imagem']; ?>" alt="<?php echo $tcn['titulo']; ?>"></a>
-					<h2><a href="noticia.php?id=<?php echo $tcn['id_noticia']; ?>"><?php echo $tcn['titulo']; ?></a></h2>
-					</article>
+               
 
 
-					<?php } ?>
+<!--Section: Blog v.4-->
+<section class="section section-blog-fw">
 
 
-				</section> <!--Artigos-->
-				<section id="publicidade-conteudo"></section> <!--Publicidade conteudo-->
-				
+                    <!--Categoria 1_____________________________CATEGORIA DIVERSOS______D, dv, dvn___________________________________________-->                
+                    <?php
 
-			</section> <!--conteudo-->
+                    $SQL_F = mysql_query("SELECT * FROM categoria ORDER BY nome_categoria");
+                    while ($ft = mysql_fetch_array($SQL_F)){
 
-			<section id="sidebar"><?php require_once 'includes/sidebar.php'; ?></section> <!--sidebar--> 
+                        $nome_catIndex       = $ft["nome_categoria"];
+                        
+                    }
 
-		</section> <!--content-->
 
-	</main>
+                    $SQL_FN = mysql_query("SELECT * FROM noticias  ORDER BY datapub DESC LIMIT 20");
 
-	<?php require_once 'includes/footer.php'; ?>
+                   
+
+                    if(mysql_num_rows($SQL_FN) != 0){
+
+                while ($ix = mysql_fetch_array($SQL_FN)){
+
+                        $id_index        = $ix["id_noticia"];
+                        $titulo_index    = $ix["titulo"];
+                        $conteudo_index  = $ix["conteudo"];
+                        $imagem_index    = $ix["imagem"];
+                        $dataPub_index    = $ix["datapub"];
+
+                        $dataPub_index = explode("-", $ix["datapub"]);
+              $dataEX = $dataPub_index[2]."/".$dataPub_index[1]."/".$dataPub_index[0];
+                        
+                    ?>
+
+
+
+
+
+
+
+    <!--First row-->
+    <div class="row-fluid">
+        <div class="col-md-14">
+
+
+            <!--Card Content-->
+          
+                
+                            <!--Card Image-->
+
+            <div class="card">
+            
+                <h3 class="price"><span class="badge red darken-1"> <?php echo $nome_catIndex; ?></span></h3>
+                <h1><a class="h1" href="noticia.php?id=<?php echo $id_index;?>"><?php echo $titulo_index; ?></a></h1>
+                <img src="cp/imagens/imgnoticia/<?php echo $imagem_index; ?>" alt="Titulo na Notícia" /> <center>
+                <p> <button type="button" class="btn btn-elegant btn-sm">Data do Evento: <?php echo $dataEX; ?></button> 
+                    <!--<button type="button" class="btn btn-elegant btn-sm">Horario: 19:00h</button>
+                    <button type="button" class="btn btn-elegant btn-sm">Local: Auditório David mufarrej, Belém-PA </button>
+                    <button type="button" class="btn btn-elegant btn-sm">Categoria: <?php echo $nome_catIndex; ?></button>
+
+                 </p>
+
+                    <!--Title--> 
+
+                
+
+<br>
+<h9>
+                 
+               
+
+                    </h9>
+</center>
+                   <div class="media-body">
+
+               
+
+
+                   
+
+
+                   
+            
+            </div>
+     
+       
+
+                
+            </div>
+
+
+                <br> <br>
+
+                           
+         
+           
+
+           </div>
+            <!--/Post data-->
+
+            <?php } } else {?>                           
+
+        </div>
+    </div>
+
+      <?php } ?>
+    <!--/First row-->
+        </div>     <!--/.Class="row-fluid"--> 
+    </div>    <!--/.Content Container-->
+</section>
+<!--/Section: Blog v.4-->
+</div></div>
+
+
+
+
+
+
+</main>
+
+    <?php require_once 'includes/footer.php'; ?>

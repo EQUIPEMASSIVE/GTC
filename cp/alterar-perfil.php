@@ -30,26 +30,27 @@
 								?>
                             <form action="acoes/atualizar-perfil.php?id_adm=<?php echo $id_adm; ?>" method="POST" enctype="multipart/form-data">
 									
-                                        
-                                        <img src="imagens/perfil/<?php echo $im_adm; ?>" width="100" height="80">
+                                        <div class="card">
+                                        <img  src="imagens/perfil/<?php echo $im_adm; ?>" width="100" height="80">
                                     	<br/>
-                                  
+                                  		</div>	
+
                                     	<label>Nome: </label>
 										<label><?php echo $nm_adm; ?></label>
-									
-                                    <br/>						
+									     <br>
+                                    						
 										<label>Email: </label>
                                         <br/>
-										<input type="text" name="adm-email-up" value="<?php echo $em_adm; ?>" />
-									<br/>
+										<input class="form-control" type="text" name="adm-email-up" value="<?php echo $em_adm; ?>" />
+									
 										<label>Usuário:</label>
                                         <br/>
-										<input type="text" name="adm-user-up" value="<?php echo $us_adm; ?>">
-									<br/>
+										<input class="form-control" type="text" name="adm-user-up" value="<?php echo $us_adm; ?>">
+									
 										<label>Senha: </label>
                                         <br/>
-										<input type="password" name="adm-pass-up" maxlength="15" required="">
-									<br/>
+										<input class="form-control" type="password" name="adm-pass-up" maxlength="15" required="">
+										<br/>
 										
 								
                                 
@@ -58,11 +59,11 @@
                                         
                                     	<br/>
                                         <input type="text" id="imagem-noticia-carregar" placeholder="Selecione uma imagem" required="" />
-                                        <input type="file" hidden id="imagem-carregada" name="adm-imgPerfil-up" />
-                                   
+                                        <input type="file" hidden="" n id="imagem-carregada" name="adm-imgPerfil-up" />
+                                   		<br/>
                                  
                     					
-                                        <button type="submit" class="btn btn-default"><i class=" fa fa-refresh "></i> Atualizar</button>
+                                        <button type="submit" class="btn btn-success"><i class=" fa fa-refresh "></i> Atualizar</button>
 							</form>
                         </div>
                         

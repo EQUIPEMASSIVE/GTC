@@ -1,59 +1,131 @@
 <?php require_once 'includes/header.php';  ?>
 
-<main>
-	
-<section id="content">
-	
-	<section id="conteudo">
-			
-			<?php  
+<main>>
 
-				$id_cat = $_GET["id"];
-																	                                                    //Exibe a noticia em ordem descrecente por id da noticia
-				$SQL_NC = mysql_query("SELECT id_noticia, titulo, conteudo, imagem FROM noticias WHERE categoria=$id_cat ORDER BY id_noticia DESC");
+
+        <!--Main layout-->
+                <div class="container"> 
+                        <div class="row-fluid">   
+
+             
+
+
+                            <!--Section: Blog v.4-->
+                            <section class="section section-blog-fw">
+
+
+
+
+      <?php  
+
+
+
+        $SQL_CT = mysql_query("SELECT * FROM categoria ORDER BY nome_categoria");
+                    while ($ct = mysql_fetch_array($SQL_CT)){
+
+                        $nome_catIndex       = $ct["nome_categoria"];//puxa o nome da categoria
+                        
+                      }
+
+
+        $id_cat = $_GET["id"];
+                                                                                      //Exibe a noticia em ordem descrecente por id da noticia
+        $SQL_NC = mysql_query("SELECT id_noticia, titulo, conteudo, imagem, datapub FROM noticias WHERE categoria=$id_cat ORDER BY id_noticia DESC");
   
+        if(mysql_num_rows($SQL_NC) != 0){
+        while ($nc = mysql_fetch_array($SQL_NC)){
+            $id_news        = $nc["id_noticia"];
+            $titulo_news    = $nc["titulo"];
+            $conteudo_news  = $nc["conteudo"];
+            $imagem_news    = $nc["imagem"];
+            $datapub_news   = $nc["datapub"];
 
-				if(mysql_num_rows($SQL_NC) != 0){
-
-				while ($nc = mysql_fetch_array($SQL_NC)){
-
-						$id_news        = $nc["id_noticia"];
-						$titulo_news    = $nc["titulo"];
-						$conteudo_news  = $nc["conteudo"];
-						$imagem_news    = $nc["imagem"];
-						
-
-			?>
-
-			<section id="categoria-news">
-				<h1><a href="noticia.php?id=<?php echo $id_news;?>"><?php echo $titulo_news; ?></a></h1>
-				<section id="imagem-noticia"><img src="cp/imagens/imgnoticia/<?php echo $imagem_news; ?>" alt="Titulo na Notícia" /></section>
-				<p><?php 
-
-				echo  substr($conteudo_news, 0, 512);
+            $datapub_news = explode("-", $nc["datapub"]);
+              $dataEX = $datapub_news[2]."/".$datapub_news[1]."/".$datapub_news[0];//Converte o estilo de data para brasileira
+      ?>
 
 
-				?><a href="noticia.php?id=<?php echo $id_news; ?>">...Continue Lendo</a></p>
-				</section>
 
-				<?php } } else {?>
 
-				<section id="categoria-news-error">
-				<h1> Não há notícias para esta categoria! =( </h1>
-				</section>
 
-				
-				<?php } ?>
 
-			</section><!-- fim conteudo-->
 
-				<section id="sidebar"><?php require_once 'includes/sidebar.php'; ?></section>
+ <br>
+    <!--First row-->
+    <div class="row-fluid">
+        <div class="col-md-14">
 
-	</section>	<!--fim content-->
 
-</section>
+            <!--Card Content-->
+            <div class="jumbotron">
+                
+                            <!--Card Image-->
+
+            <div class="card collection-card">
+            
+
+                <h3><a  href="noticia.php?id=<?php echo $id_news;?>"> <?php echo $titulo_news; ?></a></h3>
+                <p> <button type="button" class="btn btn-elegant btn-sm">Categoria: <?php echo $nome_catIndex; ?></button>
+                    <button type="button" class="btn btn-elegant btn-sm">Publicado no dia: <?php echo $dataEX; ?>  </button></p>
+                <img src="cp/imagens/imgnoticia/<?php echo $imagem_news;?>" alt="Titulo na Notícia" /> 
+
+                   <div class="media-body">
+
+                   <!--Title--> <br>
+
+                
+
+
+                   
+
+
+                   
+            
+            </div>
+
+
+     
+XXXXXXXXXXXXXXX
+
+            </div>
+               
+
+                            <!--TEXTO-->
+            <div class="excerpt">
+                <p><?php echo  substr($conteudo_news, 0, 900); ?>...</p>
+                <a type="button" class="btn btn-primary btn-lg btn-block" href="noticia.php?id=<?php echo $id_news; ?>">Ler Mais...</a> 
+           </div> 
+
+                
+            </div>
+
+</div>
+
+
+
+        <?php } } else {?>
+
+        <section id="categoria-news-error">
+        <h1> Não há notícias para esta categoria! =( </h1>
+        </section>
+
+
+        
+        <?php } ?>
+
+                     </div>
+                  </div>
+              </div>
+           </div><!--/.Class="row-fluid2"-->
+        </div>     <!--/.Class="row-fluid"--> 
+    </div>    <!--/.Content Container-->
+</section> <!--/Section: Blog v.4-->
+
+
+
+
+
 
 </main>
 
-
-<?php require_once 'includes/footer.php'; ?>
+    <?php require_once 'includes/footer.php'; ?>

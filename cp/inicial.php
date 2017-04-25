@@ -4,13 +4,44 @@ require "includes/header.php";
 
 ?>
 	
-	
-			
+
+		
     <div class="content-wrapper">
     
         <div class="container">
-        <div class="row">
-        
+        <div class="row-fluid">
+  
+
+        <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------- -->    
+
+  
+        <div class="col-md-6">     
+                <div class="Compose-Message">               
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            Publicar Notícia Rápida/Rascunho
+                        </div>
+                        <div class="panel-body">
+                         <form action="acoes/publicar-notaR.php" method="POST">   
+                            <label>Titulo da Postagem: </label>
+                            <input type="text" class="form-control" name="titulo-postagem" required />
+                            <label>Tags de Pesquisa:  </label>
+                            <input type="text" class="form-control" name="tags-pesquisa" />
+                            <label>Descrição da Notícia : </label>
+                            <textarea rows="9" class="form-control" name="descricao-nota"></textarea>                     
+                            <input  class="btn btn-warning" type="submit" name="publicar-nota" value="Publicar Nota" />
+                          </form>
+                        </div>
+                        <div class="panel-footer text-muted">
+                            <strong>Note : </strong>Todas as postagem aqui feitas iram para rascunhos!
+                        </div>
+                    </div>
+                </div>
+            
+            </div><!--Fim col-->    
+
+        <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------- -->    
+
         <div class="col-md-6">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -45,7 +76,8 @@ require "includes/header.php";
                     </div> 
                 </div><!--fim col-->
         
-        
+        <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+           
             <div class="col-md-6">
                 <div class="alert alert-info">
                    <h1>Últimas Notícias</h1>
@@ -61,33 +93,10 @@ require "includes/header.php";
                     
             </div><!--Fim col-->
             
-
+         <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------- -->    
 
             
-            <div class="col-md-6">     
-                <div class="Compose-Message">               
-                    <div class="panel panel-success">
-                        <div class="panel-heading">
-                            Publicar Notícia Rápida/Rascunho
-                        </div>
-                        <div class="panel-body">
-                         <form action="acoes/publicar-notaR.php" method="POST">   
-                            <label>Titulo da Postagem: </label>
-                            <input type="text" class="form-control" name="titulo-postagem" required />
-                            <label>Tags de Pesquisa:  </label>
-                            <input type="text" class="form-control" name="tags-pesquisa" />
-                            <label>Descrição da Notícia : </label>
-                            <textarea rows="9" class="form-control" name="descricao-nota"></textarea>                     
-                            <input  class="btn btn-warning" type="submit" name="publicar-nota" value="Publicar Nota" />
-                          </form>
-                        </div>
-                        <div class="panel-footer text-muted">
-                            <strong>Note : </strong>Todas as postagem aqui feitas iram para rascunhos!
-                        </div>
-                    </div>
-                </div>
             
-            </div><!--Fim col-->
            
           
             

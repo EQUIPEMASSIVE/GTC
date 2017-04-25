@@ -16,8 +16,8 @@ require_once "includes/header.php"
   		
           <h5>Informe o nome da(s) categorias(s) abaixo</h5>
          
-    			<input type="text" name="categorias-nomes" id="categorias-nomes" required />
-		      <button type="submit" class="btn btn-default">Cadastrar</button>
+    			<input  class="form-control" type="text" name="categorias-nomes" id="categorias-nomes" required />
+		      <button type="submit" class="btn btn-success">Cadastrar</button>
   				<h5>Sempre com virgula (,) o nome das categorias.</h5>
   
   		    </form>	
