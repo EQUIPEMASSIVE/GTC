@@ -69,7 +69,11 @@
                     <button type="button" class="btn btn-elegant btn-sm">Publicado no dia: <?php echo $dataEX; ?>  </button></p>
                 <img src="cp/imagens/imgnoticia/<?php echo $imagem_news;?>" alt="Titulo na Notícia" /> 
 
+<<<<<<< HEAD
                    <div class="media-body">
+=======
+		
+>>>>>>> origin/master
 
                    <!--Title--> <br>
 

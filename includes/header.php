@@ -84,12 +84,21 @@
         /* Carousel*/
         
         .carousel {
+<<<<<<< HEAD
             height: 15%;
         }
         
         @media (max-width: 1080px) {
             .carousel {
                 height: 15%;
+=======
+            height: 50%;
+        }
+        
+        @media (max-width: 776px) {
+            .carousel {
+                height: 100%;
+>>>>>>> origin/master
             }
         }
         
@@ -156,6 +165,7 @@
                 </ul>
 
 
+<<<<<<< HEAD
                 
             </div>
             <form class="form-inline waves-effect waves-light" action="buscar.php" method="GET">
@@ -163,9 +173,20 @@
                     <span class="glyphicon glyphicon-search"></span>
                     
                 </form>
+=======
+                <form class="form-inline waves-effect waves-light" action="buscar.php" method="GET">
+                    <input class="form-control" type="text" placeholder="Buscar..." name="busca-organica" id="busca-organica" required>
+                    
+                </form>
+            </div>
+>>>>>>> origin/master
         </div>
     </nav>
     <!--/.Navbar-->
 
 
+<<<<<<< HEAD
 <br> <br> 
+=======
+<br> <br> 
+>>>>>>> origin/master
