@@ -161,15 +161,7 @@
 
 
 
-<div style="width: 600px;">
-  <!-- Page plugin's width will be 500px -->
-  <div class="fb-page" data-href="https://www.facebook.com/goodwaytech.isc/" data-width="500" data-hide-cover="false"  data-show-facepile="true"></div>
-</div>
-
-
-
 <br> <br> <br><br>
-
 
 
 
