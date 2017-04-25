@@ -34,7 +34,7 @@ $SQL = mysql_query("SELECT nome, imgPerfil FROM administradores WHERE usuario= '
     <!--[if IE]>
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <![endif]-->
-    <title>GTC - PAINEL DE CONTROLE NOVO</title>
+    <title>TESTAAAAAAAAAAAAAAAAAAAAAA</title>
     <!-- BOOTSTRAP CORE STYLE  -->
     <link href="css/bootstrap.css" rel="stylesheet" />
     <!-- FONT AWESOME ICONS  -->
