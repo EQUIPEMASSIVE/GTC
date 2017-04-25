@@ -27,7 +27,7 @@
 				?>
 
 
-						
+			<br>			
                  <!--Main column-->
                 <div class="col-lg-12">
 
