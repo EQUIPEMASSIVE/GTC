@@ -72,7 +72,7 @@ require_once "includes/header.php";
 					?>
 
 				<ul>
-					<li id="publicar-noticia-menu" class="activeColor">Publicar notícia</li>
+					<li id="publicar-noticia-menu" class="activeColor">Compor Texto</li>
 					<li id="todas-noticias-menu">Ver todas as notícias <?php if($CNT_TN != 0): echo "($CNT_TN)"; endif; ?></li>
 					<li id="rascunhos-menu">Rascunhos <?php if($CNT_RS != 0): echo "($CNT_RS)"; endif; ?></li>
 					<li id="lixeira-menu">Lixeira<?php if($CNT_LX != 0): echo "($CNT_LX)"; endif; ?></li>
@@ -105,66 +105,65 @@ require_once "includes/header.php";
 				</table>		
 				</section>
 					<section id="publicar-noticia-right">
+				    <!--Primeira tabela-->
+                      <div class="col-md-12 col-sm-4">
+                    	<div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <button type="submit" class="btn btn-success">Publicar Notícia</button>
+                        </div>
+                            <div class="panel-body">
+                                <p>Data Publicação: <?php echo date("d/m/Y"); ?></p>
+                                <p>Autor: <?php echo $nomeUser; ?></p>
+                            </div>
+                    	</div>
+                	</div>
+                    <!--Fim primeira tabela-->
+                    
+					  
+                      
+                      
 						
-						<section id="publicar-nota-informacoes">
-							<table>
-								<tbody>
-									<tr>
-										<td align="left"><input type="submit" name="publicar" value="Publicar Notícia" /></td>
-										<!--<td align="right"><input type="submit" name="salvar-rascunho" value="Salvar Notícia" /></td>
-									</tr>-->
-									<tr>
-										<td>Data Publicação:</td>
-										<td align="right"><?php echo date("d/m/Y"); ?></td>
-									</tr>
-									<tr>
-										<td>Autor:</td>
-										<td align="right"><?php echo $nomeUser; ?></td>
-									</tr>
-								</tbody>
-							</table>
-						</section>
+                        <!--Segunda Tabela-->
+                       	<div class="col-md-12 col-sm-4">
+                    	<div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <label class="control-label" for="success">Tags de Pesquisa</label>
+                        </div>
+                            <div class="panel-body">
+                                <p><input type="text" name="tags-pesquisa" placeholder="Tag de pesquisa" required /></p>
+                                
+                            </div>
+                    	</div>
+                	</div>
+                    	<!--Fim segunda Tabela-->
+                        
+							
+                        
+                        <!--Terceira tabela-->
+                        <div class="col-md-12 col-sm-4">
+                    	<div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <label class="control-label" for="success">Imagem da Notícia</label>
+                        </div>
+                            <div class="panel-body">
+                                <input type="text" id="imagem-noticia-carregar" placeholder="Selecione Imagem" required />
+								<input type="file" hidden id="imagem-carregada" name="imagem-noticia" />
+                                
+                            </div>
+                    	</div>
+                	</div>
+						<!--Fim terceira tabela-->
 						
-						<section id="publicar-nota-informacoes">
-							<table>
-								<tbody>
-									<tr>
-										<td>Tags de Pesquisa</td>
-									</tr>
-									<tr>
-										<td><input type="text" name="tags-pesquisa" placeholder="Digite suas tags de pesquisa" required="" /></td>
-									</tr>
-									<tr>
-										<td id="tags-escolhidos"></td>
-									</tr>
-								</tbody>
-							</table>
-						</section>
 						
-							<section id="publicar-nota-informacoes">
-							<table>
-								<tbody>
-									<tr>
-										<td>Imagem da Notícia </td> <h6>*Imagem Obrigatória</h6>
-									</tr>
-									<tr>
-			    							<td>
-											<input type="text" id="imagem-noticia-carregar" placeholder="Selecione a imagem da sua notícia" required="" />
-											<input type="file" hidden id="imagem-carregada" name="imagem-noticia" /></td>
-									</tr>
-								</tbody>
-							</table>				
-						</section>
-						
-						<section id="publicar-nota-informacoes">
-							<table>
-								<tbody>
-									<tr>
-										<td>Categoria da Notícia</td>
-									</tr>
-									<tr>
-										<td>
-											<select name="categoria-noticia" required="">
+                        <!--quarta tabela-->
+                        <div class="col-md-12 col-sm-4">
+                    	<div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <label class="control-label" for="success">Categoria da Notícia</label>
+                        </div>
+                            <div class="panel-body">
+                                
+                                <select name="categoria-noticia" required="">
 												<option	selected="selected" value="">Selecione uma Categoria</option>
 												<?php
 
@@ -180,12 +179,14 @@ require_once "includes/header.php";
 
 												
           									 </select>
-										</td>
-									</tr>
-								</tbody>
-							</table>				
-						</section>
-						
+                                
+                            </div>
+                    	</div>
+                	</div>
+                    
+                    
+						<!--Fim quarta tabela-->
+                        
 					</section>
 					</form>
 					<!--fim das CHAVES if(!isset($_GET["id_nt_ed"])) -->
@@ -207,15 +208,19 @@ require_once "includes/header.php";
 						}
 
 					?>
+                    
+                    
+                    
 						<!-- INICIO DO CODIGO DUPLICADO  EDITAR NOTICIAS-->
 						<form action="acoes/atualizar-noticia.php?id_nt_up=<?php echo $id_nt; ?>" method="POST" enctype="multipart/form-data">
-						<section id="publicar-noticia-left">
+
+				<section id="publicar-noticia-left">
 
 				
 					<table>
 					<tbody>
 						<tr>
-							<td><input type="text" required="" name="titulo-noticia" value="<?php echo $titulo_ntE;  ?> "  /></td>
+							<td><input type="text" name="titulo-noticia" value="<?php echo $titulo_ntE;  ?>" /></td>
 						</tr>
 						<tr>
 							<td><textarea name="conteudo-noticia" id="maxW" ><?php echo $conteudo_ntE; ?></textarea></td>
@@ -224,66 +229,66 @@ require_once "includes/header.php";
 				</table>		
 				</section>
 					<section id="publicar-noticia-right">
+				    <!--Primeira tabela-->
+                      <div class="col-md-12 col-sm-5">
+                    	<div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <button type="submit" class="btn btn-success" name="publicar">Publicar Notícia</button>
+                            <button type="submit" class="btn btn-success" name="salvar-rascunho">Salvar </button>
+                        </div>
+                            <div class="panel-body">
+                                <p>Data Publicação: <?php echo $dataPub_ntE; ?></p>
+                                <p>Autor: <?php echo $autorPub_ntE; ?></p>
+                            </div>
+                    	</div>
+                	</div>
+                    <!--Fim primeira tabela-->
+                    
+					  
+                      
+                      
 						
-						<section id="publicar-nota-informacoes">
-							<table>
-								<tbody>
-									<tr>
-										<td align="left"><input type="submit" name="publicar" value="Publicar Notícia" /></td>
-										<td align="right"><input type="submit" name="salvar-rascunho" value="Salvar Notícia" /></td>
-									</tr>
-									<tr>
-										<td>Data Publicação:</td>
-										<td align="right"><?php echo $dataPub_ntE; ?></td>
-									</tr>
-									<tr>
-										<td>Autor:</td>
-										<td align="right"><?php echo $autorPub_ntE; ?></td>
-									</tr>
-								</tbody>
-							</table>
-						</section>
+                        <!--Segunda Tabela-->
+                       	<div class="col-md-12 col-sm-4">
+                    	<div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <label class="control-label" for="success">Tags de Pesquisa</label>
+                        </div>
+                            <div class="panel-body">
+                                <p><input type="text" name="tags-pesquisa" value="<?php echo $tagSear_ntE; ?>" required="" /></td></p>
+                                
+                            </div>
+                    	</div>
+                	</div>
+                    	<!--Fim segunda Tabela-->
+                        
+							
+                        
+                        <!--Terceira tabela-->
+                        <div class="col-md-12 col-sm-4">
+                    	<div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <label class="control-label" for="success">Imagem da Notícia</label>
+                        </div>
+                            <div class="panel-body">
+                                <input type="text" id="imagem-noticia-carregar" placeholder="Selecione Imagem"value="<?php echo $imagem_ntE ?>" required />
+								<input type="file" hidden id="imagem-carregada" name="imagem-noticia" />
+                                
+                            </div>
+                    	</div>
+                	</div>
+						<!--Fim terceira tabela-->
 						
-						<section id="publicar-nota-informacoes">
-							<table>
-								<tbody>
-									<tr>
-										<td>Tags de Pesquisa</td>
-									</tr>
-									<tr>
-										<td><input type="text" name="tags-pesquisa" value="<?php echo $tagSear_ntE; ?>" required="" /></td>
-									</tr>
-									<tr>
-										<td id="tags-escolhidos"></td>
-									</tr>
-								</tbody>
-							</table>
-						</section>
 						
-							<section id="publicar-nota-informacoes">
-							<table>
-								<tbody>
-									<tr>
-										<td>Imagem da Notícia </td> <h6>*Imagem Obrigatória</h6>
-									</tr>
-									<tr>
-			    							<td>                                          <!--value="<?php echo $imagem_ntE ?>"-->
-											<input type="text" id="imagem-noticia-carregar"  required=""/>
-											<input type="file" hidden id="imagem-carregada" name="imagem-noticia" value="<?php echo $imagem_ntE ?>"/></td>
-									</tr>
-								</tbody>
-							</table>				
-						</section>
-						
-						<section id="publicar-nota-informacoes">
-							<table>
-								<tbody>
-									<tr>
-										<td>Categoria da Notícia</td>
-									</tr>
-									<tr>
-										<td>
-											<select name="categoria-noticia" required="">
+                        <!--quarta tabela-->
+                        <div class="col-md-12 col-sm-4">
+                    	<div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <label class="control-label" for="success">Categoria da Notícia</label>
+                        </div>
+                            <div class="panel-body">
+                                
+                                <select name="categoria-noticia" required="">
 												<option	selected="selected" value="">Selecione uma Categoria</option>
 												<?php
 
@@ -299,14 +304,15 @@ require_once "includes/header.php";
 
 												
           									 </select>
-										</td>
-									</tr>
-								</tbody>
-							</table>				
-						</section>
-						
+                                
+                            </div>
+                    	</div>
+                	</div>
+                    
+                    
+						<!--Fim quarta tabela-->
+                        
 					</section>
-					<!--FIM DO CODIGO DUPLICADO-->
 					</form>
 					<?php } ?>
 				<!--fim do segundo form-->
@@ -442,5 +448,4 @@ require_once "includes/header.php";
 		</section> <!-- Wrapper -->
 		
 	</main>
-
 <?php require "includes/footer.php"; ?>

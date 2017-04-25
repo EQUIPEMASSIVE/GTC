@@ -3,82 +3,109 @@ require "includes/header.php";
 
 
 ?>
-	<main>
+	
+
 		
-		<section id="wrapper">
-			
-			<section id="content">
-			
-			<section id="contagem">
-				
-				<table>
-					<tbody>
-						<tr>
-							<td class="table-marc">Notícias Publicadas</td>
-							<td class="table-val"><?php
-								$SQL = mysql_query("SELECT * FROM noticias WHERE status=1");
-								echo mysql_num_rows($SQL);	
-							?></td>
-							<td>&nbsp;</td>
-							<td class="table-marc">Comentários Aprovados</td>
-							<td class="table-val">145</td>
-						</tr>
-						<tr>
-							<td class="table-marc">Categorias Ativas</td>
-							<td class="table-val"><?php
-								$SQL = mysql_query("SELECT * FROM categoria");
-								echo mysql_num_rows($SQL);	
-							?></td>
-							<td>&nbsp;</td>
-							<td class="table-marc">Comentários Novos</td>
-							<td class="table-val">25</td>
-						</tr>							
-					</tbody>
-				</table>
-				
-			</section>
-		
-		<section id="nota-rapida">
-			
-			<h1>Publicar Nota Rápida</h1>
-			
-			<form action="acoes/publicar-notaR.php" method="POST">
-			<table>
-				<tbody>
-					<tr><td>Titulo da Postagem</td></tr>
-					<tr><td><input type="text" name="titulo-postagem" required="required" /></td></tr>
-					<tr><td>Descrição da Nota</td></tr>
-					<tr><td><textarea name="descricao-nota" required="required" ></textarea></td></tr>
-					<tr><td>Tags de Pesquisa</td></tr>
-					<tr><td><input type="text" name="tags-pesquisa" required="required" /></td></tr>
-					<tr><td><input type="submit" name="publicar-nota" value="Publicar Nota" /></td></tr>
-				</tbody>				
-			</table>
-			</form>
-			
-		</section> <!-- Nota Rápida -->
-		
-		<section id="links-ultimas-noticias">
-			
-			<h1>Últimas Notícias</h1>
-			
-			<ul>
+    <div class="content-wrapper">
+    
+        <div class="container">
+        <div class="row-fluid">
+  
+
+        <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------- -->    
+
+  
+        <div class="col-md-6">     
+                <div class="Compose-Message">               
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            Publicar Notícia Rápida/Rascunho
+                        </div>
+                        <div class="panel-body">
+                         <form action="acoes/publicar-notaR.php" method="POST">   
+                            <label>Titulo da Postagem: </label>
+                            <input type="text" class="form-control" name="titulo-postagem" required />
+                            <label>Tags de Pesquisa:  </label>
+                            <input type="text" class="form-control" name="tags-pesquisa" />
+                            <label>Descrição da Notícia : </label>
+                            <textarea rows="9" class="form-control" name="descricao-nota"></textarea>                     
+                            <input  class="btn btn-warning" type="submit" name="publicar-nota" value="Publicar Nota" />
+                          </form>
+                        </div>
+                        <div class="panel-footer text-muted">
+                            <strong>Note : </strong>Todas as postagem aqui feitas iram para rascunhos!
+                        </div>
+                    </div>
+                </div>
+            
+            </div><!--Fim col-->    
+
+        <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------- -->    
+
+        <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                            <h3>Atualização</h3>
+                    </div>
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-bordered table-hover">
+                                    <thead>
+                                        <tr>
+                                            <td>Noicias Publicadas</td>
+                                            <td><?php
+            								$SQL = mysql_query("SELECT * FROM noticias WHERE status=1");
+            								echo mysql_num_rows($SQL);	
+							                 ?></td>
+                                            
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Categorias Ativas</td>
+                                            <td><?php
+            								$SQL = mysql_query("SELECT * FROM categoria");
+            								echo mysql_num_rows($SQL);	
+							                 ?></td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div> 
+                </div><!--fim col-->
+        
+        <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+           
+            <div class="col-md-6">
+                <div class="alert alert-info">
+                   <h1>Últimas Notícias</h1>
+				<ul>
 				<?php
 					$SQL_NI = mysql_query("SELECT * FROM noticias WHERE status=1");
 					while($lh = mysql_fetch_array($SQL_NI)){
 				?>
-					
 					<li><?php echo $lh["titulo"]; ?></li>
-					<?php } ?>
-					
-			</ul>
+					<?php } ?>	
+				</ul>
+                </div>
+                    
+            </div><!--Fim col-->
+            
+         <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------- -->    
+
+            
+            
+           
+          
+            
+                </div><!--fim row-->
+            </div>
+        </div>
+    
+         
+        
 			
-		</section>
-			
-			</section> <!-- Content -->
-				
-		</section> <!-- Wrapper -->
-		
-	</main>
 
 <?php require "includes/footer.php"; ?>
