@@ -37,10 +37,10 @@
 
                             <!--Product Card-->
                             <div class="product-wrapper" >
-                           
+                         <br>  
                     <h1 class="h1-responsive" > <a href="index.php" style="color: #000" class="text-center"><strong><?php echo $rn['titulo'];?></h1> </a></strong>
                          
-              
+              			
                    
                       <span style="color: #808080" > Publicado dia: <?php echo $dataEX; ?> &nbsp&nbsp  </span>
                       <span style="color: #808080" > Por: <?php echo $rn["autorPub"]; ?> &nbsp&nbsp  </span>
