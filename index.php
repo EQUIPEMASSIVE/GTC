@@ -92,71 +92,32 @@
 
 <main>
 
+  
 
-       
+                        <?php                  //SELECIONA TODOS DADOS DAS TABELAS noticias "JUNÇÃO INTERNA" com categoria ONDE noticia e categoria tem que ser = categoria.id_categoria pra nao duplicar                                     //Na ordem do recente para o ultimo
+                            $SQL_B = mysql_query("SELECT * FROM noticias INNER JOIN categoria ON (noticias.categoria = categoria.id_categoria)  ORDER BY id_noticia DESC");
+
+                            while ($pusha = mysql_fetch_array($SQL_B)) {
+                            
+                        ?>  
+
 
         <!--Main layout-->
         <div class="container"> 
                 <div class="row-fluid">   
 
 
-               
+                        
+          
 
 
 <!--Section: Blog v.4-->
 <section class="section section-blog-fw">
 
-
-                    <!--Categoria 1_____________________________CATEGORIA DIVERSOS______D, dv, dvn___________________________________________-->                
-                    <?php
-
-                        $SQL_CT = mysql_query("SELECT * FROM categoria");
-                    while ($ct = mysql_fetch_array($SQL_CT)){
-
-                        $nome_catIndex       = $ct["nome_categoria"];//puxa o nome da categoria
-                        
-
-
-
-                      }
-
-
-                                                                         //Na ordem do recente para o ultimo
-                            $SQL_B = mysql_query("SELECT id_noticia, imagem, titulo, conteudo, datapub, categoria FROM noticias ORDER BY id_noticia DESC LIMIT 6");
-
-                            while ($bn = mysql_fetch_array($SQL_B)) {
-                                $id_index        = $bn["id_noticia"];
-                                $titulo_index    = $bn["titulo"];
-                                $conteudo_index  = $bn["conteudo"];
-                                $imagem_index    = $bn["imagem"];
-                                $dataPub_index    = $bn["datapub"];
-                                $categoria_index    = $bn["categoria"];
-
-                        $dataPub_index = explode("-", $bn["datapub"]);
-                        $dataEX = $dataPub_index[2]."/".$dataPub_index[1]."/".$dataPub_index[0];
-                          
-
-
-                    ?>
-                            <br>
-
-                    <div class="card">
-                        <h3 class="price"><span class="badge red darken-1"> <?php echo $categoria_index; ?></span></h3> arruma categoria
-                        <h1><a class="h1" href="noticia.php?id=<?php echo $id_index;?>"><?php echo $titulo_index; ?></a></h1>
-
-                        <a href="noticia.php?id=<?php echo $bn['id_noticia']; ?>"><img src="cp/imagens/imgnoticia/<?php echo $bn['imagem']; ?>" alt="Postagem 1"/></center></a>
-                        <p><button type="button" class="btn btn-elegant btn-sm">Data de Publicação: <?php echo $dataEX; ?></button> 
-                        
+               
+                                            
                        
-                        <!--<button type="button" class="btn btn-elegant btn-sm">Categoria: <?php echo $nome_catIndex; ?></button>-->
-
-                     </div>
-
-                        <?php } ?>
-
-
-
-
+                   
 
 
 
@@ -170,19 +131,27 @@
                 
                             <!--Card Image-->
 
-            <div class="card">
+            <div class="card block">
             
-             <!--   
+                <h3 href="categoria.php?id=<?php echo $pusha['id_categoria']; ?>" class="price"><span class="badge red darken-1"> <?php echo $pusha['nome_categoria']; ?></span></h3>
+            
+                <img src="cp/imagens/imgnoticia/<?php echo $pusha['imagem']; ?>" href="noticia.php?id=<?php echo $pusha['id_noticia']; ?>" alt="Titulo na Notícia" /> <center>
+                <p> <button type="button" class="btn btn-elegant btn-sm">Data do Evento: <?php echo $pusha['datapub'];?></button> 
+                    <button type="button" class="btn btn-elegant btn-sm">Horario: 19:00h</button>
+                    <button type="button" class="btn btn-elegant btn-sm">Local: Auditório Unama, Belém-PA </button>
+                    <button type="button" class="btn btn-elegant btn-sm">Categoria:<?php echo $pusha['nome_categoria'];?></button>
+
                  </p>
 
                     <!--Title--> 
 
-                
+                <h1><a class="h1" href="noticia.php?id=<?php echo $pusha['id_noticia']; ?>"><?php echo $pusha['titulo'];?></a></h1>
 
 <br>
 <h9>
                  
-               
+                Publicado no dia: <?php echo $pusha['datapub'];?>
+
 
                     </h9>
 </center>
@@ -213,19 +182,17 @@
            </div>
             <!--/Post data-->
 
-                                      
-
+           
         </div>
     </div>
 
-      
+      <?php } ?>
     <!--/First row-->
         </div>     <!--/.Class="row-fluid"--> 
     </div>    <!--/.Content Container-->
 </section>
 <!--/Section: Blog v.4-->
 </div></div>
-
 
 
 
