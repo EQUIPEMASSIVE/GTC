@@ -9,29 +9,27 @@
   	       <div class="row">
   			   <div class="col-md-5 col-sm-6">
                       <!--    Striped Rows Table  -->
-         <div class="panel panel-default">
+         <div class="panel panel-danger">
               <div class="panel-heading">Cadastar Novo Administrador</div>
                   <div class="panel-body">
                       <div class="table-responsive">
   		
   		    <form action="acoes/cadastrar-adminstrador.php" method="POST" onsubmit="return validarFormCat();">
 
-	  			<div class="form-group has-success">
+	  			<div class="form-group has-warning">
 		         	  <label class="control-label" for="success">Nome</label>
-		         	  <input class="form-control" id="success" type="text" name="adm-name" maxlength="50" required="" />
+		         	  <input class="form-control" id="success" type="text" name="adm-name" maxlength="50" required="required" />
 
 		         	  <label class="control-label" for="success">Email</label> 	 
-		         	  <input class="form-control" id="success" type="email" name="adm-email"  maxlength="100" required="" />
+		         	  <input class="form-control" id="success" type="email" name="adm-email"  maxlength="100" required="required" />
 
 		         	  <label class="control-label" for="success">Usúario</label>
-		         	  <input class="form-control" id="success" type="text" name="adm-user" maxlength="30" required="" />
-	         	</div> 
-
-	         	<div class="form-group has-warning">   	
+		         	  <input class="form-control" id="success" type="text" name="adm-user" maxlength="30" required="required" />
+	         	
 		         	  <label class="control-label" for="warning">Senha</label>
-		    		  <input type="password" class="form-control" id="warning" name="adm-pass" maxlength="15" required="" />
+		    		  <input type="password" class="form-control" id="warning" name="adm-pass" maxlength="15" required="required" />
 		   		</div> 		  	
-					  <button type="submit" class="btn btn-success">Cadastrar</button>
+					  <button type="submit" class="btn btn-danger">Cadastrar</button>
   			
   
   		    </form>	
@@ -46,7 +44,7 @@
                 
             		<div class="col-md-7 col-sm-6">
                       <!--    Striped Rows Table  -->
-                    <div class="panel panel-default">
+                    <div class="panel panel-danger">
                         <div class="panel-heading">
                             Categorias Cadastradas
                         </div>

@@ -1,75 +1,68 @@
 <?php
- require_once "includes/configuration.php";
- require_once "includes/header.php"
-?>
-	<div class="content-wrapper">	
-        <div class="container">
-        	<div class="row">			
-        		<div class="col-md-6 col-sm-6">
-                    <div class="panel panel-primary">
-                    
-                        <div class="panel-heading">
-                            Alterar Perfil
-                        </div>
-                        	<div class="panel-body">
-                        <?php 
+require_once "includes/configuration.php";
+require_once "includes/header.php"?>
+<div class="content-wrapper">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-sm-6">
+				<div class="panel panel-primary">
 
-									$admin_log = $_SESSION["usuario"];
-									$admin_pas = $_SESSION["senha"];
+					<div class="panel-heading">Alterar Perfil</div>
+					<div class="panel-body">
+                        <?php
+																								
+																								$admin_log = $_SESSION ["usuario"];
+																								$admin_pas = $_SESSION ["senha"];
+																								
+																								$SQL_P = mysql_query ( "SELECT * FROM administradores WHERE usuario='$admin_log' AND senha = '$admin_pas' " );
+																								
+																								while ( $ln = mysql_fetch_assoc ( $SQL_P ) ) {
+																									$id_adm = $ln ['id'];
+																									$nm_adm = $ln ['nome'];
+																									$em_adm = $ln ['email'];
+																									$us_adm = $ln ['usuario'];
+																									$im_adm = $ln ['imgPerfil'];
+																								}
+																								
+																								?>
+                            <form
+							action="acoes/atualizar-perfil.php?id_adm=<?php echo $id_adm; ?>"
+							method="POST" enctype="multipart/form-data">
 
-									$SQL_P = mysql_query("SELECT * FROM administradores WHERE usuario='$admin_log' AND senha = '$admin_pas' ");
 
-									while($ln = mysql_fetch_assoc($SQL_P)){
-										$id_adm = $ln['id'];
-										$nm_adm = $ln['nome'];
-										$em_adm = $ln['email'];
-										$us_adm = $ln['usuario'];
-										$im_adm = $ln['imgPerfil'];
-									}
+							<img src="imagens/perfil/<?php echo $im_adm; ?>" width="100"
+								height="80"> <br /> <label>Nome: </label> <label><?php echo $nm_adm; ?></label>
 
-								?>
-                            <form action="acoes/atualizar-perfil.php?id_adm=<?php echo $id_adm; ?>" method="POST" enctype="multipart/form-data">
-									
-                                        <div class="card">
-                                        <img  src="imagens/perfil/<?php echo $im_adm; ?>" width="100" height="80">
-                                    	<br/>
-                                  		</div>	
+							<br /> <label>Email: </label> <br /> <input type="text"
+								name="adm-email-up" value="<?php echo $em_adm; ?>" /> <br /> <label>Usuário:</label>
+							<br /> <input type="text" name="adm-user-up"
+								value="<?php echo $us_adm; ?>"> <br /> <label>Senha: </label> <br />
+							<input type="password" name="adm-pass-up" maxlength="15"
+								required="required"> <br /> <br /> <input type="text"
+								id="imagem-noticia-carregar" placeholder="Selecione uma imagem"
+								required="required" /> <input type="file"
+								class="hidden-xs hidden-sm hidden-md hidden-lg"
+								id="imagem-carregada" name="adm-imgPerfil-up" />
 
-                                    	<label>Nome: </label>
-										<label><?php echo $nm_adm; ?></label>
-									     <br>
-                                    						
-										<label>Email: </label>
-                                        <br/>
-										<input class="form-control" type="text" name="adm-email-up" value="<?php echo $em_adm; ?>" />
-									
-										<label>Usuário:</label>
-                                        <br/>
-										<input class="form-control" type="text" name="adm-user-up" value="<?php echo $us_adm; ?>">
-									
-										<label>Senha: </label>
-                                        <br/>
-										<input class="form-control" type="password" name="adm-pass-up" maxlength="15" required="">
-										<br/>
-										
-								
-                                
-								
-                                 
-                                        
-                                    	<br/>
-                                        <input type="text" id="imagem-noticia-carregar" placeholder="Selecione uma imagem" required="" />
-                                        <input type="file" hidden="" n id="imagem-carregada" name="adm-imgPerfil-up" />
-                                   		<br/>
-                                 
-                    					
-                                        <button type="submit" class="btn btn-success"><i class=" fa fa-refresh "></i> Atualizar</button>
-							</form>
-                        </div>
-                        
-                    </div>
-                </div>
-             <!--Fim div row-->   
-        </div><!--Fim container-->
-      </div> <!--div.content-wrapper--> 
+
+
+							<button type="submit" class="btn btn-default">
+								<i class=" fa fa-refresh "></i> Atualizar
+							</button>
+						</form>
+					</div>
+
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-6 col-md-4">
+						<span class="hidden-xs hidden-sm visible-md visible-lg fa fa-refresh" style="font-size: 17em;text-shadow: 11px 22px 5px rgb(51, 51, 51);color: #337ab7;margin: 107px 226px;">
+						</span>					
+				</div>
+			</div>
+			<!--Fim div row-->
+		</div>
+		<!--Fim container-->
+	</div></div>
+	<!--div.content-wrapper--> 
 <?php require "includes/footer.php"; ?> 

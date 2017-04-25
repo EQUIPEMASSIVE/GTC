@@ -7,7 +7,7 @@ require_once "includes/header.php"
   	       <div class="row">
   			   <div class="col-md-6 col-sm-6">
                       <!--    Striped Rows Table  -->
-         <div class="panel panel-default">
+         <div class="panel panel-warning">
               <div class="panel-heading">Cadastrar nova categoria</div>
                   <div class="panel-body">
                       <div class="table-responsive">
@@ -16,8 +16,8 @@ require_once "includes/header.php"
   		
           <h5>Informe o nome da(s) categorias(s) abaixo</h5>
          
-    			<input  class="form-control" type="text" name="categorias-nomes" id="categorias-nomes" required />
-		      <button type="submit" class="btn btn-success">Cadastrar</button>
+    			<input type="text" name="categorias-nomes" id="categorias-nomes" required />
+		      <button type="submit" class="btn btn-warning">Cadastrar</button>
   				<h5>Sempre com virgula (,) o nome das categorias.</h5>
   
   		    </form>	
@@ -32,7 +32,7 @@ require_once "includes/header.php"
                 
             		<div class="col-md-6 col-sm-6">
                       <!--    Striped Rows Table  -->
-                    <div class="panel panel-default">
+                    <div class="panel panel-warning">
                         <div class="panel-heading">
                             Categorias Cadastradas
                         </div>

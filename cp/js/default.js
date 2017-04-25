@@ -35,17 +35,17 @@ $(function() {
 		$(todasasNoticias).hide();
 		$(lixeira).hide();
 		$(rascunhos).hide();
-		
+	
 
         ////////////////////////////////////////////////////////
 
 		$(linkPublicar).click(function(){//funcao publicar noticia
 
 			//1
-			$(linkTodasNot).removeClass("activeColor");
-			$(linkRascunho).removeClass("activeColor");
-			$(linkLixeira).removeClass("activeColor");
-			$(linkPublicar).addClass("activeColor");
+//			$(linkTodasNot).removeClass("");
+//			$(linkRascunho).removeClass("");
+//			$(linkLixeira).removeClass("");
+//			$(linkPublicar).addClass("btn btn-primary");
 
 
 
@@ -61,10 +61,10 @@ $(function() {
 
 			//2
 
-			$(linkRascunho).removeClass("activeColor");
-			$(linkLixeira).removeClass("activeColor");
-			$(linkPublicar).removeClass("activeColor");
-			$(linkTodasNot).addClass("activeColor");
+//			 $(linkRascunho).removeClass("btn btn-info");
+//			 $(linkLixeira).removeClass("btn btn-info");
+//			 $(linkPublicar).removeClass("btn btn-info");			
+//			$(linkTodasNot).addClass("btn btn-primary");
 
 			$(publicarNoticia).slideUp(300, function(){
 
@@ -82,11 +82,11 @@ $(function() {
 
 			//3
 
-			
-			$(linkLixeira).removeClass("activeColor");
-			$(linkPublicar).removeClass("activeColor");
-			$(linkTodasNot).removeClass("activeColor");
-			$(linkRascunho).addClass("activeColor");
+//			
+//			$(linkLixeira).removeClass("btn btn-info");
+//			$(linkPublicar).removeClass("btn btn-info");
+//			$(linkTodasNot).removeClass("btn btn-info");
+//			$(linkRascunho).addClass("btn btn-primary");
 
 			
 				$(publicarNoticia).hide();
@@ -100,27 +100,64 @@ $(function() {
 		///////////////////////////////////////////////////////
 
 		$(linkLixeira).click(function(){//funcao lixeira
-
-			$(linkPublicar).removeClass("activeColor");
-			$(linkTodasNot).removeClass("activeColor");
-			$(linkRascunho).removeClass("activeColor");
-			$(linkLixeira).addClass("activeColor");
-
-           
+//
+//			$(linkPublicar).removeClass("btn btn-info");
+//			$(linkTodasNot).removeClass("btn btn-info");
+//			$(linkRascunho).removeClass("btn btn-info");
+//			$(linkLixeira).addClass("btn-primary");
 
 				$(publicarNoticia).hide();
 				$(todasasNoticias).hide();
 				$(rascunhos).hide();
 				$(lixeira).slideDown(500);
-
-
-
-
 			});
 
+////////////////////////MUDAR DE COR O MENU ATIVO \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+		var menuPaginaInicial       = $("#menu-pagina-inicial");
+		var menuGerenciarNoticia    = $("#menu-gerenciar-noticia");
+		var menuGerenciarCategoria  = $("#menu-gerenciar-categoria");
+		var menuAdministracaoPortal = $("#menu-administracao-portal");
 
+//////////////////Pagina Inicial\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+		
+		$(menuPaginaInicial).click(function(){
+			
+			$(menuAdministracaoPortal).removeClass("menu-top-active");
+			$(menuGerenciarCategoria).removeClass("menu-top-active");
+			$(menuGerenciarNoticia).removeClass("menu-top-active");
+			$(menuPaginaInicial).addClass("menu-top-active");
+			
+		});
 
+///////////////////Gerenciar Noticia\\\\\\\\\\\\\\\\\\\\\\\\\
+		$(menuGerenciarNoticia).click(function(){
+			
+			$(menuAdministracaoPortal).removeClass("menu-top-active");
+			$(menuGerenciarCategoria).removeClass("menu-top-active");
+			$(menuPaginaInicial).removeClass("menu-top-active");
+			$(menuGerenciarNoticia).addClass("menu-top-active");
+			
+		});
+		
+///////////////////Administração Portal\\\\\\\\\\\\\\\\\\\\\\\\\
+		$(menuAdministracaoPortal).click(function(){
+			
+			$(menuGerenciarNoticia).removeClass("menu-top-active");
+			$(menuGerenciarCategoria).removeClass("menu-top-active");
+			$(menuPaginaInicial).removeClass("menu-top-active");
+			$(menuAdministracaoPortal).addClass("menu-top-active");
+			
+		});
+		
+///////////////////Gerenciar Categoria\\\\\\\\\\\\\\\\\\\\\\\\\
+		$(menuGerenciarCategoria).click(function(){
 
+			$(menuAdministracaoPortal).removeClass("menu-top-active");
+			$(menuGerenciarCategoria).removeClass("menu-top-active");
+			$(menuPaginaInicial).removeClass("menu-top-active");
+			$(menuGerenciarCategoria).addClass("menu-top-active");
+
+			});
 
 
 });// fim do jQuerry
