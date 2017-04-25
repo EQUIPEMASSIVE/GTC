@@ -114,7 +114,7 @@
     <nav class="navbar navbar-toggleable-md navbar-dark fixed-top scrolling-navbar">
                <div class="container">
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav1" aria-controls="navbarNav1" aria-expanded="false" aria-label="Toggle navigation">
-                <a class="navbar-brand" href="index.php"><img src="img/logoIndex.png" /></a>
+                <a class="navbar-brand" href="index.php"><img src="..img/logoIndex.png" /></a>
             </button>
 
 
