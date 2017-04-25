@@ -149,7 +149,7 @@
                         <!--Text-->
                    
                      
-                     <p><?php echo  substr($pusha['conteudo'], 0, 512);?><a href="noticia.php?id=<?php echo $pusha['conteudo']; ?>">...Continue Lendo</a></p>
+                     <p><?php echo  substr($pusha['conteudo'], 0, 1);?><a href="noticia.php?id=<?php echo $pusha['conteudo']; ?>">...Continue Lendo</a></p>
                      
                      
                      
