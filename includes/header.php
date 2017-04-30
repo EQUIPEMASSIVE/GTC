@@ -44,25 +44,11 @@
 
     <!--CONFIGURAÇAO SLIDE NOVO HESRON ------------------------------------------------- -->
 
-    <meta name="description" content="Descrição da Página">
     
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
     
-    <meta property="og:locale" content="pt_BR" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="http://www.nomedosite.com.br/imagens/facebook.jpg" />
-    <meta property="og:image:type" content="image/jpeg" />
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="628">
-    <meta property="og:site_name" content="Nome do Site">
-    <meta property="og:title" content="Titulo da Página" />
-    <meta property="og:description" content="Descrição da Página" />
-    <meta property="og:url" content="http://www.nomedosite.com.br" />
-    
-    <link rel="shortcut icon" href="imagens/icons/favicon.ico" type="image/x-icon" />    
-    <link rel="apple-touch-icon" href="imagens/icons/apple-touch-icon.png" />
+  
 
-    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700' rel='stylesheet' type='text/css'>
+    
     <link href="css/font.css" rel="stylesheet" type="text/css"/>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <link href="css/animate.css" rel="stylesheet" type="text/css" /> 
