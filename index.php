@@ -7,91 +7,31 @@
 
 
 
-    <!--Carousel Wrapper-->
-    <div id="carousel-example-3" class="carousel slide carousel-fade white-text" data-ride="carousel" data-interval="false">
-        <!--Indicators-->
-        <ol class="carousel-indicators">
+<br><br>
+        <div class="owl-theme owl-carousel" >
+            
+                <?php                                                       //Na ordem do recente para o ultimo
+                            $SQL_B = mysql_query("SELECT id_noticia, imagem, titulo FROM noticias ORDER BY id_noticia DESC LIMIT 5");
 
-            <li data-target="#carousel-example-3" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel-example-3" data-slide-to="1"></li>
-            <li data-target="#carousel-example-3" data-slide-to="2"></li>
-        </ol>
-        <!--/.Indicators-->
+                            while ($bn = mysql_fetch_array($SQL_B)) {
+                            
+                ?>
+       
+            <div>
+                <a href="noticia.php?id=<?php echo $bn['id_noticia']; ?>"  class="img-responsive" ><img src="cp/imagens/imgnoticia/<?php echo $bn['imagem']; ?>" alt="Postagem 1"/></a>
 
-        <!--Slides-->
-        <div class="carousel-inner" role="listbox">
-
-            <!-- First slide -->
-            <div class="carousel-item active view hm-black-light" style="background-image: url('img/postbg/1p.jpg'); background-repeat: no-repeat; background-size: cover;">
-                
-                <!-- Caption -->
-                <div class="full-bg-img flex-center red-text">
-                    <ul class="animated fadeIn col-md-12">
-
-                     <li>
-                          <p class="badge black">New evento treelele novinho em folha mesmewquehwqiuEHWQIEUWQHEIUWQHEWQUIeheuiheiuwqhewquiehwquiehwquiwho</p>
-                         
-                     </li>
-                        
-
-                    </ul>
-                </div>
-                <!-- /.Caption -->
-                
+                <h1 class="h1-responsive"> <a href="noticia.php?id=<?php echo $bn['id_noticia']; ?>" style="color: #000"><?php echo $bn['titulo'];?></h1></a>
             </div>
-            <!--/.First slide-->
+            
+            <?php } ?>
+        </div><!--/owl-carousel-->
 
-            <!-- Second slide -->
-            <div class="carousel-item view hm-black-light" style="background-image: url('img/postbg/2p.jpg'); background-repeat: no-repeat; background-size: cover;">
-                
-                <!-- Caption -->
-                <div class="full-bg-img flex-center white-text">
-                    <ul class="animated fadeIn col-md-12">
-                      
-                        <li>
-                            <p class="badge black">New evento treelele novinho em folha mesmewquehwqiuEHWQIEUWQHEIUWQHEWQUIeheuiheiuwqhewquiehwquiehwquiwho</p>
-                        </li>
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/owl.carousel.min.js"></script>
 
-                    </ul>
-                </div>
-                <!-- /.Caption -->
-                
-            </div>
-            <!--/.Second slide -->
-
-            <!-- Third slide -->
-            <div class="carousel-item view hm-black-light" style="background-image: url('img/postbg/3p.png'); ;">
-                
-                <!-- Caption -->
-                <div class="full-bg-img flex-center white-text">
-                    <ul class="animated fadeIn col-md-12">
-                       
-                            <p>Nome evento vent3</p>
-                        </li>
-
-                    </ul>
-                </div>
-                <!-- /.Caption -->
-                
-            </div>
-            <!--/.Third slide-->
-        </div>
-        <!--/.Slides-->
-
-        <!--Controls-->
-        <a class="carousel-control-prev" href="#carousel-example-3" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carousel-example-3" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-        <!--/.Controls-->
-    </div>
-    <!--/.Carousel Wrapper-->
-<br>
-
+        
+<br><hr>
+   
 
 <main>
     <br>
