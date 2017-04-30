@@ -36,18 +36,29 @@ require "includes/header.php";
 			<!--Fim col-->
 
 
-			<div class="col-md-6">
-				<div class="alert alert-info">
-					<h1 style="margin-left: 10px;">Últimas Notícias</h1>
-					<ul style="margin-left: 8px;">
-				<?php
-				$SQL_NI = mysql_query ( "SELECT * FROM noticias WHERE status=1" );
-				while ( $lh = mysql_fetch_array ( $SQL_NI ) ) {
-					?>
-					<li><?php echo $lh["titulo"]; ?></li>
-					<?php } ?>	
-				</ul>
-				</div>
+			<div class="col-md-6">	
+				<table  class="table table-striped table-bordered table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th height="48">Ultimas Noticias</th> 
+                                            <th height="48">Data</th>   
+                                        </tr>
+                                        <?php
+										$SQL_NI = mysql_query ( "SELECT * FROM noticias WHERE status=1" );
+										while ( $lh = mysql_fetch_array ( $SQL_NI ) ) {
+										?>
+
+                                  </thead>
+                                     
+                                        <tr>
+										<td><?php echo $lh["titulo"]; ?></td> 
+										<td><?php echo $lh["datapub"]; ?></td> 
+										</tr>
+										
+                                    
+                                    <?php } ?>
+                       </table>
+                       
 
 			</div>
 			<!--Fim col-->
