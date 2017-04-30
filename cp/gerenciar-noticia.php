@@ -64,7 +64,7 @@ require_once "includes/header.php";
 					<div class="panel panel-primary">
 						<div class="panel-heading">
 							<input type="submit" class="btn btn-info" value="Publicar Notícia" />
-<input type="submit" class="btn btn-warning" name="salvar-rascunho" value="Salvar Notícia" style="margin-left: 85px;"/>
+
 						</div>
 						<div class="panel-body">
 							<p>
