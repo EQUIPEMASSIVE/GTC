@@ -11,7 +11,7 @@
     
 
 
-
+<br>
     <!--Content-->
 <br>
     <div class="container">
@@ -72,12 +72,12 @@
 
  
             <!--First row-->
-           
+            
                 <div class="col-md-12">
                 <!--Card-->
                 <div class="card wow fadeIn"  data-wow-delay="0.3s">
 
-
+               
 
                     <!--Card image-->
                     <div class="card collection-card">
