@@ -6,7 +6,7 @@ require_once "includes/header.php";
 <main>
 <div class="container">
 <!-- 	<div id="submenu"> -->
-<div class="table-responsive" id="menu-top" style="border: none;">
+<div class="table-responsive" id="menu-top">
 					<?php
 					
 					$SQL_RS = mysql_query ( "SELECT status FROM noticias WHERE status=0" );
@@ -18,7 +18,8 @@ require_once "includes/header.php";
 					$CNT_LX = mysql_num_rows ( $SQL_LX );
 					
 					?>
-<table style="margin-top: 10px;border=none;">
+<br>					
+<table>
 		<tr >
 			<td>
 			<button style="border-radius: 4px;margin-right: 10px;margin-bottom: 5px;" type="submit" id="publicar-noticia-menu" class="btn btn-primary" >Compor Texto</button>
@@ -28,7 +29,7 @@ require_once "includes/header.php";
 			</td>	
 		</tr>
 </table>
-			
+<br>
 	</div>
 	<div class="row">
 
@@ -42,13 +43,12 @@ require_once "includes/header.php";
 				enctype="multipart/form-data">
 
 				<!-- SIDBAR RIGTH -->
-				<div class="col-xs-12 col-md-8" style="margin: 13px -25px;">
+				<div class="col-md-8">
 
 					<div class="grid-container" id="publicar-noticia-left">
 						<div class="grid-width-100">
-							<input type="text" name="titulo-noticia"
-								placeholder="Coloque o título aqui"
-								style="width: 100%; margin-bottom: 10px;" />
+							<input class="form-control" type="text" name="titulo-noticia"
+								placeholder="Coloque o título aqui"/>
 							<div >
 								<textarea name="conteudo-noticia" id="editor1"></textarea>
 							</div>
@@ -58,13 +58,14 @@ require_once "includes/header.php";
 				</div>
 				<!-- FIM SIDBAR RIGTH -->
 
+					<br>
+
 				<!-- SIDBAR LEFT -->
-				<div class="col-xs-6 col-md-4" style="margin-top: 13px;">
+				<div class="col-md-4">
 					<!-- Div Publicar -->
 					<div class="panel panel-primary">
 						<div class="panel-heading">
 							<input type="submit" class="btn btn-info" value="Publicar Notícia" />
-
 						</div>
 						<div class="panel-body">
 							<p>
@@ -81,9 +82,8 @@ require_once "includes/header.php";
 						</div>
 						<div class="panel-body">
 							<p>
-								<input type="text" name="tags-pesquisa"
-									placeholder="Tag de pesquisa" required="required"
-									style="width: 100%" />
+								<input class="form-control" type="text" name="tags-pesquisa"
+									placeholder="Tag de pesquisa" required="required"/>
 							</p>
 
 						</div>
@@ -95,14 +95,14 @@ require_once "includes/header.php";
 							<label class="control-label" for="success">Imagem da Notícia</label>
 						</div>
 						<div class="panel-body">
-							<input type="text" id="imagem-noticia-carregar"
-								placeholder="Selecione Imagem" required="required"
-								style="width: 100%" /> <input type="file"
+							<input class="form-control" type="text" id="imagem-noticia-carregar"
+								placeholder="Selecione Imagem" required="required"/> <input type="file"
 								class="hidden-xs hidden-sm hidden-md hidden-lg"
 								id="imagem-carregada" name="imagem-noticia" />
 
 						</div>
 					</div>
+
 
 					<!-- Div Categoria -->
 					<div class="panel panel-primary">
@@ -111,8 +111,7 @@ require_once "includes/header.php";
 						</div>
 						<div class="panel-body">
 
-							<select name="categoria-noticia" required="required"
-								style="width: 100%;">
+							<select  class="btn btn-default dropdown-toggle" name="categoria-noticia" required="required">
 								<option selected="selected" value="">Selecione uma Categoria</option>
 												<?php
 						
@@ -127,7 +126,7 @@ require_once "includes/header.php";
           					 </select>
 
 						</div>
-					</div>
+					</div><!--class="panel panel-primary"-->
 				</div>
 
 				<!-- FIM SIDBAR LEFT -->
@@ -158,14 +157,13 @@ require_once "includes/header.php";
 			<form
 				action="acoes/atualizar-noticia.php?id_nt_up=<?php echo $id_nt; ?>"
 				method="POST" enctype="multipart/form-data">
-				<div class="col-xs-12 col-md-8" style="margin: 13px -25px;">
+				<div class="col-md-6">
 
 					<div class="grid-container" id="publicar-noticia-left">
 						<div class="grid-width-100">
-							<input type="text" name="titulo-noticia"
+							<input class="form-control" type="text" name="titulo-noticia"
 								placeholder="Coloque o título aqui"
-								value="<?php echo $titulo_ntE;  ?>"
-								style="width: 100%; margin-bottom: 10px;" />
+								value="<?php echo $titulo_ntE;  ?>"/>
 							<div >
 								<textarea name="conteudo-noticia" id="editor1"><?php echo $conteudo_ntE; ?></textarea>
 							</div>
@@ -175,14 +173,15 @@ require_once "includes/header.php";
 
 				</div>
 				<!-- FIM SIDBAR RIGTH -->
+				<br>
 
 				<!-- SIDBAR LEFT -->
-				<div class="col-xs-6 col-md-4" style="margin-top: 13px;">
+				<div class="col-md-6">
 					<!-- Div Publicar -->
 					<div class="panel panel-primary">
 						<div class="panel-heading">
 							<input type="submit" class="btn btn-info btn-rigth" value="Publicar Notícia" />
-							<input type="submit" class="btn btn-warning" name="salvar-rascunho" value="Salvar Notícia" style="margin-left: 85px;"/>
+							<input type="submit" class="btn btn-warning" name="salvar-rascunho" value="Salvar Notícia"/>
 						</div>
 						<div class="panel-body">
 							<p>
@@ -200,9 +199,9 @@ require_once "includes/header.php";
 						</div>
 						<div class="panel-body">
 							<p>
-								<input type="text" name="tags-pesquisa"
+								<input class="form-control" type="text" name="tags-pesquisa"
 									placeholder="Tag de pesquisa" required="required"
-									value="<?php echo $tagSear_ntE; ?>" style="width: 100%" />
+									value="<?php echo $tagSear_ntE; ?>"/>
 							</p>
 
 						</div>
@@ -214,9 +213,9 @@ require_once "includes/header.php";
 							<label class="control-label" for="success">Imagem da Notícia</label>
 						</div>
 						<div class="panel-body">
-							<input type="text" id="imagem-noticia-carregar"
+							<input class="form-control" type="text" id="imagem-noticia-carregar"
 								placeholder="Selecione Imagem" required="required"
-								value="<?php echo $imagem_ntE ?>" style="width: 100%" /> <input
+								value="<?php echo $imagem_ntE ?>"/> <input
 								type="file" class="hidden-xs hidden-sm hidden-md hidden-lg"
 								id="imagem-carregada" name="imagem-noticia" />
 
@@ -230,8 +229,7 @@ require_once "includes/header.php";
 						</div>
 						<div class="panel-body">
 
-							<select name="categoria-noticia" required="required"
-								style="width: 100%;">
+							<select class="btn btn-default dropdown-toggle" name="categoria-noticia" required="required">
 								<option selected="selected" value="">Selecione uma Categoria</option>
 												<?php
 						
@@ -256,9 +254,9 @@ require_once "includes/header.php";
 		</div>
 
 		<!-- Todas as Noticias -->
-		<div id="todas-as-noticias" style="margin-top: -60px;">
-			<div id="container" style="margin-top: 72px;">
-				<div class="table-responsive" style="width: 100%;">
+		<div id="todas-as-noticias" >
+			<div id="container" >
+				<div class="table-responsive">
 
 					<table class="table table-bordered table-hover">
 						<tbody>
@@ -304,9 +302,9 @@ require_once "includes/header.php";
 		<!-- fim todas as noticias -->
 
 		<!-- inicio rascunho -->
-		<div id="noticias-rascunhos" style="margin-top: -60px;">
-			<div id="container" style="margin-top: 72px;">
-				<div class="table-responsive" style="width: 100%;">
+		<div id="noticias-rascunhos">
+			<div id="container">
+				<div class="table-responsive">
 
 					<table class="table table-bordered table-hover">
 						<tbody>
@@ -351,9 +349,9 @@ require_once "includes/header.php";
 		<!-- fim rascunho -->
 
 		<!-- inicio lixeira -->
-		<div id="noticias-lixeira" style="margin-top: -60px;">
-			<div id="container" style="margin-top: 72px;">
-				<div class="table-responsive" style="width: 100%;">
+		<div id="noticias-lixeira">
+			<div id="container">
+				<div class="table-responsive">
 
 					<table class="table table-bordered table-hover">
 						<tbody>
