@@ -49,6 +49,7 @@ require_once "includes/header.php";
 						<div class="grid-width-100">
 							<input class="form-control" type="text" name="titulo-noticia"
 								placeholder="Coloque o título aqui"/>
+								<br>	
 							<div >
 								<textarea name="conteudo-noticia" id="editor1"></textarea>
 							</div>
@@ -164,6 +165,7 @@ require_once "includes/header.php";
 							<input class="form-control" type="text" name="titulo-noticia"
 								placeholder="Coloque o título aqui"
 								value="<?php echo $titulo_ntE;  ?>"/>
+								<br>
 							<div >
 								<textarea name="conteudo-noticia" id="editor1"><?php echo $conteudo_ntE; ?></textarea>
 							</div>
