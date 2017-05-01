@@ -133,7 +133,7 @@
            
                 <div class="col-md-12">
                 <!--Card-->
-                <div class="card wow fadeIn"  data-wow-delay="0.3s">
+                <div class="card wow fadeIn"  data-wow-delay="0.1s">
     <!--Card content ERROR sem noticia-->
                     <div class="card-block" style="text-align:center">
                     <br> <br> <br> <br> <br> <br> <br> <br> <br> 
