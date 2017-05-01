@@ -119,16 +119,10 @@
 
           
 
-     <br> <br>
+     <br> 
         
 
-                    
-
-
-                      
-
-
-
+  
                     </div>
                     <!--/.Card content-->
    <?php } } else {?>
