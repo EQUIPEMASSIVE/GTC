@@ -40,11 +40,12 @@ require "includes/header.php";
 				<table  class="table table-striped table-bordered table-hover">
                                     <thead>
                                         <tr>
-                                            <th height="48">Ultimas Noticias</th> 
+                                            <th height="48">Últimas Notícias Postadas</th> 
                                             <th height="48">Data</th>   
                                         </tr>
                                         <?php
-										$SQL_NI = mysql_query ( "SELECT * FROM noticias WHERE status=1" );
+										$SQL_NI = mysql_query ( "SELECT * FROM noticias ORDER BY status=1, id_noticia DESC LIMIT 8");
+										
 										while ( $lh = mysql_fetch_array ( $SQL_NI ) ) {
 										?>
 
@@ -68,12 +69,12 @@ require "includes/header.php";
 					<div class="panel-heading">
 						<h3>Atualização</h3>
 					</div>
-					<div class="panel-body">
+				
 						<div class="table-responsive">
 							<table class="table table-striped table-bordered table-hover">
 								<thead>
 									<tr>
-										<td>Noicias Publicadas</td>
+										<td>Notícias Publicadas</td>
 										<td><?php
 										$SQL = mysql_query ( "SELECT * FROM noticias WHERE status=1" );
 										echo mysql_num_rows ( $SQL );
@@ -93,7 +94,7 @@ require "includes/header.php";
 								</tbody>
 							</table>
 						</div>
-					</div>
+					
 				</div>
 			</div>
 			<!--fim col-->
