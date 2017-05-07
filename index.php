@@ -100,7 +100,7 @@
                     <!--/.Card content-->
 
                 </div>
-                <!--/.Card--> <br> <br>
+                <!--/.Card--> <br> 
             </div>
             <!--First columnn-->
 

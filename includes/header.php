@@ -144,7 +144,7 @@
                 <ul class="navbar-nav mr-auto">
 
                     <li class="nav-item active">
-                        <a class="nav-link" href="index2.html">Inicio<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="index.php">Principal<span class="sr-only">(current)</span></a>
                     </li>
 
 
