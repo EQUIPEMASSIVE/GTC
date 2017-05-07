@@ -88,8 +88,7 @@
                         
 
                         <!--Text-->
-                            <!--<p><?php echo substr($pusha['conteudo'], 3, 620); ?></p>-->
-
+                            
                         <a href="noticia.php?id=<?php echo $pusha['id_noticia']; ?>" class="black-text d-flex flex-row-reverse"><h7 class="waves-effect p-2">Leia mais... <i class="fa fa-chevron-right"></i></h7></a>
                       
                         
