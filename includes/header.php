@@ -50,7 +50,7 @@
 
     
     <link href="css/font.css" rel="stylesheet" type="text/css"/>
-    <link href="css/style.css" rel="stylesheet" type="text/css" />
+
     <link href="css/animate.css" rel="stylesheet" type="text/css" /> 
 
      <!--CONFIGURAÇAO SLIDE NOVO HESRON ------------------------------------------------- -->
