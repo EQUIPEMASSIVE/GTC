@@ -38,7 +38,7 @@
     <br>
 
 
-
+ <h2 class="black-text d-flex flex-row-reverse">Teste</h2>
 
     <!--Content-->
 
@@ -58,12 +58,7 @@
 
 
             <!--First row-->
-            <div class="panel panel-default">
-  <div class="panel-body">
-    Basic panel example
-  </div>
-</div>
-                <div class="col-md-12">
+     
                 <!--Card-->
                 <div class="card wow fadeIn"  data-wow-delay="0.3s">
 
