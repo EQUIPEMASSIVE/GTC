@@ -32,7 +32,7 @@
 
         
 <br><hr>
-<h3 class="label label-default">Últimas Notícias</h3>
+<span class="label label-default">Útimas Notícias</span>
 
 <main>
     <br>
