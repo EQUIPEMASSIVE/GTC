@@ -32,7 +32,7 @@
 
         
 <br><hr>
-   
+<h2>Útimas Nóticias</h2>
 
 <main>
     <br>
