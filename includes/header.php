@@ -50,7 +50,7 @@
 
     
     <link href="css/font.css" rel="stylesheet" type="text/css"/>
-
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
     <link href="css/animate.css" rel="stylesheet" type="text/css" /> 
 
      <!--CONFIGURAÇAO SLIDE NOVO HESRON ------------------------------------------------- -->
@@ -68,6 +68,7 @@
         html,
         body {
             height: 100%;
+            background-color: #404040;
         }
         /* Navigation*/
         
@@ -120,6 +121,7 @@
         .flex-center {
             color: #000;
         }
+        bosy
     </style>
 
 </head>
@@ -144,7 +146,7 @@
                 <ul class="navbar-nav mr-auto">
 
                     <li class="nav-item active">
-                        <a class="nav-link" href="index.php">Principal<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="index2.html">Inicio<span class="sr-only">(current)</span></a>
                     </li>
 
 
@@ -181,3 +183,4 @@
 
 
 <br> <br> 
+
