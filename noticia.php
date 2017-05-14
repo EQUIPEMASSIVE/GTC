@@ -123,7 +123,7 @@
 							  fjs.parentNode.insertBefore(js, fjs);
 							}(document, 'script', 'facebook-jssdk'));</script>
 
-							<div class="fb-comments" data-href="http://www.guiatecnologico.tk/noticia.php?id=<?php echo $dataEX; ?>" data-num-posts="5" data-width="470"></div>
+							<div class="fb-comments" data-href="http://www.guiatecnologico.tk/noticia.php?id=<?php echo $id_rn; ?>" data-num-posts="5" data-width="470"></div>
 							
 		</div>                          
                           
