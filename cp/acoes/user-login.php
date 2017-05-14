@@ -26,13 +26,15 @@ if(isset($rediURL)){
 
 	header("Location: ../inicial.php");
 
+
 }          
                  
     
 }else{
     
     
-    header("Location: ../index.php");
+    header("Location: ../erro.php");
+
 }
 
 ?>
