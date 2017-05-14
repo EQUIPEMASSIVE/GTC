@@ -1,4 +1,4 @@
-  <?php require_once 'includes/header.php';  ?>
+ <?php require_once 'includes/header.php';  ?>
 
 
 <br>
@@ -98,7 +98,7 @@
 
 
 
-    <?php } ?>
+    
 
 
 <br> <br> <br><br>
@@ -106,23 +106,30 @@
 
 
 
-<?php  
-$url="www.guiatecnologico.tk/noticia.php?id=".$_GET['id']."";
-$url="www.guiatecnologico.16mb.com/noticia.php?id=".$_GET['id']."";
-echo '<div class="fb-comments" data-href="'.$url.'" data-num-posts="10" data-width="470"></div>';
-?>
-
-
+<div id="conteudo">
+			<h1>Social Plugin - Comments - Facebook!</h1>
+				<p>Teste Teste
+				
+					<h2>Deixe seu comentário!</h2>
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
- var js, fjs = d.getElementsByTagName(s)[0];
- if (d.getElementById(id)) return;
- js = d.createElement(s); js.id = id;
- js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1";
- fjs.parentNode.insertBefore(js, fjs);
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.9";
+  fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
+  
+  <div class="fb-comments" data-href="http://guiatecnologico.tk/" data-width="100%" data-numposts="5"></div>
 
+							
+		</div>                          
+                          
+                          
+<?php } ?>
 
+                        
+                          
 
 
 
@@ -153,4 +160,3 @@ echo '<div class="fb-comments" data-href="'.$url.'" data-num-posts="10" data-wid
 </main>
 
 <?php require_once 'includes/footer.php'; ?>
-
