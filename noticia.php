@@ -19,15 +19,12 @@
                             <section class="section section-blog-fw">
 
                 <?php
-
                     @$id_rn = $_GET["id"];
                     $SQL_RN = mysql_query("SELECT * FROM noticias INNER JOIN categoria ON (noticias.categoria = categoria.id_categoria) WHERE id_noticia='$id_rn'");
-
                         while ($rn = mysql_fetch_array($SQL_RN)) {
                             $data = explode("-", $rn["datapub"]);
                             $dataEX = $data[2]."/".$data[1]."/".$data[0];
                         
-
                 ?>
 
 
@@ -101,7 +98,7 @@
 
 
 
-    
+    <?php } ?>
 
 
 <br> <br> <br><br>
@@ -109,29 +106,23 @@
 
 
 
-<div id="conteudo">
-			<h1>Social Plugin - Comments - Facebook!</h1>
-				<p>Teste Teste
-				
-					<h2>Deixe seu comentário!</h2>
-						<div id="fb-root"></div>
-							<script>(function(d, s, id) {
-							  var js, fjs = d.getElementsByTagName(s)[0];
-							  if (d.getElementById(id)) {return;}
-							  js = d.createElement(s); js.id = id;
-							  js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1";
-							  fjs.parentNode.insertBefore(js, fjs);
-							}(document, 'script', 'facebook-jssdk'));</script>
+<?php  
+$url="www.guiatecnologico.tk/noticia.php?id=".$_GET['id']."";
+$url="www.guiatecnologico.16mb.com/noticia.php?id=".$_GET['id']."";
+echo '<div class="fb-comments" data-href="'.$url.'" data-num-posts="10" data-width="470"></div>';
+?>
 
-							<div class="fb-comments" data-href="http://www.guiatecnologico.tk/noticia.php?id=<?php echo $id_rn; ?>" data-num-posts="5" data-width="470"></div>
-							
-		</div>                          
-                          
-                          
-<?php } ?>
 
-                        
-                          
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+ var js, fjs = d.getElementsByTagName(s)[0];
+ if (d.getElementById(id)) return;
+ js = d.createElement(s); js.id = id;
+ js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1";
+ fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
 
 
 
@@ -162,3 +153,4 @@
 </main>
 
 <?php require_once 'includes/footer.php'; ?>
+
