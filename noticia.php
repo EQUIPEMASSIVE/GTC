@@ -111,7 +111,7 @@
 
 <?php  
 
-$url="http://www.guiatecnologico.16mb.com/noticia.php?id=".$_GET['id']."";
+$url="www.guiatecnologico.16mb.com/noticia.php?id=".$_GET['id']."";
 echo '<div class="fb-comments" data-href="'.$url.'" data-num-posts="2" data-width="470"></div>';
 
 
