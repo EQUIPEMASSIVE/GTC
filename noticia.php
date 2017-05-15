@@ -96,7 +96,7 @@
 
 
 
- <?php } ?>
+ 
 
    
 
@@ -113,8 +113,8 @@
 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
 var disqus_config = function () {
-this.page.url = window.location.href
-this.page.identifier = document.title
+this.page.url = 'http://www.guiatecnologico.tk/noticia.php?id=<?php echo $id_rn; ?>';
+this.page.identifier = '<?php echo $rn['titulo'];?>';
 };
 (function() { // DON'T EDIT BELOW THIS LINE
 var d = document, s = d.createElement('script');
@@ -125,7 +125,7 @@ s.setAttribute('data-timestamp', +new Date());
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>			
 
-				
+<?php } ?>				
 
 <br> <br> <br><br>
 
