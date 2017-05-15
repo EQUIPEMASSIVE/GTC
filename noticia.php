@@ -98,7 +98,7 @@
 
 
 
-    <?php } ?>
+   
 
 
 <br> <br> <br><br>
@@ -106,25 +106,23 @@
 
 
 
-<?php  
-$url="www.guiatecnologico.tk/noticia.php?id=".$_GET['id']."";
-$url="www.guiatecnologico.16mb.com/noticia.php?id=".$_GET['id']."";
-echo '<div class="fb-comments" data-href="'.$url.'" data-num-posts="10" data-width="470"></div>';
-?>
 
 
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
- var js, fjs = d.getElementsByTagName(s)[0];
- if (d.getElementById(id)) return;
- js = d.createElement(s); js.id = id;
- js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1";
- fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.9&appId=1891842700841758";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>		
+
+		
+<div class="fb-comments" data-href="https://tableless.com.br/noticia.php?id=<?php echo $id_rn; ?>" data-width="100%" data-numposts="10"></div>
 
 
 
-
+ <?php } ?>
 
 <br> <br> <br><br>
 
