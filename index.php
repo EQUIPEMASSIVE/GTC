@@ -4,32 +4,7 @@
 ?>
 
 
-
-
-
-<br><br>
-        <div class="owl-theme owl-carousel" >
-            
-                <?php       //Na ordem do recente para o ultimo
-                            $SQL_B = mysql_query("SELECT id_noticia, imagem, titulo FROM noticias INNER JOIN categoria ON(noticias.categoria = categoria.id_categoria) WHERE nome_categoria ='Tecnologia'  ORDER BY id_noticia DESC LIMIT 5");//aqui sao mostradas somente a noticia pelo nome da categoria.
-
-
-                            while ($bn = mysql_fetch_array($SQL_B)) {
-                            
-                ?>
        
-            <div>
-                <a href="noticia.php?id=<?php echo $bn['id_noticia']; ?>" ><img src="cp/imagens/imgnoticia/<?php echo $bn['imagem']; ?>" alt="Postagem 1"/></a>
-
-                <h1 class="h1-responsive"> <a href="noticia.php?id=<?php echo $bn['id_noticia']; ?>" style="color: #000"><?php echo $bn['titulo'];?></h1></a>
-            </div>
-            
-            <?php } ?>
-        </div><!--/owl-carousel-->
-
-    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
-    <script type="text/javascript" src="js/owl.carousel.min.js"></script>
-
         
 <br>
    
