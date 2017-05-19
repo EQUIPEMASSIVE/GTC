@@ -17,4 +17,17 @@ define("DBNAME", "u263627493_gtc");
 mysql_select_db(DBNAME) or die ("Banco de Dados desconhecido, contacte o administrador");
 
 
+//CODIGO MYSQLI PARA RODAR AS PAGINACOES DO CP INICIAL.PHP
+
+$hostname_conexao = "mysql796.umbler.com";
+$database_conexao = "u263627493_gtc";
+$username_conexao = "u263627493_root";
+$password_conexao = "root123456";
+
+$mysqli = new mysqli($hostname_conexao, $username_conexao, $password_conexao, $database_conexao);
+if ($mysqli->connect_errno) {
+    echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+}
+
+
  ?>
