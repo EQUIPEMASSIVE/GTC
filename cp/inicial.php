@@ -36,32 +36,77 @@ require "includes/header.php";
 			<!--Fim col-->
 
 
-			<div class="col-md-6">	
+			<!--NOVO CODIGO===============================================================================================================-->
+
+
+		<?php 
+			$itens_por_pagina = 4;
+
+			// pegar a pagina atual
+			@$pagina = intval($_GET['pagina']);
+			// puxar produtos do banco
+			$sql_code = "select titulo, dataPub from noticias LIMIT $pagina, $itens_por_pagina";
+			$execute = $mysqli->query($sql_code) or die($mysqli->error);
+			$produto = $execute->fetch_assoc();
+			$num = $execute->num_rows;
+
+			// pega a quantidade total de objetos no banco de dados
+			$num_total = $mysqli->query("select titulo, dataPub from noticias")->num_rows;
+
+			// definir numero de páginas
+			$num_paginas = ceil($num_total/$itens_por_pagina);
+
+		 ?>
+		
+		<div class="col-md-6">	
 				<table  class="table table-striped table-bordered table-hover">
-                                    <thead>
-                                        <tr>
-                                            <th height="48">Últimas Notícias Postadas</th> 
-                                            <th height="48">Data</th>   
-                                        </tr>
-                                        <?php
-										$SQL_NI = mysql_query ( "SELECT * FROM noticias ORDER BY status=1, id_noticia DESC LIMIT 8");
-										
-										while ( $lh = mysql_fetch_array ( $SQL_NI ) ) {
-										?>
+  				<h2>Últimas Notícias Postadas</h2>
+  				<?php if($num > 0){ ?>
+				<table class="table table-bordered table-hover">
+					<thead>
+						<tr>
+							<td><b><h3>Titulo</h3></b></td>
+							<td><b>Data</b></td>
+						</tr>
+					</thead>
+					<tbody>
+						<?php do{ ?>
+						<tr>
+							<td><?php echo $produto['titulo']; ?></td>
+							<td><?php echo $produto['dataPub']; ?></td>
+						</tr>
+						<?php } while($produto = $execute->fetch_assoc()); ?>
+					</tbody>
+				</table>
 
-                                  </thead>
-                                     
-                                        <tr>
-										<td><?php echo $lh["titulo"]; ?></td> 
-										<td><?php echo $lh["datapub"]; ?></td> 
-										</tr>
-										
-                                    
-                                    <?php } ?>
-                       </table>
-                       
+				<nav>
+				  <ul class="pagination">
+				    <li>
+				      <a href="inicial.php?pagina=0" aria-label="Previous">
+				        <span aria-hidden="true">&laquo;</span>
+				      </a>
+				    </li>
+				    <?php 
+				    for($i=0;$i<$num_paginas;$i++){
+				    $estilo = "";
+				    if($pagina == $i)
+				    	$estilo = "class=\"active\"";
+				    ?>
+				    <li <?php echo $estilo; ?> ><a href="inicial.php?pagina=<?php echo $i; ?>"><?php echo $i+1; ?></a></li>
+					<?php } ?>
+				    <li>
+				      <a href="inicial.php?pagina=<?php echo $num_paginas-1; ?>" aria-label="Next">
+				        <span aria-hidden="true">&raquo;</span>
+				      </a>
+				    </li>
+				  </ul>
+				</nav>
+  				<?php } ?>
+  			</table>
 
-			</div>
+
+  			<!---========================================================================================================================->		
+
 			<!--Fim col-->
 
 			<div class="col-md-6">
