@@ -29,6 +29,8 @@ $SQL = mysql_query("SELECT nome, imgPerfil FROM administradores WHERE usuario= '
         <script type="text/javascript" src="js/jquery-3.1.1.js"></script>
         <script type="text/javascript" src="js/default.js"></script>
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
         
 
     <!--[if IE]>
@@ -51,11 +53,16 @@ $SQL = mysql_query("SELECT nome, imgPerfil FROM administradores WHERE usuario= '
 	
 <body id="main">
         
+
+
 <!-- HEADER END-->
     <div class="navbar navbar-inverse set-radius-zero">
         <div class="container">
     
             <div class="navbar-header">
+
+                                
+
             <img src="img/logo.png"/>
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
@@ -76,6 +83,7 @@ $SQL = mysql_query("SELECT nome, imgPerfil FROM administradores WHERE usuario= '
                         }
                         
                         ?> 
+
                         <li class="dropdown">
                               <img class="img-circle" data-toggle="dropdown" src="imagens/perfil/<?php echo @$imgpUser; ?>" alt="Imagem de Perfil"/>
                           <div class="dropdown-menu dropdown-settings">
@@ -92,12 +100,23 @@ $SQL = mysql_query("SELECT nome, imgPerfil FROM administradores WHERE usuario= '
                                     </div>
                               </div>
                                <div style="margin-top: 10px;" >
-                              <a style="margin-left: 26px;" href="alterar-perfil.php" class="btn btn-info btn-sm">Perfil</a>&nbsp; <a href="logout.php" class="btn btn-danger btn-sm">Logout</a>
+                              <a style="margin-left: 26px;" href="alterar-perfil.php" class="btn btn-info btn-sm"><span class="glyphicon glyphicon-user"></span> Perfil</a>&nbsp; <a href="logout.php" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-off"></span>      Logout</a>
                                </div> 
 
                             </div>
+
+
+
+
+
                         </li>
 
+
+
+
+
+                            
+                                    
 
                     </ul>
                 </div>
@@ -111,6 +130,22 @@ $SQL = mysql_query("SELECT nome, imgPerfil FROM administradores WHERE usuario= '
                 <div class="col-md-12">
                     <div class="navbar-collapse collapse ">
                         <ul id="menu-top" class="nav navbar-nav navbar-right">
+                           <li style="color: white; margin-right: 20px;"> 
+                                        <label>Notícias Publicadas</label>
+                                        <label class="badge"><?php
+                                        $SQL = mysql_query ( "SELECT * FROM noticias WHERE status=1" );
+                                        echo mysql_num_rows ( $SQL );
+                                        ?></label>
+
+                                            <label>•</label>
+                                        <label>Categorias Ativas</label>
+                                        <label class="badge"><?php
+                                        $SQL = mysql_query ( "SELECT * FROM categoria" );
+                                        echo mysql_num_rows ( $SQL );
+                                        ?></label>
+                            </li> 
+
+
                             <li><div id="menu-pagina-inicial" class="btn btn-success"><a  href="inicial.php">Página Inicial</a></div></li>
                             <li><div id="menu-gerenciar-noticia" class="btn btn-info"><a href="gerenciar-noticia.php">Gerenciar Noticia</a></div></li>
                             <li><div id="menu-gerenciar-categoria" class="btn btn-warning"><a href="gerenciar-categoria.php">Gerenciar Categorias</a></div></li>
@@ -125,7 +160,3 @@ $SQL = mysql_query("SELECT nome, imgPerfil FROM administradores WHERE usuario= '
         </div>
     </section>
     <!-- MENU SECTION END-->
-
-
-		
-		
