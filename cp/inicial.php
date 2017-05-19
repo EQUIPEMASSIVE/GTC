@@ -80,18 +80,18 @@ require "includes/header.php";
 
 
 		<?php 
-			$itens_por_pagina = 4;
+			$itens_por_pagina = 6;
 
 			// pegar a pagina atual
 			@$pagina = intval($_GET['pagina']);
 			// puxar produtos do banco
-			$sql_code = "select titulo, dataPub from noticias LIMIT $pagina, $itens_por_pagina";
+			$sql_code = "select titulo, dataPub, status from noticias where status='1' LIMIT $pagina, $itens_por_pagina";
 			$execute = $mysqli->query($sql_code) or die($mysqli->error);
 			$produto = $execute->fetch_assoc();
 			$num = $execute->num_rows;
 
 			// pega a quantidade total de objetos no banco de dados
-			$num_total = $mysqli->query("select titulo, dataPub from noticias")->num_rows;
+			$num_total = $mysqli->query("select titulo, dataPub, status from noticias where status='1'")->num_rows;
 
 			// definir numero de páginas
 			$num_paginas = ceil($num_total/$itens_por_pagina);
