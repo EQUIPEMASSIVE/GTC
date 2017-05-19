@@ -38,42 +38,6 @@ require "includes/header.php";
 			</div>
 			<!--Fim col-->
 
-			<div class="col-md-6">
-				<div class="panel panel-success">
-					<div class="panel-heading">
-						<h3>Atualização</h3>
-					</div>
-				
-						<div class="table-responsive">
-							<table class="table table-striped table-bordered table-hover">
-								<thead>
-									<tr>
-										<td>Notícias Publicadas</td>
-										<td><?php
-										$SQL = mysql_query ( "SELECT * FROM noticias WHERE status=1" );
-										echo mysql_num_rows ( $SQL );
-										?></td>
-
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Categorias Ativas</td>
-										<td><?php
-										$SQL = mysql_query ( "SELECT * FROM categoria" );
-										echo mysql_num_rows ( $SQL );
-										?></td>
-									</tr>
-
-								</tbody>
-							</table>
-						</div>
-					
-				</div>
-			</div>
-			<!--fim col-->
-
-
 
 
 		<!--NOVO CODIGO===============================================================================================================-->
