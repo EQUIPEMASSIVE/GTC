@@ -49,7 +49,7 @@ require "includes/header.php";
 			// pegar a pagina atual
 			@$pagina = intval($_GET['pagina']);
 			// puxar produtos do banco
-			$sql_code = "select * from noticias ORDER BY status='1', id_noticia DESC LIMIT $pagina, $itens_por_pagina";
+			$sql_code = "select * from noticias ORDER BY status='1', datapub, id_noticia DESC LIMIT $pagina, $itens_por_pagina";
 			$execute = $mysqli->query($sql_code) or die($mysqli->error);
 			$produto = $execute->fetch_assoc();
 			$num = $execute->num_rows;
