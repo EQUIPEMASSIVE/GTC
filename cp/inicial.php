@@ -77,7 +77,7 @@ require "includes/header.php";
 						<?php do{ ?>
 						<tr>
 							<td><?php echo $produto['titulo']; ?></td>
-							<td><?php echo $produto['dataPub']; ?></td>
+							<td><?php echo $produto['datapub']; ?></td>
 						</tr>
 						<?php } while($produto = $execute->fetch_assoc()); ?>
 					</tbody>
@@ -86,7 +86,7 @@ require "includes/header.php";
 				<nav>
 				  <ul class="pagination">
 				    <li>
-				      <a href="inicial.php?pagina=0" aria-label="Previous">
+				      <a href="inicial.php?pagina=1" aria-label="Previous">
 				        <span aria-hidden="true">&laquo;</span>
 				      </a>
 				    </li>
