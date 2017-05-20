@@ -15,7 +15,7 @@
         <div class="row">
 <?php
     //A qunatidade de noticias a ser exibida a ser exibida
-    $quantidade = 4;//Altere a quantidade 
+    $quantidade = 4;//Altere a quantidade
     //a pagina atual
     $pagina     = (isset($_GET['pagina'])) ? (int)$_GET['pagina'] : 1;
     //Calcula a pagina de qual valor será exibido
@@ -104,7 +104,7 @@
    /**
     * Defini o valor máximo a ser exibida na página tanto para direita quando para esquerda
     */
-   $exibir = 3;
+   $exibir = 4;
    /**
     * Aqui montará o link que voltará uma pagina
     * Caso o valor seja zero, por padrão ficará o valor 1
