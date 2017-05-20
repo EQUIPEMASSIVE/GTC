@@ -16,7 +16,7 @@
             <!-- Loading Screen -->
             <div data-u="loading" style="position:absolute;top:0px;left:0px;background:url('img/loading.gif') no-repeat 50% 50%; background-color: rgba(0, 0, 0, .7);"></div>
             <!-- Slides Container -->
-            <div u="slides" style="position: absolute; left: 0px; top: 0px; width: 1000px; height: 400px; overflow: hidden;">
+            <div u="slides" style="position: absolute; left: 0px; top: 0px; width: 1000px; height: 450px; overflow: hidden;">
                 <?php    
                    //Na ordem do recente para o ultimo
                           
