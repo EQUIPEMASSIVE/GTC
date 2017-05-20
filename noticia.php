@@ -1,4 +1,4 @@
- <?php require_once 'includes/header.php';  ?>
+  <?php require_once 'includes/header.php';  ?>
 
 
 <br>
@@ -19,16 +19,19 @@
                             <section class="section section-blog-fw">
 
                 <?php
+
                     @$id_rn = $_GET["id"];
                     $SQL_RN = mysql_query("SELECT * FROM noticias INNER JOIN categoria ON (noticias.categoria = categoria.id_categoria) WHERE id_noticia='$id_rn'");
+
                         while ($rn = mysql_fetch_array($SQL_RN)) {
                             $data = explode("-", $rn["datapub"]);
                             $dataEX = $data[2]."/".$data[1]."/".$data[0];
                         
+
                 ?>
 
 
-            <br>            
+            <br>   <br>         
                  <!--Main column-->
                 <div class="col-lg-12">
 
@@ -96,7 +99,7 @@
 
 
 
- 
+
 
    
 
@@ -105,8 +108,7 @@
 
 
 
-	
-				
+
 <div id="disqus_thread"></div>
 <script>
 /**
@@ -123,9 +125,12 @@ s.setAttribute('data-timestamp', +new Date());
 (d.head || d.body).appendChild(s);
 })();
 </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>			
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>      
 
-<?php } ?>				
+ <?php } ?>
+
+
+
 
 <br> <br> <br><br>
 
