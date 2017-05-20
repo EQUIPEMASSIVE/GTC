@@ -34,7 +34,7 @@
 
                 <!--First row-->
 
-                <div class="col-md-6">
+                <div class="col-md-6 col-lg-6">
                 <!--Card-->
                 <div class="card wow fadeIn"  data-wow-delay="0.3s">
 
