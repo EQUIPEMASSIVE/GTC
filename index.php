@@ -31,8 +31,8 @@
                 <a href="noticia.php?id=<?php echo $bn['id_noticia']; ?>" ><img src="cp/imagens/imgnoticia/<?php echo $bn['imagem']; ?>" alt="Postagem 1"/>
 
                 <div  style="position: absolute; top: 380px; left: 40px;">
-                  <h1 style="font-size: 30px; text-align: center;"> 
-                    <div href="noticia.php?id=<?php echo $bn['id_noticia']; ?>" style="color: white;"><?php echo $bn['titulo'];?>  
+                  <h1 style="font-size: 35px; text-align: center;"> 
+                    <b><div href="noticia.php?id=<?php echo $bn['id_noticia']; ?>" style="color: white;"><?php echo $bn['titulo'];?></b>  
                     <div>
                   </h1>
                 </div>
