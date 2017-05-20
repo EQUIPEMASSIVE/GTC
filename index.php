@@ -142,7 +142,7 @@
     $inicio     = ($quantidade * $pagina) - $quantidade;
 
     //Monta o SQL com LIMIT para exibição dos dados  
-    $SQL_B = "SELECT * FROM noticias INNER JOIN categoria ON (noticias.categoria = categoria.id_categoria) WHERE status = '1' ORDER BY  dataPub, id_noticia DESC LIMIT $inicio, $quantidade";
+    $SQL_B = "SELECT titulo, imagem, conteudo, status, id_noticia, datapub FROM noticias INNER JOIN categoria ON (noticias.categoria = categoria.id_categoria) WHERE status = '1' ORDER BY  id_noticia DESC LIMIT $inicio, $quantidade";
 
 
     //Executa o SQL
