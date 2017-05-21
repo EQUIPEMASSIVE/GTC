@@ -144,7 +144,7 @@
         <div class="row-fluid">
 <?php
     //A qunatidade de noticias a ser exibida a ser exibida
-    $quantidade = 4;//Altere a quantidade 
+    $quantidade = 8;//Altere a quantidade 
     //a pagina atual
     $pagina     = (isset($_GET['pagina'])) ? (int)$_GET['pagina'] : 1;
     //Calcula a pagina de qual valor será exibido
