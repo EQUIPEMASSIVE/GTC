@@ -30,7 +30,7 @@
             <div>
                 <a href="noticia.php?id=<?php echo $bn['id_noticia']; ?>" ><img src="cp/imagens/imgnoticia/<?php echo $bn['imagem']; ?>" alt="Postagem 1"/>
 
-                <div  style="position: absolute; top: 320px; left: 40px; white-space: normal;"><!--nome do titulo da noticia por id-->
+                <div  style="position: absolute; top: 350px; left: 40px; white-space: normal;"><!--nome do titulo da noticia por id-->
                   <h1 style="font-size: 50px; text-align: center; text-shadow: 1px 1px 2px rgba(0,0,0,.7); "> 
                     <div href="noticia.php?id=<?php echo $bn['id_noticia']; ?>" style="color: white;"><?php echo $bn['titulo'];?></div>
                     <div>
@@ -38,7 +38,7 @@
                 </div>
 
 
-                <div  style="position: absolute; top: 280px; left: 40px;"><!--texto slider categoria da noticia por id-->
+                <div  style="position: absolute; top: 300px; left: 40px;"><!--texto slider categoria da noticia por id-->
                   <h1 style="font-size: 35px; text-align: center; text-shadow: 1px 1px 2px rgba(0,0,0,.7);"> 
                     <b><div href="noticia.php?id=<?php echo $bn['id_noticia']; ?>" style="color: #cd2323; text-shadow: 1px 1px 2px rgba(0,0,0,.7);"><?php echo $bn['nome_categoria'];?></div></b>  
                     <div>
@@ -178,9 +178,43 @@
 
 
                    
-                        <a href="noticia.php?id=<?php echo $pusha['id_noticia']; ?>"><img src="cp/imagens/imgnoticia/<?php echo $pusha['imagem']; ?>"  class="img-responsive" alt="Titulo na Notícia"/></a>  
+                       
 
                         
+
+
+
+                        <div>
+                            <a href="noticia.php?id=<?php echo $pusha['id_noticia']; ?>" ><img src="cp/imagens/imgnoticia/<?php echo $pusha['imagem']; ?>" alt="Postagem 1"/>
+
+                            <div  style="position: absolute; top: -5px; left: 20px;"><!--texto categoria da noticia por id-->
+                              <h1 style="font-size: 25px; text-align: center; text-shadow: 3px 3px 4px rgba(0,0,0,.7);"> 
+
+                                <b><div href="noticia.php?id=<?php echo $pusha['id_categoria']; ?>" style="color: #f0f0fa; text-shadow: 1px 1px 2px rgba(0,0,0,.7);"><?php echo $pusha['nome_categoria'];?></div></b>  
+                                <div>
+                              </h1>
+                            </div>
+
+                        
+
+                            </a>
+
+                
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
                            
                        
