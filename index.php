@@ -20,7 +20,7 @@
                 <?php    
                    //Na ordem do recente para o ultimo
                           
-                            $SQL_B = mysql_query("SELECT id_noticia, imagem, titulo FROM noticias INNER JOIN categoria ON(noticias.categoria = categoria.id_categoria)  ORDER BY id_noticia DESC LIMIT 5");//aqui sao mostradas somente a noticia pelo nome da categoria.
+                            $SQL_B = mysql_query("SELECT * FROM noticias INNER JOIN categoria ON(noticias.categoria = categoria.id_categoria)  ORDER BY id_noticia DESC LIMIT 5");//aqui sao mostradas somente a noticia pelo nome da categoria.
 
 
                             while ($bn = mysql_fetch_array($SQL_B)) {
@@ -30,9 +30,17 @@
             <div>
                 <a href="noticia.php?id=<?php echo $bn['id_noticia']; ?>" ><img src="cp/imagens/imgnoticia/<?php echo $bn['imagem']; ?>" alt="Postagem 1"/>
 
-                <div  style="position: absolute; top: 380px; left: 40px;">
-                  <h1 style="font-size: 35px; text-align: center;"> 
-                    <b><div href="noticia.php?id=<?php echo $bn['id_noticia']; ?>" style="color: white;"><?php echo $bn['titulo'];?></b>  
+                <div  style="position: absolute; top: 350px; left: 40px; white-space: normal;"><!--nome do titulo da noticia por id-->
+                  <h1 style="font-size: 50px; text-align: center; text-shadow: 1px 1px 2px rgba(0,0,0,.7); "> 
+                    <div href="noticia.php?id=<?php echo $bn['id_noticia']; ?>" style="color: white;"><?php echo $bn['titulo'];?></div>
+                    <div>
+                  </h1>
+                </div>
+
+
+                <div  style="position: absolute; top: 300px; left: 40px;"><!--texto slider categoria da noticia por id-->
+                  <h1 style="font-size: 35px; text-align: center; text-shadow: 1px 1px 2px rgba(0,0,0,.7);"> 
+                    <b><div href="noticia.php?id=<?php echo $bn['id_noticia']; ?>" style="color: #cd2323; text-shadow: 1px 1px 2px rgba(0,0,0,.7);"><?php echo $bn['nome_categoria'];?></div></b>  
                     <div>
                   </h1>
                 </div>
@@ -136,7 +144,7 @@
         <div class="row-fluid">
 <?php
     //A qunatidade de noticias a ser exibida a ser exibida
-    $quantidade = 8;//Altere a quantidade 
+    $quantidade = 4;//Altere a quantidade 
     //a pagina atual
     $pagina     = (isset($_GET['pagina'])) ? (int)$_GET['pagina'] : 1;
     //Calcula a pagina de qual valor será exibido
@@ -161,7 +169,7 @@
 
                 <div class="col-md-6">
                 <!--Card-->
-                <div class="card wow fadeIn"  data-wow-delay="0.3s">
+                <div class="card wow fadeIn"  data-wow-delay="0.3s" style="background-color: white;">
 
 
 
@@ -288,4 +296,7 @@
 
     </nav>
 
+
+</main>
 <?php require_once 'includes/footer.php'; ?>
+

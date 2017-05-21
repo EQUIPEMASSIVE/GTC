@@ -119,18 +119,15 @@
             //responsive code end
         });
     </script>    
-</head>
 
 
-<body id="main">
-
-
-
-
-<style>
+    <style>
         /* use navbar-wrapper to wrap navigation bar, the purpose is to overlay navigation bar above slider */
-            
-            
+      body{
+        background-color: #1e1e22;
+        
+      }      
+              
      .navbar-wrapper {
             position: absolute;
             top: 20px;
@@ -148,7 +145,19 @@
                 top: 0px;
             }
         }
+        body.cor-fundo{
+            background-color: gray;
+        }
     </style>
+</head>
+
+
+<body>
+<main class="cor-fundo">
+
+
+
+
     <div class="navbar-wrapper">
         <div class="container">
 
@@ -182,7 +191,7 @@
                         </ul>
 
                         <form class="form-inline waves-effect waves-light" action="buscar.php" method="GET">
-                    <input style="color: white; margin-left: 300px; font-size: 10px; margin-top: 10px;" class="form-control" type="text" placeholder="Buscar..." name="busca-organica" id="inputError" >
+                    <input style="color: white; margin-left: 400px; font-size: 10px; margin-top: 10px;" class="form-control" type="text" placeholder="Buscar..." name="busca-organica" id="inputError" >
                     <span class="glyphicon glyphicon-search"></span>
                     
                         </form>
