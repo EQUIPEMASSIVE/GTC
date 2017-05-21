@@ -64,6 +64,7 @@
                     /* size of bullet elment */
                     width: 19px;
                     height: 19px;
+                    margin-top: 30px;
                     text-align: center;
                     line-height: 19px;
                     color: white;
