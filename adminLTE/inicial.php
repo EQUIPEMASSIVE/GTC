@@ -1,6 +1,3 @@
-<?php
-require "includes/header.php";
-?>
 
 
 <!DOCTYPE html>
@@ -756,6 +753,4 @@ require "includes/header.php";
 <script src="dist/js/demo.js"></script>
 </body>
 
-
-
-<?php require "includes/footer.php"; ?>
+</html>
