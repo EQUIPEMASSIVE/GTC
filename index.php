@@ -177,11 +177,6 @@
                     <div class="card collection-card">
 
 
-                   
-                       
-
-                        
-
 
 
                         <div>
@@ -201,17 +196,6 @@
 
                 
                         </div>
-
-
-
-
-
-
-
-
-
-
-
 
 
 
