@@ -1,3 +1,8 @@
+<?php
+require "includes/header.php";
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -750,4 +755,7 @@
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
 </body>
-</html>
+
+
+
+<?php require "includes/footer.php"; ?>
