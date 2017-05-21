@@ -16,7 +16,7 @@
             <!-- Loading Screen -->
             <div data-u="loading" style="position:absolute;top:0px;left:0px;background:url('img/loading.gif') no-repeat 50% 50%; background-color: rgba(0, 0, 0, .7);"></div>
             <!-- Slides Container -->
-            <div u="slides" style="position: absolute; left: 0px; top: 0px; width: 1000px; height: 470px; overflow: hidden;">
+            <div u="slides" style="position: absolute; left: 0px; top: 0px; width: 1000px; height: 450px; overflow: hidden;">
                 <?php    
                    //Na ordem do recente para o ultimo
                           
@@ -31,7 +31,7 @@
                 <a href="noticia.php?id=<?php echo $bn['id_noticia']; ?>" ><img src="cp/imagens/imgnoticia/<?php echo $bn['imagem']; ?>" alt="Postagem 1"/>
 
                 <div  style="position: absolute; top: 380px; left: 40px;">
-                  <h1 style="font-size: 30px; text-align: center;"> 
+                  <h1 style="font-size: 35px; text-align: center;"> 
                     <b><div href="noticia.php?id=<?php echo $bn['id_noticia']; ?>" style="color: white;"><?php echo $bn['titulo'];?></b>  
                     <div>
                   </h1>
@@ -64,8 +64,8 @@
                     /* size of bullet elment */
                     width: 19px;
                     height: 19px;
-                    margin-top: 30px;
                     text-align: center;
+                    margin-top: 30px;
                     line-height: 19px;
                     color: white;
                     font-size: 12px;
@@ -136,14 +136,14 @@
         <div class="row-fluid">
 <?php
     //A qunatidade de noticias a ser exibida a ser exibida
-    $quantidade = 8;//Altere a quantidade 
+    $quantidade = 4;//Altere a quantidade 
     //a pagina atual
     $pagina     = (isset($_GET['pagina'])) ? (int)$_GET['pagina'] : 1;
     //Calcula a pagina de qual valor será exibido
     $inicio     = ($quantidade * $pagina) - $quantidade;
 
     //Monta o SQL com LIMIT para exibição dos dados  
-    $SQL_B = "SELECT titulo, imagem, conteudo, status, id_noticia, datapub FROM noticias INNER JOIN categoria ON (noticias.categoria = categoria.id_categoria) WHERE status = '1' ORDER BY  id_noticia DESC LIMIT $inicio, $quantidade";
+    $SQL_B = "SELECT * FROM noticias INNER JOIN categoria ON (noticias.categoria = categoria.id_categoria) WHERE status = '1' ORDER BY  dataPub DESC LIMIT $inicio, $quantidade";
 
 
     //Executa o SQL
@@ -289,4 +289,3 @@
     </nav>
 
 <?php require_once 'includes/footer.php'; ?>
-
