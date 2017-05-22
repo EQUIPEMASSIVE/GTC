@@ -291,7 +291,8 @@
               <a href="?pagina=1" class="btn btn-danger" class="page-link" aria-label="Previous">
                 <span aria-hidden="true">Primeira</span>
                 <span class="sr-only">Primeira</span>
-              </a> 
+              </a>
+               </li>
         ';
 
 
@@ -302,6 +303,7 @@
                 <span aria-hidden="true">«</span>
                 <span class="sr-only">«</span>
               </a> 
+               </li>
         "; 
         ?>
 
