@@ -288,23 +288,24 @@
         
          <!--Primeira Pagina-->
         <li class="page-item">
-        <a href="?pagina=1" class="btn btn-danger" class="page-link" aria-label="Previous">
+              <a href="?pagina=1" class="btn btn-danger" class="page-link" aria-label="Previous">
                 <span aria-hidden="true">Primeira</span>
                 <span class="sr-only">Primeira</span>
-              </a> ';
+              </a> 
+        ';
 
 
-        echo '       
+          echo "
                 <!--Pra voltar-->
-        <li class="page-item">
-        <a href=\"?pagina=$anterior\" class="btn btn-default" class="page-link" aria-label="Previous">
+        <li class="page-item"> 
+              <a href=\"?pagina=$anterior\" class="btn btn-default" class="page-link" aria-label="Previous">
                 <span aria-hidden="true">«</span>
                 <span class="sr-only">«</span>
-              </a> '; ?>
+              </a> 
+        "; 
+        ?>
 
         </ul>
- 
- 
  
         <?php
 
