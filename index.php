@@ -293,6 +293,8 @@
                 <span aria-hidden="true">Primeira</span>
                 <span class="sr-only">Primeira</span>
               </a> ';
+           
+           echo " | <a href=\"?pagina=$anteeio\">próxima</a> | ";
 
 
         ?>
