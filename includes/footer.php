@@ -38,13 +38,13 @@
         <div class="call-to-action">
             <h4>Assine nosso Newsletter</h4>
             <ul>
-               <li><a target="_blank" href="#" class="btn btn-light-green" rel="nofollow">Deixe seu: Email</a></li>
+               <li><a target="_blank" href="#" class="btn btn-outline-success waves-effect btn-sm" rel="nofollow">Deixe seu: Email</a></li>
             </ul>
 
         <h4>Encontrou algum bug?</h4>
             <ul>
                
-                <li><a target="_blank" href="#" class="btn btn-outline-danger waves-effect" rel="nofollow">Reportar!</a></li>
+                <li><a target="_blank" href="#" class="btn btn-outline-danger waves-effect btn-sm" rel="nofollow">Reportar!</a></li>
 
             </ul>
 
