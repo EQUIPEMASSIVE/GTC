@@ -280,15 +280,22 @@
 
 
 
-    <nav id="navegacao" style="text-align: center;">
+
+<!--Pagination blue-->
+        <nav id="navegacao" style="text-align: center;">
+          <ul class="pagination pg-blue">
         <?php
-        echo '<a href="?pagina=1" class="btn btn-danger" class="page-link" aria-label="Previous">
+        echo '
+                    <!--Primeira Pagina-->
+        <li class="page-item">
+        <a href="?pagina=1" class="btn btn-danger" class="page-link" aria-label="Previous">
                 <span aria-hidden="true">Primeira</span>
                 <span class="sr-only">Primeira</span>
               </a> ';
+  
      
         echo "<a href=\"?pagina=$anterior\">anterior</a> | ";
-        ?>
+        ?>   </ul>
         <?php
 
          /**
