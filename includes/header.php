@@ -23,7 +23,7 @@
 
     <!-- Material Design Bootstrap -->
     <link href="css/mdb.min.css" rel="stylesheet">
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
 
     <!-- SCRIPTS -->
 
@@ -190,11 +190,12 @@
                             <li><a href="cp/index.php">Login CP</a></li>
                         </ul>
 
-                        <form class="form-inline waves-effect waves-light" action="buscar.php" method="GET">
-                    <input style="" class="form-control" type="text" placeholder="Buscar..." name="busca-organica" id="inputError" >
-                    <span class="glyphicon glyphicon-search"></span>
-                    
-                        </form>
+                       <div> 
+                         <form class="form-inline waves-effect waves-light" action="buscar.php" method="GET">
+                    <input style="margin-top: 9px;" class="form-control pull-right" type="text" placeholder="Buscar..." name="busca-organica" id="inputError" >
+                    <span class="glyphicon glyphicon-search">
+                               </form> </span>
+                    </div>
                     </div>
                 </div>
             </nav>
