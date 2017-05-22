@@ -296,7 +296,7 @@
         ';
 
 
-          echo "
+          echo '
                 <!--Pra voltar-->
         <li class="page-item"> 
               <a href=\"?pagina=$anterior\" class="btn btn-default" class="page-link" aria-label="Previous">
@@ -304,7 +304,7 @@
                 <span class="sr-only">«</span>
               </a> 
                </li>
-        "; 
+         ';
         ?>
 
         </ul>
