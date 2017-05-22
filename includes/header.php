@@ -191,7 +191,7 @@
                         </ul>
 
                         <form class="form-inline waves-effect waves-light" action="buscar.php" method="GET">
-                    <input style="color: white; margin-left: 400px; font-size: 10px; margin-top: 10px;" class="form-control" type="text" placeholder="Buscar..." name="busca-organica" id="inputError" >
+                    <input style="" class="form-control" type="text" placeholder="Buscar..." name="busca-organica" id="inputError" >
                     <span class="glyphicon glyphicon-search"></span>
                     
                         </form>
