@@ -1,5 +1,4 @@
-<!--Footer-->
-    <footer class="page-footer center-on-small-only">
+<footer class="page-footer center-on-small-only">
 
         <!--Footer Links-->
         <div class="container-fluid">
@@ -13,36 +12,12 @@
                 </div>
                 <!--/.First column-->
 
-                <hr class="hidden-md-up">
-
-                <!--Second column-->
                 <div class="col-lg-2 offset-lg-1 hidden-lg-down">
-                    <h5 class="title">.</h5>
-                    <ul>
-                        <li><a href="#!">.</a></li>
-                        <li><a href="#!">.</a></li>
-                        <li><a href="#!">.</a></li>
-                    </ul>
+          
                 </div>
-                <!--/.Second column-->
-
-                <hr class="hidden-md-up">
-
-                <!--Third column-->
-                <div class="col-lg-2 offset-lg-1 hidden-lg-down">
-                    <h5 class="title">.</h5>
-                    <ul>
-                        <li><a href="#!">.</a></li>
-                        <li><a href="#!">.</a></li>
-                        <li><a href="#!">.</a></li>
-                    </ul>
-                </div>
-                <!--/.Third column-->
-
-                <hr class="hidden-md-up">
-
+            
                 <!--Fourth column-->
-                <div class="col-lg-2 col-md-4">
+                <div class="col-lg-2 col-md-4 pull-right">
                     <h5 class="title">Redes Sociais</h5>
                     <ul>
                         <li><a href="#!">Facebook</a></li>
@@ -63,8 +38,7 @@
         <div class="call-to-action">
             <h4>Assine nosso Newsletter</h4>
             <ul>
-               
-                <li><a target="_blank" href="#" class="btn btn-light-green" rel="nofollow">Deixe seu: Email</a></li>
+               <li><a target="_blank" href="#" class="btn btn-light-green" rel="nofollow">Deixe seu: Email</a></li>
             </ul>
 
         <h4>Encontrou algum bug?</h4>
@@ -87,12 +61,3 @@
         <!--/.Copyright-->
 
     </footer>
-    <!--/.Footer-->
-
-    <script>
-    new WOW().init();
-    </script>
-
-</body>
-
-</html>
