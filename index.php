@@ -282,7 +282,7 @@
 
     <nav id="navegacao" style="text-align: center;">
         <?php
-        echo '<a href="?pagina=1" class="page-link" aria-label="Previous">
+        echo '<a href="?pagina=1" class="btn btn-danger" class="page-link" aria-label="Previous">
                 <span aria-hidden="true">Primeira</span>
                 <span class="sr-only">Primeira</span>
               </a> ';
