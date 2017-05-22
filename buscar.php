@@ -6,7 +6,7 @@
     
 
           <br>
-          <h1 class="jumbotron">Resultados da busca para:   <?php echo @$termo = $_GET["busca-organica"]; ?></h1> 
+          <h4 class="jumbotron" style="margin: 33px 0px -15px 0px; padding: 10px 10px;">Resultados da busca para:   <?php echo @$termo = $_GET["busca-organica"]; ?></h4> 
           
 
             
