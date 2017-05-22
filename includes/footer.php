@@ -44,7 +44,7 @@
         <h4>Encontrou algum bug?</h4>
             <ul>
                
-                <li><a target="_blank" href="#" class="btn btn-danger" rel="nofollow">Reportar!</a></li>
+                <li><a target="_blank" href="#" class="btn btn-outline-danger waves-effect" rel="nofollow">Reportar!</a></li>
 
             </ul>
 
