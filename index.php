@@ -295,7 +295,7 @@
               </a> ';
 
 
-        echo " | <a href=\"?pagina=$posterior\">próxima</a> | ";
+        echo " | <a href=\"?pagina=$posterior\">próxima</a> | 
                         <span aria-hidden="true">«</span>
                 <span class="sr-only">«</span>
               </a> "; 
