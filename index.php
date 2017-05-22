@@ -280,7 +280,7 @@
 
     <nav id="navegacao" style="text-align: center;">
         <?php
-        echo '<a  href="?pagina=1">primeira</a> | ';
+        echo '<a  href="?pagina=1" class="btn btn-default">primeira</a> | ';
         echo "<a href=\"?pagina=$anterior\">anterior</a> | ";
         ?>
         <?php
