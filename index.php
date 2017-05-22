@@ -285,16 +285,7 @@
         <nav id="navegacao" style="text-align: center;">
           <ul class="pagination pg-blue">
         <?php
-        echo '
-        
-         <!--Primeira Pagina-->
-        
-        <a href=\"?pagina=$posterior\" class="btn btn-danger" class="page-link" aria-label="Previous">
-                <span aria-hidden="true">Primeira</span>
-                <span class="sr-only">Primeira</span>
-              </a> ';
-           
-           echo " | <a href=\"?pagina=$anteeio\">próxima</a> | ";
+               echo " | <a href=\"?pagina=$anterior\">próxima</a> | ";
 
 
         ?>
