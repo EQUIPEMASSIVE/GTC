@@ -169,7 +169,7 @@
 
                 <div class="col-md-6">
                 <!--Card-->
-                <div class="card wow fadeIn"  data-wow-delay="0.3s" style="background-color: white;">
+                <div class="card wow fadeIn"  data-wow-delay="0.3s" style="background-color: white;  padding-bottom: 30px;">
 
 
 
