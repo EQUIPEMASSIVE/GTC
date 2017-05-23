@@ -283,15 +283,10 @@
 
 <!--Pagination blue-->
         <nav id="navegacao" style="text-align: center;">
-          <ul class="pagination pg-blue">
         <?php
-               echo " | <a href=\"?pagina=$anterior\">próxima</a> | ";
-
-
+        echo '<a  href="?pagina=1">primeira</a> | ';
+        echo "<a href=\"?pagina=$anterior\">anterior</a> | ";
         ?>
-
-        </ul>
- 
         <?php
 
          /**
