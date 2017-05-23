@@ -180,19 +180,16 @@
 
 
                         <div><!--codigo para por nome da categoria em cima da imagem da noticia-->
-                            <a href="noticia.php?id=<?php echo $pusha['id_noticia']; ?>" ><img src="cp/imagens/imgnoticia/<?php echo $pusha['imagem']; ?>" alt="Postagem 1"/>
+                             <a href="noticia.php?id=<?php echo $pusha['id_noticia']; ?>" ><img src="cp/imagens/imgnoticia/<?php echo $pusha['imagem']; ?>" alt="Postagem 1"/>
 
                             <div  style="position: absolute; top: -5px; left: 20px;"><!--texto categoria da noticia por id-->
-                              <h1 style="font-size: 25px; text-align: center; text-shadow: 3px 3px 4px rgba(0,0,0,.7); background-color: gray; z-index:1; opacity:.6; "> 
+                              <h1 style="font-size: 25px; text-align: center; text-shadow: 3px 3px 4px rgba(0,0,0,.7);"> 
 
-                                <b><div href="noticia.php?id=<?php echo $pusha['id_categoria']; ?>" style="color: #f0f0fa; text-shadow: 1px 1px 2px rgba(0,0,0,.7);"><?php echo $pusha['nome_categoria'];?></div></b>  
-                                <div>
+                                <b><div class="price" href="noticia.php?id=<?php echo $pusha['id_categoria']; ?>" style="color: #f0f0fa; text-shadow: 1px 1px 2px rgba(0,0,0,.7);"><span class="badge btn-elegant"><?php echo $pusha['nome_categoria'];?></div></b></span> <!--nome da categoria em cima da imagem-->
+                             <div>
                               </h1>
                             </div>
-
-                        
-
-                            </a>
+                             </a>
 
                 
                         </div>
