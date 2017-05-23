@@ -226,7 +226,7 @@
                     <!--/.Card content-->
 
                 </div>
-                <!--/.Card--> <br> <br>
+                <!--/.Card--> <br> <br> <br> <br>
             </div>
             <!--First columnn-->
 
