@@ -8,6 +8,6 @@ GTC - Beta- Testing Github
 Existe uma promessa de refatoração e organização desse codigo... 
 
 Esperamos a profecia se cumprir.
-Como dizia o pastor alemão, o mais importante é funcionar haha
+Como dizia o pastor alemão, as vezes o mais importante em um sistema é funcionar haha.
 
 
