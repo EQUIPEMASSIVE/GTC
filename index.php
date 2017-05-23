@@ -30,7 +30,7 @@
             <div>
                 <a href="noticia.php?id=<?php echo $bn['id_noticia']; ?>" ><img src="cp/imagens/imgnoticia/<?php echo $bn['imagem']; ?>" alt="Postagem 1"/>
 
-                <div  style="position: absolute; top: 320px; left: 40px; white-space: normal;"><!--nome do titulo da noticia por id-->
+                <div  style="position: absolute; top: 320px; left: 40px;"><!--nome do titulo da noticia por id-->
                   <h1 style="font-size: 50px; text-align: center; text-shadow: 1px 1px 2px rgba(0,0,0,.7); "> 
                     <div href="noticia.php?id=<?php echo $bn['id_noticia']; ?>" style="color: white;"><?php echo $bn['titulo'];?></div>
                     <div>
