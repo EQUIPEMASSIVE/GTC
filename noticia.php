@@ -46,9 +46,8 @@
                          
                         
                    
-                      <span style="color: #808080" > Publicado dia: <?php echo $dataEX; ?> &nbsp&nbsp  </span>
-                      <span style="color: #808080" > Por: <?php echo $rn["autorPub"]; ?> &nbsp&nbsp  </span>
-
+                      Publicado dia:<span style="color: #09f" >  <?php echo $dataEX; ?> &nbsp&nbsp  </span>
+                      Por:<span style="color: #09f" >  <?php echo $rn["autorPub"]; ?> &nbsp&nbsp  </span>
 
 
                      
