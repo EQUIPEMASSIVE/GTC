@@ -6,9 +6,8 @@ GTC - Beta- Testing Github
 
 
 Existe uma promessa de refatoração e organização desse codigo... 
+
 Esperamos a profecia se cumprir.
 Como dizia o pastor alemão, o mais importante é funcionar haha
 
 
-
-![](https://i2.wp.com/www.viralane.com/wp-content/uploads/2014/07/pic_00718.jpg?resize=600%2C450)
