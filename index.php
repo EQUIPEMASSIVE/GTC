@@ -185,7 +185,7 @@
                             <div  style="position: absolute; top: -30px; left: 15px;"><!--texto categoria da noticia por id-->
                               <h1 style="font-size: 25px; text-align: center; text-shadow: 3px 3px 4px rgba(0,0,0,.7);"> 
 
-                                <b><div class="price" href="noticia.php?id=<?php echo $pusha['id_categoria']; ?>" style="color: #f0f0fa; text-shadow: 1px 1px 2px rgba(0,0,0,.7);"><span class="badge btn-elegant"><?php echo $pusha['nome_categoria'];?></div></b></span> <!--nome da categoria em cima da imagem-->
+                                <b><div href="noticia.php?id=<?php echo $pusha['id_categoria']; ?>" style="color: #f0f0fa; text-shadow: 1px 1px 2px rgba(0,0,0,.7);"><span class="badge btn-elegant"><?php echo $pusha['nome_categoria'];?></div></b></span> <!--nome da categoria em cima da imagem-->
                              <div>
                               </h1>
                             </div>
