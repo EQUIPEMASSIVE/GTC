@@ -47,7 +47,7 @@ require_once "includes/header.php";
 
 					<div class="grid-container" id="publicar-noticia-left">
 						<div class="grid-width-100">
-							<input maxlength="58" class="form-control" type="text" name="titulo-noticia"
+							<input SIZE=10 MAXLENGTH=10 class="form-control" type="text" name="titulo-noticia"
 								placeholder="Coloque o título aqui"/>
 								<br>	
 							<div >
