@@ -190,11 +190,12 @@
                             <li><a href="cp/index.php">Login CP</a></li>
                         </ul>
 
-                       <div> 
+                       <div style="margin-left: 10px;"> 
                          <form class="form-inline waves-effect waves-light" action="buscar.php" method="GET">
-                    <input style="margin-top: 9px;" class="form-control pull-right" type="text" placeholder="Buscar..." name="busca-organica" id="inputError" >
+                    <input style="margin-top: 8px; padding-left: 5px;  border: 2px solid white; border-radius: 20px;" class="form-control pull-right" type="text" placeholder="  Buscar..." name="busca-organica" id="inputError" >
                     <span class="glyphicon glyphicon-search">
-                               </form> </span>
+                               </span>
+                                </form>
                     </div>
                     </div>
                 </div>
