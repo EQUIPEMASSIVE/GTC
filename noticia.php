@@ -1,7 +1,7 @@
   <?php require_once 'includes/header.php';  ?>
 
 
-<br>
+
 
 
 <main>
@@ -31,7 +31,7 @@
                 ?>
 
 
-            <br>   <br>         
+            <br>           
                  <!--Main column-->
                 <div class="col-lg-12">
 
