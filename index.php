@@ -182,8 +182,8 @@
                         <div><!--codigo para por nome da categoria em cima da imagem da noticia-->
                              <a href="noticia.php?id=<?php echo $pusha['id_noticia']; ?>" ><img src="cp/imagens/imgnoticia/<?php echo $pusha['imagem']; ?>" alt="Postagem 1"/>
 
-                            <div  style="position: relative; top: -20px; left: 0px;"><!--texto categoria da noticia por id-->
-                              <h1 style="font-size: 25px; text-align: center;"> 
+                            <div  style="position: absolute; top: 170px; left: 15px;"><!--texto categoria da noticia por id-->
+                              <h1 class="price" style="font-size: 25px; text-align: center; text-shadow: 3px 3px 4px rgba(0,0,0,.7);"> 
 
                                 <b><div class="price" href="noticia.php?id=<?php echo $pusha['id_categoria']; ?>" style="color: #f0f0fa; text-shadow: 1px 1px 2px rgba(0,0,0,.7);"><span class="badge btn-elegant"><?php echo $pusha['nome_categoria'];?></div></b></span> <!--nome da categoria em cima da imagem-->
                              <div>
@@ -209,7 +209,7 @@
 
                         <h1 class="h1-responsive"> <a href="noticia.php?id=<?php echo $pusha['id_noticia']; ?>" style="color: #000" class="card-title"><?php echo $pusha['titulo'];?></a></h1> 
                         
-                        <br>     
+                        <br>  <br><br><br>    
                         <!--Text-->
                        
                         <!--<a href="noticia.php?id=<?php echo $pusha['id_noticia']; ?>" class="black-text d-flex flex-row-reverse"><h7 class="waves-effect p-2">Leia mais... <i class="fa fa-chevron-right"></i></h7></a>-->
