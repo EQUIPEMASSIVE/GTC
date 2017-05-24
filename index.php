@@ -200,7 +200,7 @@
                     <!--/.Card image-->
 
                     <!--Card content-->
-                    <div class="card-block" style="max-height: 300px; max-width: auto; text-align:center">
+                    <div class="card-block" style="min-height: 400px; max-width: auto; text-align:center">
                         <!--Title-->
                         <!--h5 class="price"><a href="categoria.php?id=<?php //echo $pusha['id_categoria']; ?>"> <span class="badge btn-elegant"> <?php //echo $pusha['nome_categoria']; ?></span></a></h5>--> 
 
