@@ -299,7 +299,7 @@
     * O loop para exibir os valores à direita
     */
     ?>
-     | <a class="badge badge-success" href=<?php echo "\"?pagina=$posterior\">próxima</a> | ";
+     | <a class="badge-success" href=<?php echo "\"?pagina=$posterior\">próxima</a> | ";
     ?>
      <a class="badge btn-outline-default waves-effect" href=<?php echo "\"?pagina=$totalPagina\">última</a> | ";          
  
