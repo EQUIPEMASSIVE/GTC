@@ -140,7 +140,7 @@
 
 <main>
     <br>
-<div class="container">
+<div class="container-fluid">
         <div class="row">
 <?php
     //A qunatidade de noticias a ser exibida a ser exibida
