@@ -271,9 +271,6 @@
 <!--Pagination blue-->
         <nav id="navegacao" style="text-align: center;">
          
-         <div class="container">
-        <div class="row-fluid">
-          <div class="col-md-6">
        
     | <a  class="badge btn-outline-danger waves-effect" href=<?php echo "\"?pagina=1\">primeira</a> | ";
     ?>
@@ -309,7 +306,7 @@
     ?>
 
     </nav>
-          </div></div>/<div>
+         
 
 </main>
 <?php require_once 'includes/footer.php'; ?>
