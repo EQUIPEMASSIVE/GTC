@@ -173,11 +173,12 @@
 
 
                     <!--Card image-->
-                    <div class="card-block">                        
-                              
-                              <img class="img-fluid" src="cp/imagens/imgnoticia/<?php echo $pusha['imagem']; ?>" style="max-height: 240px; max-width: auto;" alt="Postagem 1"/>
-                               <div><!--codigo para por nome da categoria em cima da imagem da noticia-->
-                               <a href="noticia.php?id=<?php echo $pusha['id_noticia']; ?>" >
+                    <div class="card-block">  
+                     
+                      <div><!--codigo para por nome da categoria em cima da imagem da noticia-->
+                               <a href="noticia.php?id=<?php echo $pusha['id_noticia']; ?>" >                              
+                              <img class="img-fluid" src="cp/imagens/imgnoticia/<?php echo $pusha['imagem']; ?>" alt="Postagem 1"/>
+                               
                               
                       
 
