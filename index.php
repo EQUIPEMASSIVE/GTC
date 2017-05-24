@@ -272,7 +272,7 @@
         <nav id="navegacao" style="text-align: center;">
          
        
-    | <a  class="badge btn-outline-danger waves-effect" href=<?php echo "\"?pagina=1\">primeira</a> | ";
+    | <a  class="badge btn-outline-danger" href=<?php echo "\"?pagina=1\"><<</a> | ";
     ?>
      <a class="btn btn-danger" style="    font-size: 0.5rem;
     padding: -0.35rem 1.13rem;
@@ -305,9 +305,15 @@
     * O loop para exibir os valores à direita
     */
     ?>
-     | <a class="btn btn-light-green waves-effect" href=<?php echo "\"?pagina=$posterior\">próxima</a> | ";
+     | <a class="btn btn-light-green" style="    font-size: 0.5rem;
+    padding: -0.35rem 1.13rem;
+    border-radius: 2px;
+    border: 0;
+    color: #fff!important;
+    margin: -9px;
+    white-space: normal!important;" href=<?php echo "\"?pagina=$posterior\">próxima</a> | ";
     ?>
-     <a class="badge btn-outline-default waves-effect" href=<?php echo "\"?pagina=$totalPagina\">última</a> | ";          
+     <a class="badge btn-outline-default" href=<?php echo "\"?pagina=$totalPagina\">>></a> | ";          
  
     ?>
 
