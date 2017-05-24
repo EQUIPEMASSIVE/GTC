@@ -169,7 +169,7 @@
 
                 <div class="col-md-6">
                 <!--Card-->
-                <div class="card-block" style="background-color: white; padding-bottom: 10px;">
+                <div class="card-block" style="min-height: 400px; max-width: auto; background-color: white; padding-bottom: 10px;">
 
 
                     <!--Card image-->
@@ -200,7 +200,7 @@
                     <!--/.Card image-->
 
                     <!--Card content-->
-                    <div class="card-block" style="min-height: 400px; max-width: auto; text-align:center">
+                    <div class="card-block" style="text-align:center">
                         <!--Title-->
                         <!--h5 class="price"><a href="categoria.php?id=<?php //echo $pusha['id_categoria']; ?>"> <span class="badge btn-elegant"> <?php //echo $pusha['nome_categoria']; ?></span></a></h5>--> 
 
