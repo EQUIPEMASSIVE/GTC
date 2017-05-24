@@ -169,11 +169,11 @@
 
                 <div class="col-md-6">
                 <!--Card-->
-                <div class="card-block"style="background-color: white; padding-bottom: 10px;">
+                <div class="card-block" style="background-color: white; padding-bottom: 10px;">
 
 
                     <!--Card image-->
-                    <div class="card-block" style=" white; max-height: 200px; max-width: auto;">
+                    <div class="card-block" style="max-height: 170px; max-width: auto;">
                         <div><!--codigo para por nome da categoria em cima da imagem da noticia-->
                              <a href="noticia.php?id=<?php echo $pusha['id_noticia']; ?>" >
                               
