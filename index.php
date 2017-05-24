@@ -28,7 +28,7 @@
                 <a href="noticia.php?id=<?php echo $bn['id_noticia']; ?>" ><img src="cp/imagens/imgnoticia/<?php echo $bn['imagem']; ?>" alt="Postagem 1"/>
 
                 <div  style="position: absolute; top: 320px; left: 40px;"><!--nome do titulo da noticia por id-->
-                  <h1 style="font-size: 50px; text-align: left; text-shadow: 1px 1px 2px rgba(0,0,0,.7); "> 
+                  <h1 style="font-size: 50px; text-align: left; border: 1px solid text-shadow: 1px 1px 2px rgba(0,0,0,.7); "> 
                     <div href="noticia.php?id=<?php echo $bn['id_noticia']; ?>" style="color: white;"><?php echo $bn['titulo'];?></div>
                     <div>
                   </h1>
