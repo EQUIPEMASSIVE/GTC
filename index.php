@@ -169,17 +169,17 @@
 
                 <div class="col-md-6">
                 <!--Card-->
-                <div class="card-block"style="background-color: white; max-height: 200px; max-width: auto; padding-bottom: 10px;">
+                <div class="card-block"style="background-color: white; padding-bottom: 10px;">
 
 
                     <!--Card image-->
-                    <div class="view overlay hm-white-slight">
+                    <div class="card-block" style=" white; max-height: 200px; max-width: auto;">
                         <div><!--codigo para por nome da categoria em cima da imagem da noticia-->
                              <a href="noticia.php?id=<?php echo $pusha['id_noticia']; ?>" >
                               
-                              <img class="img-fluid" src="cp/imagens/imgnoticia/<?php echo $pusha['imagem']; ?>" style="max-height: 250px; max-width: auto;" alt="Postagem 1"/>
+                              <img class="img-fluid" src="cp/imagens/imgnoticia/<?php echo $pusha['imagem']; ?>" alt="Postagem 1"/>
                               
-                              <div class="mask waves-effect waves-light"></div>
+                      
 
                             <div  style="position: absolute; top: -20px; left: 15px;"><!--texto categoria da noticia por id-->
                               <h1 style="font-size: 20px; text-align: left; text-shadow: 3px 3px 4px rgba(0,0,0,.7); background-color: rgba(0,0,0,1.5); padding: 2px;"> 
