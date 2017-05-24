@@ -272,9 +272,9 @@
 <!--Pagination blue-->
         <nav id="navegacao" style="text-align: center;">
        
-    | <a class="btn btn-outline-danger waves-effect" href=<?php echo "\"?pagina=1\">primeira</a> | ";
+    | <a class="badge btn-outline-danger waves-effect" href=<?php echo "\"?pagina=1\">primeira</a> | ";
     ?>
-     <a class="btn btn-outline-danger waves-effect" href=<?php echo "\"?pagina=$anterior\">anterior</a> | ";          
+     <a class="badge badge-danger" href=<?php echo "\"?pagina=$anterior\">anterior</a> | ";          
  
     ?>
          
@@ -299,9 +299,9 @@
     * O loop para exibir os valores à direita
     */
     ?>
-     | <a class="btn btn-outline-success waves-effect" href=<?php echo "\"?pagina=$posterior\">próxima</a> | ";
+     | <a class="badge badge-success" href=<?php echo "\"?pagina=$posterior\">próxima</a> | ";
     ?>
-     <a class="btn btn-outline-default waves-effect" href=<?php echo "\"?pagina=$totalPagina\">última</a> | ";          
+     <a class="badge btn-outline-default waves-effect" href=<?php echo "\"?pagina=$totalPagina\">última</a> | ";          
  
     ?>
 
