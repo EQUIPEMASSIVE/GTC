@@ -274,7 +274,7 @@
        
     | <a class="badge btn-outline-danger waves-effect" href=<?php echo "\"?pagina=1\">primeira</a> | ";
     ?>
-     <a class="badge badge-danger" href=<?php echo "\"?pagina=$anterior\">anterior</a> | ";          
+     <a class="btn btn-danger waves-effect" href=<?php echo "\"?pagina=$anterior\">anterior</a> | ";          
  
     ?>
          
@@ -299,7 +299,7 @@
     * O loop para exibir os valores à direita
     */
     ?>
-     | <a class="badge-success" href=<?php echo "\"?pagina=$posterior\">próxima</a> | ";
+     | <a class="btn btn-light-green waves-effect" href=<?php echo "\"?pagina=$posterior\">próxima</a> | ";
     ?>
      <a class="badge btn-outline-default waves-effect" href=<?php echo "\"?pagina=$totalPagina\">última</a> | ";          
  
