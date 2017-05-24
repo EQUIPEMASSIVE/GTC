@@ -176,7 +176,9 @@
                     <div class="view overlay hm-white-slight">
                         <div><!--codigo para por nome da categoria em cima da imagem da noticia-->
                              <a href="noticia.php?id=<?php echo $pusha['id_noticia']; ?>" >
-                              <img class="img-fluid" src="cp/imagens/imgnoticia/<?php echo $pusha['imagem']; ?>" alt="Postagem 1"/>
+                              
+                              <img class="img-fluid" src="cp/imagens/imgnoticia/<?php echo $pusha['imagem']; ?>" class="img-thumbnail" alt="Postagem 1"/>
+                              
                               <div class="mask waves-effect waves-light"></div>
 
                             <div  style="position: absolute; top: -20px; left: 15px;"><!--texto categoria da noticia por id-->
