@@ -212,7 +212,7 @@
                       
                         
 
-                        <span style="position: absolute; top: -20px; left: 15px color: #C0C0C0" ><i class="fa fa-clock-o" ></i> Publicado dia: <?php echo $pusha['datapub'];?></span>
+                        <span style="position: absolute; top: 10px; color: #C0C0C0" ><i class="fa fa-clock-o" ></i> Publicado dia: <?php echo $pusha['datapub'];?></span>
 
                         
                     </div>
