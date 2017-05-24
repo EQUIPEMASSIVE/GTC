@@ -272,7 +272,7 @@
 <!--Pagination blue-->
         <nav id="navegacao" style="text-align: center;">
        
-    | <a  class="btn btn-danger" href=<?php echo "\"?pagina=1\">primeira</a> | ";
+    | <a  class="badge btn-outline-danger waves-effect" href=<?php echo "\"?pagina=1\">primeira</a> | ";
     ?>
      <a class="btn btn-danger waves-effect" href=<?php echo "\"?pagina=$anterior\">anterior</a> | ";          
  
