@@ -177,7 +177,7 @@
                         <div><!--codigo para por nome da categoria em cima da imagem da noticia-->
                              <a href="noticia.php?id=<?php echo $pusha['id_noticia']; ?>" >
                               
-                              <img class="img-fluid" src="cp/imagens/imgnoticia/<?php echo $pusha['imagem']; ?>" style="max-height: 270px; max-width: auto;" alt="Postagem 1"/>
+                              <img class="img-fluid" src="cp/imagens/imgnoticia/<?php echo $pusha['imagem']; ?>" style="max-height: 260px; max-width: auto;" alt="Postagem 1"/>
                               
                               <div class="mask waves-effect waves-light"></div>
 
