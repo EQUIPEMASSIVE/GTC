@@ -274,7 +274,13 @@
        
     | <a  class="badge btn-outline-danger waves-effect" href=<?php echo "\"?pagina=1\">primeira</a> | ";
     ?>
-     <a class="btn btn-danger waves-effect" href=<?php echo "\"?pagina=$anterior\">anterior</a> | ";          
+     <a class="btn btn-danger" style="    font-size: 0.5rem;
+    padding: -0.35rem 1.13rem;
+    border-radius: 2px;
+    border: 0;
+    color: #fff!important;
+    margin: -9px;
+    white-space: normal!important;" href=<?php echo "\"?pagina=$anterior\">anterior</a> | ";          
  
     ?>
          
