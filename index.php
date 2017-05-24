@@ -140,8 +140,8 @@
 
 <main>
     <br>
-<div class="container-fluid">
-        <div class="row">
+<div class="container">
+        <div class="row-fluid">
 <?php
     //A qunatidade de noticias a ser exibida a ser exibida
     $quantidade = 8;//Altere a quantidade 
