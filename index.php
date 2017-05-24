@@ -169,7 +169,7 @@
 
                 <div class="col-md-6">
                 <!--Card-->
-                <div class="card-block" style="min-height: 400px; max-width: auto; background-color: white; padding-bottom: 10px;">
+                <div class="card-block" style="min-height: 380px; max-width: auto; background-color: white; padding-bottom: 10px;">
 
 
                     <!--Card image-->
@@ -205,7 +205,7 @@
                         <!--h5 class="price"><a href="categoria.php?id=<?php //echo $pusha['id_categoria']; ?>"> <span class="badge btn-elegant"> <?php //echo $pusha['nome_categoria']; ?></span></a></h5>--> 
                               
                 <span style="color: #C0C0C0" ><i class="fa fa-clock-o" ></i> Publicado dia: <?php echo $pusha['datapub'];?></span>
-                        <h1 class="card-title"> <a href="noticia.php?id=<?php echo $pusha['id_noticia']; ?>" style="color: #000"><?php echo $pusha['titulo'];?></a></h1> 
+                        <h2 class="card-title"> <a href="noticia.php?id=<?php echo $pusha['id_noticia']; ?>" style="color: #000"><?php echo $pusha['titulo'];?></a></h2> 
                                                 
                         <!--Text-->
                        
