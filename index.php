@@ -285,12 +285,12 @@
     */
    for($i = $pagina-$exibir; $i <= $pagina-1; $i++){
        if($i > 0)
-        echo '<a href="?pagina='.$i.'"> '.$i.' </a>';
+        echo '<a style="color: red;" href="?pagina='.$i.'"> '.$i.' </a>';
   }
   echo '<a style="color: greenyellow; " href="?pagina='.$pagina.'"><strong>'.$pagina.'</strong></a>';
   for($i = $pagina+1; $i < $pagina+$exibir; $i++){
        if($i <= $totalPagina)
-        echo '<a href="?pagina='.$i.'"> '.$i.' </a>';
+        echo '<a style="color:red ;" href="?pagina='.$i.'"> '.$i.' </a>';
   }
    /**
     * Depois o link da página atual
