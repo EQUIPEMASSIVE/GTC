@@ -1,4 +1,3 @@
-
 <?php
  require_once 'includes/header.php';
 ?>
@@ -21,8 +20,6 @@
                    //Na ordem do recente para o ultimo
                           
                             $SQL_B = mysql_query("SELECT * FROM noticias INNER JOIN categoria ON(noticias.categoria = categoria.id_categoria)  ORDER BY id_noticia DESC LIMIT 5");//aqui sao mostradas somente a noticia pelo nome da categoria.
-
-
                             while ($bn = mysql_fetch_array($SQL_B)) {
                             
                 ?>
@@ -149,16 +146,12 @@
     $pagina     = (isset($_GET['pagina'])) ? (int)$_GET['pagina'] : 1;
     //Calcula a pagina de qual valor será exibido
     $inicio     = ($quantidade * $pagina) - $quantidade;
-
     //Monta o SQL com LIMIT para exibição dos dados  
     $SQL_B = "SELECT * FROM noticias INNER JOIN categoria ON (noticias.categoria = categoria.id_categoria) WHERE status = '1' ORDER BY  dataPub DESC LIMIT $inicio, $quantidade";
-
-
     //Executa o SQL
     $qr  = mysql_query($SQL_B) or die(mysql_error());
     //Percorre os campos da tabela
     while($pusha = mysql_fetch_assoc($qr)){
-
 ?>
 
                 <!--First row-->
@@ -204,14 +197,14 @@
                         <!--Title-->
                         <!--h5 class="price"><a href="categoria.php?id=<?php //echo $pusha['id_categoria']; ?>"> <span class="badge btn-elegant"> <?php //echo $pusha['nome_categoria']; ?></span></a></h5>--> 
                               
-                <span class="badge btn-outline-success waves-effect" style="color: #C0C0C0; background-color: transparent;" > <i class="fa fa-clock-o" ></i>  &nbsp Publicado dia: <?php echo $pusha['datapub'];?></span>
+                <span style="color: #C0C0C0" ><i class="fa fa-clock-o" ></i> Publicado dia: <?php echo $pusha['datapub'];?></span>
                         <h1  style="text-align:center" class="card-title"> <a href="noticia.php?id=<?php echo $pusha['id_noticia']; ?>" style="color: #000"><?php echo $pusha['titulo'];?></a></h1> 
                                                 
                         <!--Text-->
                        
                         <!--<a href="noticia.php?id=<?php echo $pusha['id_noticia']; ?>" class="black-text d-flex flex-row-reverse"><h7 class="waves-effect p-2">Leia mais... <i class="fa fa-chevron-right"></i></h7></a>-->
                       
-                       
+                        
 
                         
 
@@ -283,7 +276,6 @@
         echo "<a href=\"?pagina=$anterior\">anterior</a> | ";
         ?>
         <?php
-
          /**
     * O loop para exibir os valores à esquerda
     */
@@ -291,21 +283,17 @@
        if($i > 0)
         echo '<a href="?pagina='.$i.'"> '.$i.' </a>';
   }
-
   echo '<a href="?pagina='.$pagina.'"><strong>'.$pagina.'</strong></a>';
-
   for($i = $pagina+1; $i < $pagina+$exibir; $i++){
        if($i <= $totalPagina)
         echo '<a href="?pagina='.$i.'"> '.$i.' </a>';
   }
-
    /**
     * Depois o link da página atual
     */
    /**
     * O loop para exibir os valores à direita
     */
-
     ?>
     <?php echo " | <a href=\"?pagina=$posterior\">próxima</a> | ";
     echo "  <a href=\"?pagina=$totalPagina\">última</a>";
@@ -316,4 +304,3 @@
 
 </main>
 <?php require_once 'includes/footer.php'; ?>
-
