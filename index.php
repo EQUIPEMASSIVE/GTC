@@ -267,7 +267,8 @@
     ?>
 
 
-
+<div class="container">
+        <div class="row-fluid">
 
 <!--Pagination blue-->
         <nav id="navegacao" style="text-align: center;">
@@ -306,7 +307,8 @@
     ?>
 
     </nav>
-
+</div> 
+        </div> 
 
 </main>
 <?php require_once 'includes/footer.php'; ?>
