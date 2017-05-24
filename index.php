@@ -141,7 +141,7 @@
 <main>
     <br>
 <div class="container">
-        <div class="row>
+        <div class="row-fluid">
 <?php
     //A qunatidade de noticias a ser exibida a ser exibida
     $quantidade = 8;//Altere a quantidade 
@@ -180,7 +180,7 @@
 
 
                         <div><!--codigo para por nome da categoria em cima da imagem da noticia-->
-                             <a href="noticia.php?id=<?php echo $pusha['id_noticia']; ?>" ><img src="cp/imagens/imgnoticia/<?php echo $pusha['imagem']; ?>" style="max-height: 480px; max-width: 600px;" alt="Postagem 1"/>
+                             <a href="noticia.php?id=<?php echo $pusha['id_noticia']; ?>" ><img src="cp/imagens/imgnoticia/<?php echo $pusha['imagem']; ?>" style="max-height: 480px; max-width: 480px;" alt="Postagem 1"/>
 
                             <div  style="position: absolute; top: -20px; left: 15px;"><!--texto categoria da noticia por id-->
                               <h1 style="font-size: 20px; text-align: left; text-shadow: 3px 3px 4px rgba(0,0,0,.7); background-color: rgba(0,0,0,1.5); padding: 2px;"> 
