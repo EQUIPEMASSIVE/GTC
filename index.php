@@ -162,7 +162,7 @@
 
                 <div class="col-md-6">
                 <!--Card-->
-                <div class="card-block" style="min-height: 380px; max-width: auto; background-color: white; padding-bottom: 10px;">
+                <div class="card-block" style="min-height: 390px; max-width: auto; background-color: white; padding-bottom: 10px;">
 
 
                     <!--Card image-->
