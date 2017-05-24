@@ -169,18 +169,18 @@
 
                 <div class="col-md-6">
                 <!--Card-->
-                <div class="card wow fadeIn"  data-wow-delay="0.3s" style="background-color: white;  padding-bottom: 10px;">
+                <div class="card-block" style="background-color: white;  padding-bottom: 10px;">
 
 
 
                     <!--Card image-->
-                    <div class="card">
+                    <div class="card-block text-center">
 
 
 
 
                         <div><!--codigo para por nome da categoria em cima da imagem da noticia-->
-                             <a href="noticia.php?id=<?php echo $pusha['id_noticia']; ?>" ><img src="cp/imagens/imgnoticia/<?php echo $pusha['imagem']; ?>"  class="rounded mx-auto d-block" style="max-height: 240px;" alt="Postagem 1"/>
+                             <a href="noticia.php?id=<?php echo $pusha['id_noticia']; ?>" ><img src="cp/imagens/imgnoticia/<?php echo $pusha['imagem']; ?>" alt="Postagem 1"/>
 
                             <div  style="position: absolute; top: -20px; left: 15px;"><!--texto categoria da noticia por id-->
                               <h1 style="font-size: 20px; text-align: left; text-shadow: 3px 3px 4px rgba(0,0,0,.7); background-color: rgba(0,0,0,1.5); padding: 2px;"> 
