@@ -296,8 +296,10 @@
     */
     ?>
      | <a class="btn btn-outline-success waves-effect" href=<?php echo "\"?pagina=$posterior\">próxima</a> | ";
+    ?>
+     <a class="btn btn-outline-success waves-effect" href=<?php echo "\"?pagina=$totalPagina\">última</a> | ";    
          
-    echo "  <a href=\"?pagina=$totalPagina\">última</a>";
+ 
     ?>
 
     </nav>
