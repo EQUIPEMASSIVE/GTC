@@ -274,13 +274,7 @@
        
     | <a  class="badge btn-outline-danger" href=<?php echo "\"?pagina=1\"><<</a> | ";
     ?>
-     <a class="btn btn-danger" style="    font-size: 0.5rem;
-    padding: -0.35rem 1.13rem;
-    border-radius: 2px;
-    border: 0;
-    color: #fff!important;
-    margin: -9px;
-    white-space: normal!important;" href=<?php echo "\"?pagina=$anterior\">anterior</a> | ";          
+     <a class="badge btn-danger" href=<?php echo "\"?pagina=$anterior\">anterior</a> | ";          
  
     ?>
          
@@ -305,15 +299,9 @@
     * O loop para exibir os valores à direita
     */
     ?>
-     | <a class="btn btn-light-green" style="    font-size: 0.5rem;
-    padding: -0.35rem 1.13rem;
-    border-radius: 2px;
-    border: 0;
-    color: #fff!important;
-    margin: -9px;
-    white-space: normal!important;" href=<?php echo "\"?pagina=$posterior\">próxima</a> | ";
+     | <a class="badge btn-light-green" href=<?php echo "\"?pagina=$posterior\">próxima</a> | ";
     ?>
-     <a class="badge btn-outline-default" href=<?php echo "\"?pagina=$totalPagina\">>></a> | ";          
+     <a class="badge btn-outline-success" href=<?php echo "\"?pagina=$totalPagina\">>></a> | ";          
  
     ?>
 
