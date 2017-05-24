@@ -295,7 +295,7 @@
     * O loop para exibir os valores à direita
     */
     ?>
-    <?php echo " | <a class="btn btn-outline-success waves-effect" href=\"?pagina=$posterior\">próxima</a> | ";
+     | <a class="btn btn-outline-success waves-effect" href=<?php echo "\"?pagina=$posterior\">próxima</a> | ";
          
     echo "  <a href=\"?pagina=$totalPagina\">última</a>";
     ?>
