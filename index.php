@@ -272,8 +272,12 @@
 <!--Pagination blue-->
         <nav id="navegacao" style="text-align: center;">
         <?php
-        echo '<a  href="?pagina=1">primeira</a> | ';
-        echo "<a href=\"?pagina=$anterior\">anterior</a> | ";
+                 
+         <a class="btn btn-outline-danger waves-effect" href=<?php echo "\"?pagina=1">primeira</a> | ';
+       ?>
+        
+         <a class="btn btn-outline-danger waves-effect" href=<?php echo "\"?pagina=$anterior">anterior</a> | ';
+
         ?>
         <?php
          /**
@@ -297,7 +301,7 @@
     ?>
      | <a class="btn btn-outline-success waves-effect" href=<?php echo "\"?pagina=$posterior\">próxima</a> | ";
     ?>
-     <a class="btn btn-outline-success waves-effect" href=<?php echo "\"?pagina=$totalPagina\">última</a> | ";    
+     <a class="btn btn-outline-default waves-effect" href=<?php echo "\"?pagina=$totalPagina\">última</a> | ";    
          
  
     ?>
