@@ -287,7 +287,7 @@
        if($i > 0)
         echo '<a href="?pagina='.$i.'"> '.$i.' </a>';
   }
-  echo '<a href="?pagina='.$pagina.'"><strong>'.$pagina.'</strong></a>';
+  echo '<a style="color: red; " href="?pagina='.$pagina.'"><strong>'.$pagina.'</strong></a>';
   for($i = $pagina+1; $i < $pagina+$exibir; $i++){
        if($i <= $totalPagina)
         echo '<a href="?pagina='.$i.'"> '.$i.' </a>';
