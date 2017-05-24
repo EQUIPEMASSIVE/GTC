@@ -177,7 +177,7 @@
                         <div><!--codigo para por nome da categoria em cima da imagem da noticia-->
                              <a href="noticia.php?id=<?php echo $pusha['id_noticia']; ?>" >
                               
-                              <img class="img-fluid" src="cp/imagens/imgnoticia/<?php echo $pusha['imagem']; ?>" class="img-thumbnail" alt="Postagem 1"/>
+                              <img class="img-fluid" src="cp/imagens/imgnoticia/<?php echo $pusha['imagem']; ?>" style="max-height: 480px; max-width: auto;" alt="Postagem 1"/>
                               
                               <div class="mask waves-effect waves-light"></div>
 
@@ -203,7 +203,7 @@
                         <!--Title-->
                         <!--h5 class="price"><a href="categoria.php?id=<?php //echo $pusha['id_categoria']; ?>"> <span class="badge btn-elegant"> <?php //echo $pusha['nome_categoria']; ?></span></a></h5>--> 
 
-                        <h4 class="card-title"> <a href="noticia.php?id=<?php echo $pusha['id_noticia']; ?>" style="color: #000"><?php echo $pusha['titulo'];?></a></h4> 
+                        <h2 class="card-title"> <a href="noticia.php?id=<?php echo $pusha['id_noticia']; ?>" style="color: #000"><?php echo $pusha['titulo'];?></a></h2> 
                                                   <br><br>
                         <!--Text-->
                        
