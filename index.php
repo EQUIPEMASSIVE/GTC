@@ -37,7 +37,7 @@
 
                 <div  style="position: absolute; top: 280px; left: 40px;"><!--texto slider categoria da noticia por id-->
                   <h1 style="font-size: 35px; text-align: center; text-shadow: 1px 1px 2px rgba(0,0,0,.7);"> 
-                    <b><div href="noticia.php?id=<?php echo $bn['id_noticia']; ?>" style="color: #cd2323; text-shadow: 1px 1px 2px rgba(0,0,0,.7);"><?php echo $bn['nome_categoria'];?></div></b>  
+                    <b><div href="noticia.php?id=<?php echo $bn['id_noticia']; ?>" style="color: greenyellow; text-shadow: 1px 1px 2px rgba(0,0,0,.7);"><?php echo $bn['nome_categoria'];?></div></b>  
                     <div>
                   </h1>
                 </div>
