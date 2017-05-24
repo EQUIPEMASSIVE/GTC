@@ -204,7 +204,7 @@
                         <!--Title-->
                         <!--h5 class="price"><a href="categoria.php?id=<?php //echo $pusha['id_categoria']; ?>"> <span class="badge btn-elegant"> <?php //echo $pusha['nome_categoria']; ?></span></a></h5>--> 
                               
-                <span class="btn btn-outline-sucess btn-sm waves-effect" style="color: #C0C0C0; background-color: transparent;" > <i class="fa fa-clock-o" ></i>  &nbsp Publicado dia: <?php echo $pusha['datapub'];?></span>
+                <span class="badge btn-outline-success waves-effect" style="color: #C0C0C0; background-color: transparent;" > <i class="fa fa-clock-o" ></i>  &nbsp Publicado dia: <?php echo $pusha['datapub'];?></span>
                         <h1  style="text-align:center" class="card-title"> <a href="noticia.php?id=<?php echo $pusha['id_noticia']; ?>" style="color: #000"><?php echo $pusha['titulo'];?></a></h1> 
                                                 
                         <!--Text-->
