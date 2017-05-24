@@ -176,7 +176,7 @@
                       
 
                             <div  style="position: absolute; top: -20px; left: 15px;"><!--texto categoria da noticia por id-->
-                              <h1 style="font-size: 24px; text-align: left; text-shadow: 3px 3px 4px rgba(0,0,0,.7); background-color: rgba(0,0,0,1.5); padding: 3px;"> 
+                              <h1 style="font-size: 20px; text-align: left; text-shadow: 3px 3px 4px rgba(0,0,0,.7); background-color: rgba(0,0,0,1.5); padding: 3px;"> 
 
                                 <b><div href="noticia.php?id=<?php echo $pusha['id_categoria']; ?>" style="color: greenyellow; text-shadow: 1px 1px 2px rgba(0,0,0,.7);"><span><?php echo $pusha['nome_categoria'];?></div></b></span> <!--nome da categoria em cima da imagem-->
                              <div>
