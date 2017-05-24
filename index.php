@@ -203,7 +203,8 @@
                     <div class="card-block" style="text-align:center">
                         <!--Title-->
                         <!--h5 class="price"><a href="categoria.php?id=<?php //echo $pusha['id_categoria']; ?>"> <span class="badge btn-elegant"> <?php //echo $pusha['nome_categoria']; ?></span></a></h5>--> 
-
+                              
+                <span style="color: #C0C0C0" ><i class="fa fa-clock-o" ></i> Publicado dia: <?php echo $pusha['datapub'];?></span>
                         <h1 class="card-title"> <a href="noticia.php?id=<?php echo $pusha['id_noticia']; ?>" style="color: #000"><?php echo $pusha['titulo'];?></a></h1> 
                                                 
                         <!--Text-->
@@ -217,8 +218,7 @@
                         
                     </div>
                     <!--/.Card content-->
-                     
-                <span style="color: #C0C0C0" ><i class="fa fa-clock-o" ></i> Publicado dia: <?php echo $pusha['datapub'];?></span>
+                
                 </div>
                  
                 <!--/.Card--> <br> <br> 
