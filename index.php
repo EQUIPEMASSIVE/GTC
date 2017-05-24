@@ -217,9 +217,10 @@
                         
                     </div>
                     <!--/.Card content-->
-                     <span style="color: #C0C0C0" ><i class="fa fa-clock-o" ></i> Publicado dia: <?php echo $pusha['datapub'];?></span>
+                     
 
                 </div>
+                 <span style="color: #C0C0C0" ><i class="fa fa-clock-o" ></i> Publicado dia: <?php echo $pusha['datapub'];?></span>
                 <!--/.Card--> <br> <br> 
             </div>
             <!--First columnn-->
