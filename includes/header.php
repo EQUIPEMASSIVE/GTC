@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>tsz NÃO ENTRE EM PANICO! GZUZ XAMA REGUERO (92% Concluido) v0.2-beta </title>
+    <title>ttsz NÃO ENTRE EM PANICO! GZUZ XAMA REGUERO (92% Concluido) v0.2-beta </title>
      
      
  
