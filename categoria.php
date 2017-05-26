@@ -78,10 +78,8 @@
                 <div class="card-block" style="min-height: 400px; max-width: auto; background-color: white; padding-bottom: 10px;">
 
 
-               
-
                     <!--Card image-->
-                    <div class="card collection-card">
+                    <div class="card-block">  
                     
                         <img src="cp/imagens/imgnoticia/<?php echo $imagem_news; ?>"  class="img-responsive" alt="Titulo na Notícia" />                          
 
@@ -93,7 +91,8 @@
                 
               <!--Card content-->
                     <div class="card-block" style="text-align:center; background-color: white;">
-                        <span style="color: #C0C0C0" ><i class="fa fa-clock-o" ></i> Publicado dia: <?php echo $dataEX;?></span>
+                     <span style="color: #C0C0C0" ><i class="fa fa-clock-o" ></i> Publicado dia: <?php echo $dataEX;?></span>
+
                         <!--Title ARRUMA O BUG DE PUXAR CATEGORIA AQUI NESSA LINHA ABAIXO -->
                         <h5 class="price"><a href="categoria.php?id=<?php echo $id_cat; ?>"> <!--<span class="badge btn-elegant"> <?php echo $rn['nome_categoria']; ?></span></h5>   </a>-->
 
@@ -108,8 +107,7 @@
                       
                         
 
-                        
-
+                       
 
 
 
