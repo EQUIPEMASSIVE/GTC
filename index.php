@@ -19,7 +19,7 @@
                 <?php    
                    //Na ordem do recente para o ultimo
                           
-                            $SQL_B = mysql_query("SELECT * FROM noticias INNER JOIN categoria ON(noticias.categoria = categoria.id_categoria)  ORDER BY id_noticia DESC LIMIT 5");//aqui sao mostradas somente a noticia pelo nome da categoria.
+                             $SQL_B = mysql_query("SELECT * FROM noticias  INNER JOIN categoria ON(noticias.categoria = categoria.id_categoria)WHERE status='1'  ORDER BY id_noticia DESC LIMIT 5");//aqui sao mostradas somente a noticia pelo nome da categoria.
                             while ($bn = mysql_fetch_array($SQL_B)) {
                             
                 ?>
