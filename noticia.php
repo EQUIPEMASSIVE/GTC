@@ -37,7 +37,7 @@
 
                     <!--First row-->
                     <div class="row wow fadeIn" data-wow-delay="0.4s">
-                        <div class="col-md-12">
+                       
 
                             <!--Product Card-->
                             <div class="product-wrapper" >
@@ -79,7 +79,7 @@
                                                                 
                                 <hr>
                                 <!--Texto-->
-
+                     <div class="col-md-8">
                                 <p class="text-justify"><?php echo $rn["conteudo"]; ?></p>
 
 
