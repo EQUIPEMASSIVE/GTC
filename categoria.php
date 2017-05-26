@@ -73,9 +73,10 @@
  
             <!--First row-->
             
-                <div class="col-md-12">
+                <div class="col-md-6">
                 <!--Card-->
-                <div class="card wow fadeIn"  data-wow-delay="0.3s">
+                <div class="card-block" style="min-height: 400px; max-width: auto; background-color: white; padding-bottom: 10px;">
+
 
                
 
@@ -91,7 +92,8 @@
 
                 
               <!--Card content-->
-                    <div class="card-block" style="text-align:center">
+                    <div class="card-block" style="text-align:center; background-color: white;">
+                        <span style="color: #C0C0C0" ><i class="fa fa-clock-o" ></i> Publicado dia: <?php echo $dataEX;?></span>
                         <!--Title ARRUMA O BUG DE PUXAR CATEGORIA AQUI NESSA LINHA ABAIXO -->
                         <h5 class="price"><a href="categoria.php?id=<?php echo $id_cat; ?>"> <!--<span class="badge btn-elegant"> <?php echo $rn['nome_categoria']; ?></span></h5>   </a>-->
 
@@ -106,7 +108,7 @@
                       
                         
 
-                        <span style="color: #C0C0C0" ><i class="fa fa-clock-o" ></i> Publicado dia: <?php echo $dataEX;?></span>
+                        
 
 
 
