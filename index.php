@@ -168,7 +168,7 @@
                     <!--Card image-->
                     <div class="card-block">  
                      
-                      <div><!--codigo para por nome da categoria em cima da imagem da noticia-->
+                      <div class="view overlay hm-zoom"><!--codigo para por nome da categoria em cima da imagem da noticia-->
                                <a href="noticia.php?id=<?php echo $pusha['id_noticia']; ?>" >                              
                               <img class="img-fluid" src="cp/imagens/imgnoticia/<?php echo $pusha['imagem']; ?>" alt="Postagem 1"/>
                                
