@@ -15,21 +15,16 @@
     <!--Content-->
 <br>
     <div class="container">
-        <div class="row">
+        <div class="row-fluid">
 
 
 
-
-      <?php  
-
+<?php  
 
 
-        $SQL_CT = mysql_query("SELECT * FROM categoria WHERE nome_categoria");
-                    while ($ct = mysql_fetch_array($SQL_CT)){
 
-                        $nome_catIndex       = $ct["nome_categoria"];//puxa o nome da categoria
-                        
-                      }
+       
+      
 
 
 
@@ -39,7 +34,7 @@
 
         $id_cat = $_GET["id"];
                                                                                       //Exibe a noticia em ordem descrecente por id da noticia
-        $SQL_NC = mysql_query("SELECT id_noticia, titulo, conteudo, imagem, datapub FROM noticias WHERE categoria=$id_cat ORDER BY id_noticia DESC");
+        $SQL_NC = mysql_query("SELECT * FROM noticias WHERE categoria=$id_cat AND status='1' ORDER BY id_noticia DESC");
   
         if(mysql_num_rows($SQL_NC) != 0){
         while ($nc = mysql_fetch_array($SQL_NC)){
@@ -67,13 +62,13 @@
 
 
 
-            <br>
+         
 
 
  
             <!--First row-->
             
-                <div class="col-md-12">
+               <div class="col-md-6">
                 <!--Card-->
                 <div class="card-block" style="min-height: 400px; max-width: auto; background-color: white; padding-bottom: 10px;">
 
@@ -84,7 +79,7 @@
                         <img src="cp/imagens/imgnoticia/<?php echo $imagem_news; ?>"  class="img-responsive" alt="Titulo na Notícia" />                          
 
                             <div class="mask waves-effect waves-light"></div>
-                        
+                        </a>
                     </div>
                     <!--/.Card image-->
 
@@ -96,14 +91,14 @@
                         <!--Title ARRUMA O BUG DE PUXAR CATEGORIA AQUI NESSA LINHA ABAIXO -->
                         <h5 class="price"><a href="categoria.php?id=<?php echo $id_cat; ?>"> <!--<span class="badge btn-elegant"> <?php echo $rn['nome_categoria']; ?></span></h5>   </a>-->
 
-                        <h1 class="h1-responsive"> <a href="noticia.php?id=<?php echo $id_news;?>" style="color: #000" class="card-title"><?php echo $titulo_news;?> </a></h1>
+                        <h1 class="h1-responsive"> <a href="noticia.php?id=<?php echo $id_news;?>" style="color: #000" class="card-title"><?php echo $titulo_news;?></h1> </a>
                                      
 
 
                         <!--Text-->
-                        <p style="color: #696969" class="card-text"><?php echo  substr($conteudo_news, 0, 900); ?>...</p>
+                       <!-- <p style="color: #696969" class="card-text"><?php echo  substr($conteudo_news, 0, 900); ?>...</p>-->
                         <br>
-                        <a href="noticia.php?id=<?php echo $id_news; ?>" class="black-text d-flex flex-row-reverse"><h7 class="waves-effect p-2">Leia mais... <i class="fa fa-chevron-right"></i></h7></a>
+                        
                       
                         
 
