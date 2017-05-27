@@ -35,7 +35,7 @@
                         <!-- <p>Por: <?php echo $src['autorPub']; ?></p> -->
 
                                     <!--Card Image-->
-                    <div class="card">
+                    <div>
                         <img src="cp/imagens/imgnoticia/<?php echo $src['imagem']; ?>" alt="<?php echo $src['titulo']; ?>">
                         <a>
                           
