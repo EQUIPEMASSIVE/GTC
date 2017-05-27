@@ -158,7 +158,7 @@
 
 
 
-    <div style="position: fixed; z-index: 99; margin-top: 0px; padding: 0px; top: 0px;" class="navbar-wrapper">
+    <div style=" z-index: 99; margin-top: 0px; padding: 0px; top: 0px;" class="navbar-wrapper">
         <div class="container">
 
             <nav class="navbar navbar-inverse navbar-static-top" role="navigation" style="margin-bottom: 0px;">
