@@ -76,7 +76,7 @@
                     <!--Card image-->
                     <div class="card-block view overlay hm-zoom">  
                     
-                        <img src="cp/imagens/imgnoticia/<?php echo $imagem_news; ?>"  class="img-responsive img-fluid " alt="Titulo na Notícia" />                          
+                        <a href="noticia.php?id=<?php echo $id_news;?>"><img src="cp/imagens/imgnoticia/<?php echo $imagem_news; ?>"  class="img-responsive img-fluid " alt="Titulo na Notícia" /></a>                          
 
                             <div class="mask waves-effect waves-light"></div>
                         </a>
