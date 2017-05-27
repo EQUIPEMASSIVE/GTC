@@ -154,21 +154,12 @@ $SQL = mysql_query("SELECT nome, imgPerfil FROM administradores WHERE usuario= '
                 $SQL_RS = mysql_query("SELECT status FROM noticias WHERE status=0");
                 $SQL_TN = mysql_query("SELECT status FROM noticias WHERE status=1");
                 $SQL_LX = mysql_query("SELECT status FROM noticias WHERE status=2");
-<<<<<<< HEAD
 
                 $CNT_RS = mysql_num_rows($SQL_RS);
                 $CNT_TN = mysql_num_rows($SQL_TN);
                 $CNT_LX = mysql_num_rows($SQL_LX);
 
                 //IMPLEMENTAÇÃO CONTADOR DE RASCUNHO DE EVENTOS
-=======
-              
-                $CNT_RS = mysql_num_rows($SQL_RS);
-                $CNT_TN = mysql_num_rows($SQL_TN);
-                $CNT_LX = mysql_num_rows($SQL_LX);
-       
-         //IMPLEMENTAÇÃO CONTADOR DE RASCUNHO DE EVENTOS 
->>>>>>> aec4cf96a42b9f895759d63f35d3217bfa2bb2d5
                 // $SQL_EV = mysql_query("SELECT status FROM eventos WHERE status=0");
                 // $CNT_EV = mysql_num_rows($SQL_EV);
                 //<?php if($CNT_EV != 0): echo "$CNT_EV"; endif; ?>
@@ -191,8 +182,8 @@ $SQL = mysql_query("SELECT nome, imgPerfil FROM administradores WHERE usuario= '
                 <li>
                     <a href="administracao-portal.php"> <i class="fa fa-users"></i> <span class="title">Administração Portal</span></a>
                 </li>
-              <!-- <li>
-                   <a href="javascript:;"> <i class="fa fa-gears"></i> <span class="title">Extra</span> <span class=" arrow"></span> </a>
+                <li>
+                    <a href="javascript:;"> <i class="fa fa-gears"></i> <span class="title">Extra</span> <span class=" arrow"></span> </a>
                     <ul class="sub-menu">
                         <li> <a href="#"> Teste </a> </li>
                         <li> <a href="#"> Teste </a> </li>
@@ -208,7 +199,7 @@ $SQL = mysql_query("SELECT nome, imgPerfil FROM administradores WHERE usuario= '
                         <li> <a href="#">Teste</a> </li>
                         <li> <a href="#"> Teste </a> </li>
                     </ul>
-                </li> -->
+                </li>
             </ul>
 
             <!-- Pagina Mobile-->
