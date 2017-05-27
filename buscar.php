@@ -3,6 +3,7 @@
 <br><br>
   <main>
         <div class="container">
+        <div class="row-fluid">
     
 
           <br>
@@ -24,44 +25,45 @@
 
             
             <hr>
-        <div class="row">
-                <div class="col-lg-6">
+        
+               <div class="col-md-6">
+                <!--Card-->
+                <div class="card-block" style="min-height: 400px; max-width: auto; background-color: white; padding-bottom: 10px;">
 
 
                     <!--Card Content-->
-                    <div style="background-color: white;">
+                   
                         <!--Title-->
-                        <h1 style="text-align: center; color: #000;"><a href="noticia.php?id=<?php echo $src['id_noticia'];  ?>"><?php echo $src['titulo']; ?></a></h1>
-                        <!-- <p>Por: <?php echo $src['autorPub']; ?></p> -->
+                        <h1><a href="noticia.php?id=<?php echo $src['id_noticia'];  ?>"><?php echo $src['titulo']; ?></a></h1>
+                        <p>Por: <?php echo $src['autorPub']; ?></p>
 
                                     <!--Card Image-->
-                    <div class="card">
+                     <div class="card-block view overlay hm-zoom">  
                         <img src="cp/imagens/imgnoticia/<?php echo $src['imagem']; ?>" alt="<?php echo $src['titulo']; ?>">
-                        <a>
-                          
-                        </a>
                         
-                    </div>
-                         
+                       </div> 
+                    
+                      
 
                                     <!--TEXTO-->
-                    <div class="excerpt">
+                  
                         <p><?php echo substr($src['conteudo'], 0, 0); ?></p>
                         
                         
                         
 
                         
-                    </div>
+                    
 
                     
-                  <!-- <a type="button" class="btn btn-primary btn-lg btn-block"  href="noticia.php?id=<?php echo $src['id_noticia']; ?>">...Leia Mais</a> -->
+                   <a type="button" class="btn btn-primary btn-lg btn-block"  href="noticia.php?id=<?php echo $src['id_noticia']; ?>">...Leia Mais</a>
                    
-                    </div>
+                   
             <!--/Post data-->
 
 
                 </div>
+          </div>
           </div>
 
               <?php } } else {  ?>
