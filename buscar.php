@@ -29,9 +29,9 @@
 
 
                     <!--Card Content-->
-                    <div class="card"  style="background-color: white;">
+                    <div class="card"  style="background-color: white; color: black;">
                         <!--Title-->
-                        <h1 style="text-align: center; color: black;"><a href="noticia.php?id=<?php echo $src['id_noticia'];  ?>"><?php echo $src['titulo']; ?></a></h1>
+                        <h1 style="text-align: center; "><a href="noticia.php?id=<?php echo $src['id_noticia'];  ?>"><?php echo $src['titulo']; ?></a></h1>
                         <!-- <p>Por: <?php echo $src['autorPub']; ?></p> -->
 
                                     <!--Card Image-->
