@@ -1,9 +1,5 @@
   <?php require_once 'includes/header.php';  ?>
 
-
-<br>
-
-
 <main>
 
 <body style="background-color:white">
