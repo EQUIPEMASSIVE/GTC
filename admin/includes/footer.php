@@ -12,7 +12,7 @@
 
     <!-- END CORE JS DEPENDECENCIES-->
     <!-- BEGIN CORE TEMPLATE JS -->
-    <script src="resources/webarch/js/gtc.js" type="text/javascript"></script>
+    <script src="resources/js/gtc.js" type="text/javascript"></script>
     <script src="resources/assets/js/chat.js" type="text/javascript"></script>
     <!-- END CORE TEMPLATE JS -->
 </body>

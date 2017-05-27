@@ -20,21 +20,15 @@ if(@mysql_num_rows($SQL) != 0){
 
 if(isset($rediURL)){
 
-
 	header("Location ../$rediURL");
+
 }  else {
 
 	header("Location: ../inicial.php");
+}
 
-
-}          
-                 
-    
 }else{
-    
-    
-    header("Location: ../erro.php");
-
+  header("Location: ../erro.php");
 }
 
 ?>

@@ -2,14 +2,14 @@
 //pagina de login, se o login e senha forem correspondentes aos cadastrados no banco, irá abrir o panel de controle.
 session_start();
 
-    @$Usuario = $_SESSION["usuario"];
-    @$Senha = $_SESSION["senha"];
+@$Usuario = $_SESSION["usuario"];
+@$Senha = $_SESSION["senha"];
 
 if (isset($Usuario) && isset($Senha)){
-    
+
     header("Location: inicial.php");
-  
-} 
+
+}
 
 // Programa pra criptografar e ver a senha \/
 //$senha = "123";
@@ -21,66 +21,48 @@ if (isset($Usuario) && isset($Senha)){
 
 
 <html lang="pt_br">
-	<head>
-		<meta charset="utf-8" />
-		<title>Painel de Controle - Portal WVD</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="teste.ico">
-		<link rel="stylesheet" type="text/css" href="css/default.css" media="screen" />
-		<script type="text/javascript" src="jquery-1.9.1.js"></script><link href="dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-    <link href="signin.css" rel="stylesheet">
-    <script src="assets/js/ie-emulation-modes-warning.js"></script>
+<head>
+    <meta charset="utf-8" />
+    <title>Administração GTC</title>
+    <?php require "includes/imports-header.php";?>
+</head>
 
-	</head>
-	
-	<body>
-		
-
-    <?php
-
-   if(isset($_GET["url"])){
-
-    $url = $_GET["url"];
-   
-
-  ?>  
-      
-    <form  action="acoes/user-login.php?url=<?php echo $url; ?>" method="POST">
-    <?php } else { ?>
-
-    <div class="container">
-  
-    <form action="acoes/user-login.php" method="POST" class="form-signin">
-    <?php } ?> 
+<body class="error-body no-top lazy  pace-done" data-original="resources/assets/img/work.jpg" style="background-image: url('resources/assets/img/work.jpg')">
+<div class="container">
+    <div class="row login-container animated  flipInX">
+        <div class="col-md-7 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-offset-1 no-padding">
 
 
-        <h2 class="form-signin-heading"><center>  
-          <h2>Login Administrador</h2>
-        </center></h2>  
-        
-      
-        <label for="inputText" class="sr-only">Usuário</label>
-        <input name="user-name" type="text" autofocus required class="form-control"  placeholder="usuário" id="inputText">
-      
-            
-        <label for="inputPassword" class="sr-only">Senha</label>
-        <input name="user-pass" type="password" required class="form-control"  placeholder="Senha" id="inputPassword">
-      
-      
-      
-          <div class="checkbox">
-            <label>
-               <input type="checkbox" value="remember-me"> 
-               Lembrar<br>
-            </label>
-          </div>
-        
-        <button class="btn btn-lg btn-primary btn-block" type="submit" name="user-login" >Entrar</button>
-       </form>
-     </div> <!-- /container -->
- 	
+            <div class="tiles grey p-t-20 p-b-20 no-margin text-black tab-content lockscreen-wrapper" style="border-radius: 10px;">
+                <div class="row ">
+                    <div class="col-md-8 col-md-offset-1 col-sm-6 col-sm-offset-3 col-xs-offset-1" style="width: 100%;">
 
-	<script src="assets/js/ie10-viewport-bug-workaround.js"></script>	
-	</body>
+                        <?php
+                        if(isset($_GET["url"])){
+
+                        $url = $_GET["url"];
+                        ?>
+                        <form class="user-form" action="acoes/user-login.php?url=<?php echo $url; ?>" method="POST" style="width: 100%;">
+                            <?php } else { ?>
+
+                            <form class="user-form" action="acoes/user-login.php" method="POST" style="width: 100%;">
+                                <?php } ?>
+                                <div class="profile-wrapper">
+                                    <img width="69" height="69" data-src-retina="resources/assets/img/logo-index-01.jpg" data-src="resources/assets/img/logo-index-01.jpg" src="resources/assets/img/logo-index-01.jpg" alt="Imagem GTC">
+                                </div>
+                                <h2 class="user">Administração <span class="semi-bold">GTC</span></h2>
+                                <input name="user-name" required="required" type="text" placeholder="Digite o seu nome ...">
+                                <input name="user-pass" required="required" type="password" placeholder="Digite o sua senha ...">
+                                <button type="submit" name="user-login" class="btn btn-primary " style=" margin-top: 3px;" ><i class="fa fa-lock"></i></button>
+                            </form>
+
+                    </div>
+                </div>
+            </div>
+            <div id="push"></div>
+        </div>
+    </div>
+</div>
+<?php require "includes/imports-header.php";?>
+</body>
 </html>

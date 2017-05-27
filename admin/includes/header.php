@@ -31,14 +31,14 @@ $SQL = mysql_query("SELECT nome, imgPerfil FROM administradores WHERE usuario= '
     <link rel="stylesheet" href="resources/assets/plugins/jquery-ricksaw-chart/css/rickshaw.css" type="text/css" media="screen">
     <link rel="stylesheet" href="resources/assets/plugins/Mapplic/mapplic/mapplic.css" type="text/css" media="screen">
 
-    <link rel="stylesheet" href="resources/webarch/js/ckeditor/samples/toolbarconfigurator/lib/codemirror/neo.css">
+    <link rel="stylesheet" href="resources/js/ckeditor/samples/toolbarconfigurator/lib/codemirror/neo.css">
 
-    <script src="resources/webarch/js/ckeditor/ckeditor.js"></script>
-    <script src="resources/webarch/js/ckeditor/samples/js/sample.js"></script>
+    <script src="resources/js/ckeditor/ckeditor.js"></script>
+    <script src="resources/js/ckeditor/samples/js/sample.js"></script>
 
     <script src="resources/assets/plugins/jquery/jquery-1.11.3.min.js"></script>
-    <script src="resources/webarch/js/default.js"></script>
-    <script src="resources/webarch/js/validacoes.js"></script>
+    <script src="resources/js/default.js"></script>
+    <script src="resources/js/validacoes.js"></script>
             <!-- END PLUGIN CSS -->
             <!-- BEGIN PLUGIN CSS -->
     <link href="resources/assets/plugins/pace/pace-theme-flash.css" rel="stylesheet" type="text/css" media="screen" />
@@ -49,7 +49,7 @@ $SQL = mysql_query("SELECT nome, imgPerfil FROM administradores WHERE usuario= '
     <link href="resources/assets/plugins/jquery-scrollbar/jquery.scrollbar.css" rel="stylesheet" type="text/css" />
     <!-- END PLUGIN CSS -->
     <!-- BEGIN CORE CSS FRAMEWORK -->
-    <link href="webarch/css/webarch.css" rel="stylesheet" type="text/css" />
+    <link href="resources/css/gtc.css" rel="stylesheet" type="text/css" />
     <!-- END CORE CSS FRAMEWORK -->
 </head>
 <!-- END HEAD -->
@@ -151,17 +151,18 @@ $SQL = mysql_query("SELECT nome, imgPerfil FROM administradores WHERE usuario= '
             <ul>
 
                 <?php
-
-
                 $SQL_RS = mysql_query("SELECT status FROM noticias WHERE status=0");
                 $SQL_TN = mysql_query("SELECT status FROM noticias WHERE status=1");
                 $SQL_LX = mysql_query("SELECT status FROM noticias WHERE status=2");
-                $SQL_EV = mysql_query("SELECT status FROM eventos WHERE status=0");
 
                 $CNT_RS = mysql_num_rows($SQL_RS);
                 $CNT_TN = mysql_num_rows($SQL_TN);
                 $CNT_LX = mysql_num_rows($SQL_LX);
-                $CNT_EV = mysql_num_rows($SQL_EV);
+
+                //IMPLEMENTAÇÃO CONTADOR DE RASCUNHO DE EVENTOS
+                // $SQL_EV = mysql_query("SELECT status FROM eventos WHERE status=0");
+                // $CNT_EV = mysql_num_rows($SQL_EV);
+                //<?php if($CNT_EV != 0): echo "$CNT_EV"; endif; ?>
 
                 ?>
                 <li> <a href="inicial.php"><i class="material-icons">home</i> <span class="title">Página Inicil</span> <span class="selected"></span></a>            </li>
@@ -171,7 +172,7 @@ $SQL = mysql_query("SELECT nome, imgPerfil FROM administradores WHERE usuario= '
                         <li> <a href="compor-noticia.php"><i class="fa fa-quote-left"></i>Compor Notícia </a> </li>
                         <li> <a href="todas-noticias.php"><i class="fa fa-book"></i>Todas as Notícias <span class="badge badge-info"><?php if($CNT_TN != 0): echo " $CNT_TN"; endif; ?></span></a></li>
                         <li> <a href="rascunho-noticia.php"><i class="fa fa-bookmark-o"></i>Rascunho de Notícias <span class="badge badge-inverse"><?php if($CNT_RS != 0): echo "$CNT_RS"; endif; ?></span></a></li>
-                        <li> <a href="rascunho-evento.php"><i class="fa fa-bookmark"></i>Rascunho de Eventos <span class="badge badge-warning"><?php if($CNT_EV != 0): echo "$CNT_EV"; endif; ?></span></a></li>
+                        <li> <a href="rascunho-evento.php"><i class="fa fa-bookmark"></i>Rascunho de Eventos <span class="badge badge-warning"></span></a></li>
                         <li> <a href="lixeira-noticia.php"><i class="fa fa-trash-o"></i>Lixeira <span class="badge badge-danger"><?php if($CNT_LX != 0): echo "$CNT_LX"; endif; ?></span></a></li>
                     </ul>
                 </li>
@@ -184,19 +185,19 @@ $SQL = mysql_query("SELECT nome, imgPerfil FROM administradores WHERE usuario= '
                 <li>
                     <a href="javascript:;"> <i class="fa fa-gears"></i> <span class="title">Extra</span> <span class=" arrow"></span> </a>
                     <ul class="sub-menu">
-                        <li> <a href="user-profile.html"> User Profile </a> </li>
-                        <li> <a href="time_line.html"> Time line </a> </li>
-                        <li> <a href="support_ticket.html"> Support Ticket </a> </li>
-                        <li> <a href="gallery.html"> Gallery</a> </li>
-                        <li class=""><a href="calender.html"> Calendar</a> </li>
-                        <li> <a href="search_results.html"> Search Results </a> </li>
-                        <li> <a href="invoice.html"> Invoice </a> </li>
-                        <li> <a href="404.html"> 404 Page </a> </li>
-                        <li> <a href="500.html"> 500 Page </a> </li>
-                        <li> <a href="blank_template.html"> Blank Page </a> </li>
-                        <li> <a href="login.html"> Login </a> </li>
-                        <li> <a href="login_v2.html">Login v2</a> </li>
-                        <li> <a href="lockscreen.html"> Lockscreen </a> </li>
+                        <li> <a href="#"> Teste </a> </li>
+                        <li> <a href="#"> Teste </a> </li>
+                        <li> <a href=#"> Teste </a> </li>
+                        <li> <a href="#"> Teste</a> </li>
+                        <li class=""><a href="#"> Teste</a> </li>
+                        <li> <a href="#"> Teste </a> </li>
+                        <li> <a href="#"> Teste </a> </li>
+                        <li> <a href="#"> Teste </a> </li>
+                        <li> <a href="#"> Teste </a> </li>
+                        <li> <a href="#"> Teste </a> </li>
+                        <li> <a href="#"> Teste </a> </li>
+                        <li> <a href="#">Teste</a> </li>
+                        <li> <a href="#"> Teste </a> </li>
                     </ul>
                 </li>
             </ul>
