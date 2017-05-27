@@ -3,7 +3,6 @@
 <br><br>
   <main>
         <div class="container">
-        <div class="row-fluid">
     
 
           <br>
@@ -24,37 +23,39 @@
             
 
             
-          
-        
+            <hr>
+        <div class="row">
                 <div class="col-lg-6">
 
 
                     <!--Card Content-->
-                    <div class="card wow fadeIn"  data-wow-delay="0.3s" style="background-color: white;">
+                    <div style="background-color: white;">
                         <!--Title-->
                         <h1><a href="noticia.php?id=<?php echo $src['id_noticia'];  ?>"><?php echo $src['titulo']; ?></a></h1>
                         <p>Por: <?php echo $src['autorPub']; ?></p>
 
                                     <!--Card Image-->
-                    
+                    <div class="card">
                         <img src="cp/imagens/imgnoticia/<?php echo $src['imagem']; ?>" alt="<?php echo $src['titulo']; ?>">
+                        <a>
+                          
+                        </a>
                         
-                        
-                    
-                      
+                    </div>
+                        <br> 
 
                                     <!--TEXTO-->
-                  
+                    <div class="excerpt">
                         <p><?php echo substr($src['conteudo'], 0, 0); ?></p>
                         
                         
                         
 
                         
-                    
+                    </div>
 
                     
-                  <!-- <a type="button" class="btn btn-primary btn-lg btn-block"  href="noticia.php?id=<?php echo $src['id_noticia']; ?>">...Leia Mais</a> -->
+                   <a type="button" class="btn btn-primary btn-lg btn-block"  href="noticia.php?id=<?php echo $src['id_noticia']; ?>">...Leia Mais</a>
                    
                     </div>
             <!--/Post data-->
