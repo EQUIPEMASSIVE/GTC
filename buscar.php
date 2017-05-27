@@ -23,8 +23,7 @@
             ?>
             
 
-            
-            <hr>
+
         
                <div class="col-md-6">
                 <!--Card-->
