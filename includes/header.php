@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>(97% Concluido) v0.2-beta </title>
+    <title>DDONT PANIC!! (94% Concluido) v0.2-beta </title>
      
      
  
@@ -23,7 +23,7 @@
 
     <!-- Material Design Bootstrap -->
     <link href="css/mdb.min.css" rel="stylesheet">
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
 
     <!-- SCRIPTS -->
 
@@ -158,7 +158,7 @@
 
 
 
-    <div class="navbar-wrapper">
+    <div style=" z-index: 99; margin-top: 0px; padding: 0px; top: 0px;" class="navbar-wrapper">
         <div class="container">
 
             <nav class="navbar navbar-inverse navbar-static-top" role="navigation" style="margin-bottom: 0px;">
@@ -190,11 +190,13 @@
                             <li><a href="cp/index.php">Login CP</a></li>
                         </ul>
 
-                        <form class="form-inline waves-effect waves-light" action="buscar.php" method="GET">
-                    <span><input style="color: white; margin-left: 400px; font-size: 10px; margin-top: 10px;" class="form-control" type="text" placeholder="Buscar..." name="busca-organica" id="inputError" > <i class="fa fa-search" aria-hidden="true"></i></span>
-                   
-                    
-                        </form>
+                       <div style="margin-left: 10px;"> 
+                         <form class="form-inline waves-effect waves-light" action="buscar.php" method="GET">
+                    <input style="margin-top: 8px; padding-left: 5px;  border: 2px solid white; border-radius: 20px;" class="form-control pull-right" type="text" placeholder="  Buscar..." name="busca-organica" id="inputError" >
+                    <span class="glyphicon glyphicon-search">
+                               </span>
+                                </form>
+                    </div>
                     </div>
                 </div>
             </nav>
