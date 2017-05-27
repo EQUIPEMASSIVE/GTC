@@ -32,7 +32,7 @@
                     <div style="background-color: white;">
                         <!--Title-->
                         <h1><a href="noticia.php?id=<?php echo $src['id_noticia'];  ?>"><?php echo $src['titulo']; ?></a></h1>
-                        <p>Por: <?php echo $src['autorPub']; ?></p>
+                        <!-- <p>Por: <?php echo $src['autorPub']; ?></p> -->
 
                                     <!--Card Image-->
                     <div class="card">
@@ -55,7 +55,7 @@
                     </div>
 
                     
-                   <a type="button" class="btn btn-primary btn-lg btn-block"  href="noticia.php?id=<?php echo $src['id_noticia']; ?>">...Leia Mais</a>
+                  <!-- <a type="button" class="btn btn-primary btn-lg btn-block"  href="noticia.php?id=<?php echo $src['id_noticia']; ?>">...Leia Mais</a> -->
                    
                     </div>
             <!--/Post data-->
