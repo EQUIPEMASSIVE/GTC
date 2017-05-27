@@ -88,7 +88,7 @@
 
                         <!--Text-->
                        <!-- <p style="color: #696969" class="card-text"><?php echo  substr($conteudo_news, 0, 900); ?>...</p>-->
-                        <br>
+                       
                         
                       
                         
@@ -123,12 +123,12 @@
                 <div class="card wow fadeIn"  data-wow-delay="0.1s">
     <!--Card content ERROR sem noticia-->
                     <div class="card-block" style="text-align:center">
-                    <br> <br> <br> <br> <br> <br> <br> <br> <br> 
+                    <br> <br> <br>
                         <!--Title-->
                        
                         <h1 class="h1-responsive" class="card-title">Não há notícias para esta categoria! =(</h1> </a> 
 
-                        <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
+                        <br> <br> <br>  
                         </div> </div>
 
 
@@ -141,7 +141,7 @@
 
         </div> <!--/ Row Main Layout--> 
 
-    </div>     <!--/.Container Main Layout-->  </h1></div></div></div></h1></h5></div></div></div></div></div></body>
+    </div>     <!--/.Container Main Layout-->  
 
 <?php require_once 'includes/footer.php'; ?>
 
