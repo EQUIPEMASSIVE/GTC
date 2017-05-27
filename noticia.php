@@ -42,7 +42,7 @@
                             <!--Product Card-->
                             <div class="product-wrapper" >
                          <br>  
-                    <h1 class="h1-responsive" > <a href="index.php" style="color: #000" class="text-center"><strong><?php echo $rn['titulo'];?></h1> </a></strong>
+                    <h1 class="h1-responsive" style="color: #000" class="text-center"><strong><?php echo $rn['titulo'];?></h1></strong>
                          
                         
                    
