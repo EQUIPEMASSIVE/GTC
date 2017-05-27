@@ -24,7 +24,7 @@
             
 
             
-            <hr>
+          
         
                 <div class="col-lg-6">
 
@@ -54,7 +54,7 @@
                     
 
                     
-                   <a type="button" class="btn btn-primary btn-lg btn-block"  href="noticia.php?id=<?php echo $src['id_noticia']; ?>">...Leia Mais</a>
+                  <!-- <a type="button" class="btn btn-primary btn-lg btn-block"  href="noticia.php?id=<?php echo $src['id_noticia']; ?>">...Leia Mais</a> -->
                    
                     </div>
             <!--/Post data-->
