@@ -192,7 +192,7 @@
 
                        <div style="margin-left: 10px;"> 
                          <form class="form-inline waves-effect waves-light" action="buscar.php" method="GET">
-                    <input style="margin-top: 8px; padding-left: 5px;  border-radius: 20px; " class="form-control pull-right" type="text" placeholder="  Buscar..." name="busca-organica" id="inputError"  onmouseover="this.style.border='solid 2px greenyellow'" onmouseout="this.style.border='solid 2px white'>
+                    <input style="margin-top: 8px; padding-left: 5px; border: solid 2px white; border-radius: 20px; " class="form-control pull-right" type="text" placeholder="  Buscar..." name="busca-organica" id="inputError"  onmouseover="this.style.border='solid 2px greenyellow'" onmouseout="this.style.border='solid 2px white'>
                     <span class="glyphicon glyphicon-search">
                                </span>
                                 </form>
