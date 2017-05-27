@@ -4,7 +4,7 @@
 
 <main>
 
-<body style="background-color:white; margin-top: -5px">
+<body style="background-color:white; margin-top: -15px">
     
         <!--Main layout-->
                 <div class="container"> 
