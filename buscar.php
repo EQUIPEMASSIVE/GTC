@@ -66,7 +66,7 @@
 
               <?php } } else {  ?>
             <section id="buscar">
-            <h2 class="title">A busca não retornou resuldado! =( </h2>
+            <h2 class="title" style="color: white;">A busca não retornou resuldado! =( </h2>
 
             </section>
             <?php } ?>
