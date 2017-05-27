@@ -37,23 +37,13 @@
                                     <!--Card Image-->
                     <div>
                         <img src="cp/imagens/imgnoticia/<?php echo $src['imagem']; ?>" alt="<?php echo $src['titulo']; ?>">
-                        <a>
-                          
-                        </a>
+                        
                         
                     </div>
                          
 
                                     <!--TEXTO-->
-                    <div class="excerpt">
-                        <p><?php echo substr($src['conteudo'], 0, 0); ?></p>
-                        
-                        
-                        
-
-                        
-                    </div>
-
+                    
                     
                   <!-- <a type="button" class="btn btn-primary btn-lg btn-block"  href="noticia.php?id=<?php echo $src['id_noticia']; ?>">...Leia Mais</a> -->
                    
