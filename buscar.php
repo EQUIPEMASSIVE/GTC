@@ -29,17 +29,16 @@
 
 
                     <!--Card Content-->
-                    <div style="background-color: white;">
+                    <div class="card"  style="background-color: white;">
                         <!--Title-->
                         <h1 style="text-align: center; color: #000;"><a href="noticia.php?id=<?php echo $src['id_noticia'];  ?>"><?php echo $src['titulo']; ?></a></h1>
                         <!-- <p>Por: <?php echo $src['autorPub']; ?></p> -->
 
                                     <!--Card Image-->
-                    <div>
-                        <img src="cp/imagens/imgnoticia/<?php echo $src['imagem']; ?>" alt="<?php echo $src['titulo']; ?>">
+                                            <img src="cp/imagens/imgnoticia/<?php echo $src['imagem']; ?>" alt="<?php echo $src['titulo']; ?>">
                         
                         
-                    </div>
+                    
                          
 
                                     <!--TEXTO-->
