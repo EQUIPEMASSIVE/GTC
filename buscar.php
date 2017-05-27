@@ -42,7 +42,7 @@
                         </a>
                         
                     </div>
-                        <br> 
+                         
 
                                     <!--TEXTO-->
                     <div class="excerpt">
