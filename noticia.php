@@ -1,5 +1,7 @@
   <?php require_once 'includes/header.php';  ?>
 
+
+
 <main>
 
 <body style="background-color:white">
@@ -27,18 +29,18 @@
                 ?>
 
 
-            <br>           
+                     
                  <!--Main column-->
                 <div class="col-lg-12">
 
                     <!--First row-->
                     <div class="row wow fadeIn" data-wow-delay="0.4s">
-                       
+                        <div class="col-md-12">
 
                             <!--Product Card-->
                             <div class="product-wrapper" >
                          <br>  
-                    <h1 class="h1-responsive" style="color: #000" class="text-center"><strong><?php echo $rn['titulo'];?></h1></strong>
+                    <h1 class="h1-responsive" > <a href="index.php" style="color: #000" class="text-center"><strong><?php echo $rn['titulo'];?></h1> </a></strong>
                          
                         
                    
@@ -75,7 +77,7 @@
                                                                 
                                 <hr>
                                 <!--Texto-->
-                     <div class="col-md-8">
+
                                 <p class="text-justify"><?php echo $rn["conteudo"]; ?></p>
 
 
