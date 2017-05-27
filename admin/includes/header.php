@@ -156,12 +156,15 @@ $SQL = mysql_query("SELECT nome, imgPerfil FROM administradores WHERE usuario= '
                 $SQL_RS = mysql_query("SELECT status FROM noticias WHERE status=0");
                 $SQL_TN = mysql_query("SELECT status FROM noticias WHERE status=1");
                 $SQL_LX = mysql_query("SELECT status FROM noticias WHERE status=2");
-                $SQL_EV = mysql_query("SELECT status FROM eventos WHERE status=0");
-
+              
                 $CNT_RS = mysql_num_rows($SQL_RS);
                 $CNT_TN = mysql_num_rows($SQL_TN);
                 $CNT_LX = mysql_num_rows($SQL_LX);
-                $CNT_EV = mysql_num_rows($SQL_EV);
+       
+         //IMPLEMENTAÇÃO CONTADOR DE RASCUNHO DE EVENTOS 
+                // $SQL_EV = mysql_query("SELECT status FROM eventos WHERE status=0");
+                // $CNT_EV = mysql_num_rows($SQL_EV);
+                //<?php if($CNT_EV != 0): echo "$CNT_EV"; endif; ?>
 
                 ?>
                 <li> <a href="inicial.php"><i class="material-icons">home</i> <span class="title">Página Inicil</span> <span class="selected"></span></a>            </li>
@@ -171,7 +174,7 @@ $SQL = mysql_query("SELECT nome, imgPerfil FROM administradores WHERE usuario= '
                         <li> <a href="compor-noticia.php"><i class="fa fa-quote-left"></i>Compor Notícia </a> </li>
                         <li> <a href="todas-noticias.php"><i class="fa fa-book"></i>Todas as Notícias <span class="badge badge-info"><?php if($CNT_TN != 0): echo " $CNT_TN"; endif; ?></span></a></li>
                         <li> <a href="rascunho-noticia.php"><i class="fa fa-bookmark-o"></i>Rascunho de Notícias <span class="badge badge-inverse"><?php if($CNT_RS != 0): echo "$CNT_RS"; endif; ?></span></a></li>
-                        <li> <a href="rascunho-evento.php"><i class="fa fa-bookmark"></i>Rascunho de Eventos <span class="badge badge-warning"><?php if($CNT_EV != 0): echo "$CNT_EV"; endif; ?></span></a></li>
+                        <li> <a href="rascunho-evento.php"><i class="fa fa-bookmark"></i>Rascunho de Eventos <span class="badge badge-warning"></span></a></li>
                         <li> <a href="lixeira-noticia.php"><i class="fa fa-trash-o"></i>Lixeira <span class="badge badge-danger"><?php if($CNT_LX != 0): echo "$CNT_LX"; endif; ?></span></a></li>
                     </ul>
                 </li>
@@ -181,8 +184,8 @@ $SQL = mysql_query("SELECT nome, imgPerfil FROM administradores WHERE usuario= '
                 <li>
                     <a href="administracao-portal.php"> <i class="fa fa-users"></i> <span class="title">Administração Portal</span></a>
                 </li>
-                <li>
-                    <a href="javascript:;"> <i class="fa fa-gears"></i> <span class="title">Extra</span> <span class=" arrow"></span> </a>
+              <!-- <li>
+                   <a href="javascript:;"> <i class="fa fa-gears"></i> <span class="title">Extra</span> <span class=" arrow"></span> </a>
                     <ul class="sub-menu">
                         <li> <a href="user-profile.html"> User Profile </a> </li>
                         <li> <a href="time_line.html"> Time line </a> </li>
@@ -198,7 +201,7 @@ $SQL = mysql_query("SELECT nome, imgPerfil FROM administradores WHERE usuario= '
                         <li> <a href="login_v2.html">Login v2</a> </li>
                         <li> <a href="lockscreen.html"> Lockscreen </a> </li>
                     </ul>
-                </li>
+                </li> -->
             </ul>
 
             <!-- Pagina Mobile-->
