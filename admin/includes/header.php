@@ -162,7 +162,7 @@ $SQL = mysql_query("SELECT nome, imgPerfil FROM administradores WHERE usuario= '
                 //IMPLEMENTAÇÃO CONTADOR DE RASCUNHO DE EVENTOS
                 // $SQL_EV = mysql_query("SELECT status FROM eventos WHERE status=0");
                 // $CNT_EV = mysql_num_rows($SQL_EV);
-                //<?php if($CNT_EV != 0): echo "$CNT_EV"; endif; ?>
+                //<?php if($CNT_EV != 0): echo "$CNT_EV"; endif;
 
                 ?>
                 <li> <a href="inicial.php"><i class="material-icons">home</i> <span class="title">Página Inicil</span> <span class="selected"></span></a>            </li>
