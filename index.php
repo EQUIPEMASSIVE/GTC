@@ -263,21 +263,38 @@
     */
   /**
     * Agora monta o Link para Próxima Página
-    * Depois O link para Última Página
+        * Depois O link para Última Página
     */
     ?>
 
 
 
-<!--Pagination blue-->
-        <nav id="navegacao" style="text-align: center;">
-         
-       
-    | <a  class="badge btn-outline-danger" href=<?php echo "\"?pagina=1\"><<</a> | ";
-    ?>
-     <a class="badge btn-danger" href=<?php echo "\"?pagina=$anterior\">anterior</a> | ";          
- 
-    ?>
+
+     
+
+
+
+<!--Pagination dark -->
+<nav id="navegacao" style="text-align: center;">
+    <ul class="pagination pg-dark">
+
+
+
+        <!-- ABRE COMENTARIO   primeira paginA
+        <li class="page-item active">
+        <a  class="page-link" href=< PHP ECH0 "\"?pagina=1\">PRIMEIRA PAGINA</a>"
+        ?>
+        </li>
+             FECHA COMENTARIO-->
+
+
+          <!--Pagina anterior << -->
+        <li class="page-item">
+        <a  class="page-link" href=<?php echo "\"?pagina=$anterior\">&laquo;</a>";
+        ?>
+        </li>
+        
+
          
          
         <?php
@@ -286,12 +303,16 @@
     */
    for($i = $pagina-$exibir; $i <= $pagina-1; $i++){
        if($i > 0)
-        echo '<a style="color: red;" href="?pagina='.$i.'"> '.$i.' </a>';
+        echo '<li class="page-item"><a class="page-link" href="?pagina='.$i.'">'.$i.' </a></li>';
   }
-  echo '<a style="color: greenyellow; " href="?pagina='.$pagina.'"><strong>'.$pagina.'</strong></a>';
+
+
+  echo '<li class="page-item active"><a class="page-link" href="?pagina='.$pagina.'">'.$pagina.'</a></li>';
+
+
   for($i = $pagina+1; $i < $pagina+$exibir; $i++){
        if($i <= $totalPagina)
-        echo '<a style="color:red ;" href="?pagina='.$i.'"> '.$i.' </a>';
+        echo '<li class="page-item"><a class="page-link" href="?pagina='.$i.'">'.$i.' </a></li>';
   }
    /**
     * Depois o link da página atual
@@ -300,14 +321,34 @@
     * O loop para exibir os valores à direita
     */
     ?>
-     | <a class="badge btn-light-green" href=<?php echo "\"?pagina=$posterior\">próxima</a> | ";
-    ?>
-     <a class="badge btn-outline-success" href=<?php echo "\"?pagina=$totalPagina\">>></a> | ";          
- 
-    ?>
 
-    </nav>
-         
+
+
+
+
+          <!--Proxima Pagina -->
+        <li class="page-item">
+        <a  class="page-link" href=<?php echo "\"?pagina=$posterior\">&raquo;</a>";
+        ?>    
+        </li>
+
+
+                <!--ABRECOMENTARIO  ultima pagina 
+        <li class="page-item active">
+        <a  class="page-link" href=< PHP ECH0 "\"?pagina=$totalPagina\">ULTIMAPAGINA</a>" 
+        ?>
+        </li>
+             FECHACOMENTARIO-->
+
+
+    </ul>
+</nav>
+
+<!--/Pagination Dark-->
+
+
+
+
 
 </main>
 <?php require_once 'includes/footer.php'; ?>
