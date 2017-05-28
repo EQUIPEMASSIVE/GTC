@@ -148,7 +148,7 @@
     //Calcula a pagina de qual valor será exibido
     $inicio     = ($quantidade * $pagina) - $quantidade;
     //Monta o SQL com LIMIT para exibição dos dados  
-    $SQL_B = "SELECT * FROM noticias INNER JOIN categoria ON (noticias.categoria = categoria.id_categoria) WHERE status = '1' ORDER BY  dataPub DESC LIMIT $inicio, $quantidade";
+    $SQL_B = "SELECT * FROM noticias INNER JOIN categoria ON (noticias.categoria = categoria.id_categoria) WHERE status = '1' ORDER BY  id_noticia DESC LIMIT $inicio, $quantidade";
     //Executa o SQL
     $qr  = mysql_query($SQL_B) or die(mysql_error());
     //Percorre os campos da tabela
