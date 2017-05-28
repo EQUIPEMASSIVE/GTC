@@ -27,7 +27,7 @@
             <div>
                 <a href="noticia.php?id=<?php echo $bn['id_noticia']; ?>" ><img src="cp/imagens/imgnoticia/<?php echo $bn['imagem']; ?>" alt="Postagem 1"/>
 
-                <div  style="position: absolute; top: 320px; left: 40px;"><!--nome do titulo da noticia por id-->
+                <div  style="position: absolute; top: 300px; left: 40px;"><!--nome do titulo da noticia por id-->
                   <h1 style="font-size: 50px; text-align: left; text-shadow: 2px 2px 4px rgba(0,0,0,.7); "> 
                     <div href="noticia.php?id=<?php echo $bn['id_noticia']; ?>" style="color: #f0f0fa; display:inline; text-decoration: none;"   onmouseover="this.style.color='#D8D8D8'" onmouseout="this.style.color='#f0f0fa'"><?php echo $bn['titulo'];?></div>
                     <div>
@@ -35,7 +35,7 @@
                 </div>
 
 
-                <div  style="position: absolute; top: 280px; left: 40px;"><!--texto slider categoria da noticia por id-->
+                <div  style="position: absolute; top: 300px; left: 40px;"><!--texto slider categoria da noticia por id-->
                   <h1 style="font-size: 35px; text-align: center; text-shadow: 1px 1px 2px rgba(0,0,0,.7);"> 
                     <b><div href="noticia.php?id=<?php echo $bn['id_noticia']; ?>" style="color: greenyellow; text-shadow: 1px 1px 2px rgba(0,0,0,.7);"><?php echo $bn['nome_categoria'];?></div></b>  
                     <div>
