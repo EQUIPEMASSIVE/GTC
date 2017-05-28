@@ -139,7 +139,7 @@
     <br>
 <div class="container">
         <div class="row-fluid">
-         <button class="btn btn-warning btn-rounded" style="position: fixed; z-index: 98; top: 85%; margin-left: 85%; border-radius: 30px; padding: 10px; background-color: greenyellow;"><a href="javascript:void(0)"><i class="fa fa-arrow-up" style="color: #000000;"></i></a></button>
+         <button class="btn btn-warning btn-rounded" style="position: fixed; z-index: 98; top: 85%; margin-left: 85%; border-radius: 30px; padding: 10px; background-color: greenyellow;"><a href="#"><i class="fa fa-arrow-up" style="color: #000000;"></i></a></button>
 <?php
     //A qunatidade de noticias a ser exibida a ser exibida
     $quantidade = 8;//Altere a quantidade 
