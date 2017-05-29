@@ -35,7 +35,7 @@ if (isset($Usuario) && isset($Senha)){
 
             <div class="tiles grey p-t-20 p-b-20 no-margin text-black tab-content lockscreen-wrapper" style="border-radius: 10px;">
                 <div class="row ">
-                    <div class="col-md-8 col-md-offset-1 col-sm-6 col-sm-offset-3 col-xs-offset-1" style="width: 100%;">
+                    <div class="col-md-8 col-md-offset-1 col-sm-6 no-padding" style="width: 100%; margin-left: 3%;">
 
                         <?php
                         if(isset($_GET["url"])){
