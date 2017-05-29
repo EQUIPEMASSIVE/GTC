@@ -6,14 +6,13 @@
         <div class="page-content">
             <div class="clearfix"></div>
             <div class="content">
-                <div class="page-title">
-                    <div class="form-inline">
-                        <h3> Adiminstração do Portal</h3></span>
-                    </div>
-                </div>
-
-                <div class="content-wrapper">
+                  <div class="content-wrapper">
                     <div class="container">
+                        <div class="page-title">
+                            <div class="form-inline">
+                                <h3> Adiminstração do Portal</h3>
+                            </div>
+                        </div>
                         <div class="row">
                             <div class="col-md-4 col-vlg-4 m-b-10 no-padding">
                                 <!--    Striped Rows Table  -->
