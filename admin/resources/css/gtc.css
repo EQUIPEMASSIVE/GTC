@@ -322,6 +322,7 @@ body.boxed-layout .footer-widget {
   margin-top: 3px;
 }
 .header .header-seperation {
+  margin-top: -7%;
   width: 250px;
   display: block;
   float: left;
