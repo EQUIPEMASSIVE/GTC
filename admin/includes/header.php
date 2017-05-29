@@ -69,10 +69,11 @@ $SQL = mysql_query("SELECT nome, imgPerfil FROM administradores WHERE usuario= '
             </ul>
             <!-- BEGIN LOGO -->
             <a href="inicial.php">
-                <img src="resources/assets/img/logo.png" class="logo" alt="" data-src="resources/assets/img/logo.png" data-src-retina="resources/assets/img/logo2x.png" width="155" height="27" />
+                <img src="resources/assets/img/logo.png" class="logo hidden-sm hidden-xs visible-md visible-lg" alt="" data-src="resources/assets/img/logo.png" data-src-retina="resources/assets/img/logo2x.png" width="155" height="27" />
+                <img src="resources/assets/img/logo.png" class="logo visible-sm visible-xs hidden-md hidden-lg" alt="" data-src="resources/assets/img/logo.png" data-src-retina="resources/assets/img/logo2x.png" width="120" height="27" style="margin-left: 23%;"/>
             </a>
             <!-- END LOGO -->
-            <ul class="nav pull-right notifcation-center">
+            <ul class="nav pull-right notifcation-center" style="margin-top: -15%;" />
                 <li class="dropdown visible-xs visible-sm">
                     <a href="inicial.php" class="dropdown-toggle" data-toggle="">
                         <i class="material-icons">home</i>
