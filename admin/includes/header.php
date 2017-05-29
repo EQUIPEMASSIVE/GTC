@@ -75,9 +75,7 @@ $SQL = mysql_query("SELECT nome, imgPerfil FROM administradores WHERE usuario= '
             <!-- END LOGO -->
             <ul class="nav pull-right notifcation-center" style="margin-top: -15%;" />
                 <li class="dropdown visible-xs visible-sm">
-                    <a href="inicial.php" class="dropdown-toggle" data-toggle="">
-                        <i class="material-icons">home</i>
-                    </a>
+                    <a href="logout.php"><i class="material-icons">power_settings_new</i></a>
                 </li>
 
                <!-- PEGA A IMAGEM DO PERFIL -->
