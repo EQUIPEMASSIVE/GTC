@@ -38,13 +38,14 @@ require_once "includes/configuration.php";
 
                    ?>
                     <div class="row">
-                        <div class="col-md-6">
+                        <br />
+                        <div class="col-md-8">
                             <div class=" tiles white col-md-12 no-padding">
                                 <div class="tiles green cover-pic-wrapper">
                                     <div class="overlayer bottom-right">
                                         <div class="overlayer-wrapper">
                                             <div class="padding-10 hidden-xs">
-                                                <button type="button" class="btn btn-primary btn-small"><i class="fa fa-check"></i>&nbsp;&nbsp;Following</button>
+                                                <button type="button" class="btn btn-primary btn-small"><i class="fa fa-pencil"></i>Editar</button>
                                             </div>
                                         </div>
                                     </div>
@@ -77,7 +78,7 @@ require_once "includes/configuration.php";
                             </div>
                         </div>
                         <br />
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <div class="tiles white col-md-12 col-sm-12 no-padding">
                                 <div class="tiles-body">
                                     <div class="row">
