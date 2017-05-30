@@ -20,37 +20,8 @@ $SQL = mysql_query("SELECT nome, imgPerfil FROM administradores WHERE usuario= '
     <title>Guia Tecnologico - Admin Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta content="" name="description" />
-    <meta content="" name="author" />
-    <!-- BEGIN PLUGIN CSS -->
-    <link href="resources/assets/plugins/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
-    <link href="resources/assets/plugins/jquery-metrojs/MetroJs.min.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="resources/assets/plugins/shape-hover/css/demo.css" />
-    <link rel="stylesheet" type="text/css" href="resources/assets/plugins/shape-hover/css/component.css" />
-    <link href="resources/assets/plugins/pace/pace-theme-flash.css" rel="stylesheet" type="text/css" media="screen" />
-    <link href="resources/assets/plugins/jquery-slider/css/jquery.sidr.light.css" rel="stylesheet" type="text/css" media="screen" />
-    <link rel="stylesheet" href="resources/assets/plugins/jquery-ricksaw-chart/css/rickshaw.css" type="text/css" media="screen">
-    <link rel="stylesheet" href="resources/assets/plugins/Mapplic/mapplic/mapplic.css" type="text/css" media="screen">
-
-    <link rel="stylesheet" href="resources/js/ckeditor/samples/toolbarconfigurator/lib/codemirror/neo.css">
-
-    <script src="resources/js/ckeditor/ckeditor.js"></script>
-    <script src="resources/js/ckeditor/samples/js/sample.js"></script>
-
-    <script src="resources/assets/plugins/jquery/jquery-1.11.3.min.js"></script>
-    <script src="resources/js/default.js"></script>
-    <script src="resources/js/validacoes.js"></script>
-            <!-- END PLUGIN CSS -->
-            <!-- BEGIN PLUGIN CSS -->
-    <link href="resources/assets/plugins/pace/pace-theme-flash.css" rel="stylesheet" type="text/css" media="screen" />
-    <link href="resources/assets/plugins/bootstrapv3/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="resources/assets/plugins/bootstrapv3/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="resources/assets/plugins/animate.min.css" rel="stylesheet" type="text/css" />
-    <link href="resources/assets/plugins/jquery-scrollbar/jquery.scrollbar.css" rel="stylesheet" type="text/css" />
-    <!-- END PLUGIN CSS -->
-    <!-- BEGIN CORE CSS FRAMEWORK -->
-    <link href="resources/css/gtc.css" rel="stylesheet" type="text/css" />
-    <!-- END CORE CSS FRAMEWORK -->
+    <meta content="Alvaro" name="author" />
+        <?php require "imports-header.php" ?>
 </head>
 <!-- END HEAD -->
 <!-- BEGIN BODY -->
@@ -103,16 +74,34 @@ $SQL = mysql_query("SELECT nome, imgPerfil FROM administradores WHERE usuario= '
                         </a>
                     </li>
                 </ul>
+                <ul class="nav quick-section">
+                    <li class="quicklinks">
+                        <a href="compor-noticia.php" title="Compor Noticia" >
+                            <i class="fa fa-pencil-square"></i>&nbsp;
+                        </a>
+                    </li>
+
+                </ul>
             </div>
             <!-- END TOP NAVIGATION MENU -->
             <!-- BEGIN CHAT TOGGLER -->
             <div class="pull-right">
                 <div class="chat-toggler sm">
                     <div class="profile-pic">
-                        <a href="user-profile.html"> <img src="imagens/perfil/<?php echo @$imgpUser; ?>" alt="Imagem de Perfil" data-src="imagens/perfil/<?php echo @$imgpUser; ?>" data-src-retina="imagens/perfil/<?php echo @$imgpUser; ?>" width="35" height="35" /></a>
+                        <a href="alterar-perfil.php"> <img src="imagens/perfil/<?php echo @$imgpUser; ?>" alt="Imagem de Perfil" data-src="imagens/perfil/<?php echo @$imgpUser; ?>" data-src-retina="imagens/perfil/<?php echo @$imgpUser; ?>" width="35" height="35" /></a>
                     </div>
                 </div>
                 <ul class="nav quick-section ">
+                    <li class="quicklinks">
+                        <a data-toggle="dropdown" class="dropdown-toggle  pull-right " href="#" id="user-options">
+                            <i class="material-icons">tune</i>
+                        </a>
+                        <ul class="dropdown-menu  pull-right" role="menu" aria-labelledby="user-options">
+                            <li>
+                                <a href="alterar-perfil.php"><i class="fa fa-user"></i>&nbsp;&nbsp; Minha Conta</a>
+                            </li>
+                        </ul>
+                    </li>
                     <li class="quicklinks"> <span class="h-seperate"></span></li>
                     <li class="quicklinks">
                         <a href="logout.php"><i class="material-icons">power_settings_new</i></a>
@@ -121,12 +110,12 @@ $SQL = mysql_query("SELECT nome, imgPerfil FROM administradores WHERE usuario= '
                     </li>
                 </ul>
             </div>
+            <!-- END CHAT TOGGLER --
             <!-- END CHAT TOGGLER -->
         </div>
         <!-- END TOP NAVIGATION MENU -->
     </div>
     <!-- END TOP NAVIGATION BAR -->
-</div>
 <!-- END HEADER -->
 <!-- BEGIN CONTAINER -->
 <div class="page-container row-fluid">
