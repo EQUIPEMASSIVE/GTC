@@ -45,7 +45,7 @@ require_once "includes/configuration.php";
                                     <div class="overlayer bottom-right">
                                         <div class="overlayer-wrapper">
                                             <div class="padding-10 hidden-xs">
-                                                <button type="button" class="btn btn-primary btn-small"><i class="fa fa-pencil"></i>Editar</button>
+                                                <button type="button" class="btn btn-primary btn-small"><i class="fa fa-pencil"></i>&nbsp;&nbsp; Editar</button>
                                             </div>
                                         </div>
                                     </div>
