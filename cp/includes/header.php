@@ -150,6 +150,7 @@ $SQL = mysql_query("SELECT nome, imgPerfil FROM administradores WHERE usuario= '
                             <li><div id="menu-gerenciar-noticia" class="btn btn-info"><a href="gerenciar-noticia.php">Gerenciar Noticia</a></div></li>
                             <li><div id="menu-gerenciar-categoria" class="btn btn-warning"><a href="gerenciar-categoria.php">Gerenciar Categorias</a></div></li>
                             <li><div id="menu-administracao-portal" class="btn btn-danger"><a href="administracao-portal.php">Administração do Portal</a></div></li>
+                            <li><div class="btn btn-danger"><a href="testeUP.php">CP-Evento</a></div></li>
                              
 
                         </ul>
