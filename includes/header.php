@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>DDONT PANIC!! (94% Concluido) v0.2-beta </title>
+    <title>ttsz NÃO ENTRE EM PANICO! GZUZ XAMA REGUERO (92% Concluido) v0.2-beta </title>
      
      
  
@@ -158,7 +158,7 @@
 
 
 
-    <div style=" z-index: 99; margin-top: 0px; padding: 0px; top: 0px;" class="navbar-wrapper">
+    <div style="position: fixed; z-index: 99; margin-top: 0px; padding: 0px; top: 0px;" class="navbar-wrapper">
         <div class="container">
 
             <nav class="navbar navbar-inverse navbar-static-top" role="navigation" style="margin-bottom: 0px;">
@@ -188,6 +188,7 @@
                             </li>
 
                             <li><a href="cp/index.php">Login CP</a></li>
+                            <li><a href="teste.php">EVENTOS</a></li>
                         </ul>
 
                        <div style="margin-left: 10px;"> 
