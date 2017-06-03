@@ -26,23 +26,21 @@ while ($evento = mysql_fetch_array($sql)) {
 <div class="col-md-6">
 <div class="Compose-Message">
                     <div class="panel panel-success">
-                        <div class="panel-heading">Publicar Notícia Rápida/Rascunho</div>
+                        <div class="panel-heading">Publicar/Editar Conteudo do Evento</div>
                         <div class="panel-body">
                             <form action="atualizar-evento.php?id_ct=<?php echo $id_ct; ?>" method="POST">
                            
 
                             
-                                <label>Titulo da Postagem: </label> 
+                                <label>Titulo do Evento: </label> 
                                 <input type="text" class="form-control" name="titulo-evento" value="<?php echo $evento['titulo']; ?>" />  
-                                <label>Descrição da Notícia : </label>
+                                <label>Conteudo do Evento: </label>
+                                <img src="../fotos/<?php echo $evento['imagem']; ?>" alt="Imagem de evento" width="85" height="85" />
                                 <textarea rows="9" class="form-control" name="conteudo-evento" value=""><?php echo $evento['conteudo']; ?></textarea>
-                                <input class="btn btn-success" type="submit" name="publicar-nota" value="Habilitar Evento" style="margin-top: 8px;"/>
+                                <input class="btn btn-success" type="submit" name="publicar-nota" value="Publicar Evento" style="margin-top: 8px;"/>
                             </form>
                         </div>
-                        <div class="panel-footer text-muted">
-                            <strong>Note : </strong>Todas as postagem aqui feitas iram para
-                            rascunhos!
-                        </div>
+                        
                     </div>
                 </div>
              </div> 
