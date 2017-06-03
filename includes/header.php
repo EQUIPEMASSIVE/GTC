@@ -188,7 +188,7 @@
                             </li>
 
                             <li><a href="cp/index.php">Login CP</a></li>
-                            <li><a href="pEvento.php">Eventos</a></li>
+                            <li><a href="pEvento.php" style="color: red;">Eventos</a></li>
                         </ul>
 
                        <div style="margin-left: 10px;"> 
