@@ -29,7 +29,7 @@
 
     <!-- JQuery -->
     
-
+    <link rel="icon" href="teste.ico">
     <!-- Bootstrap tooltips -->
     <script type="text/javascript" src="js/tether.min.js"></script>
 
@@ -188,7 +188,7 @@
                             </li>
 
                             <li><a href="cp/index.php">Login CP</a></li>
-                            <li><a href="teste.php">EVENTOS</a></li>
+                            <li><a href="pEvento.php">Eventos</a></li>
                         </ul>
 
                        <div style="margin-left: 10px;"> 
