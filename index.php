@@ -19,7 +19,7 @@
                 <?php    
                    //Na ordem do recente para o ultimo
                           
-                             $SQL_B = mysql_query("SELECT * FROM noticias  INNER JOIN categoria ON(noticias.categoria = categoria.id_categoria)WHERE status='1'  ORDER BY id_noticia DESC LIMIT 5");//aqui sao mostradas somente a noticia pelo nome da categoria.
+                            $SQL_B = mysql_query("SELECT * FROM noticias  INNER JOIN categoria ON(noticias.categoria = categoria.id_categoria)WHERE status='1'  ORDER BY id_noticia DESC LIMIT 5");//aqui sao mostradas somente a noticia pelo nome da categoria.
                             while ($bn = mysql_fetch_array($SQL_B)) {
                             
                 ?>
@@ -27,21 +27,42 @@
             <div>
                 <a href="noticia.php?id=<?php echo $bn['id_noticia']; ?>" ><img src="cp/imagens/imgnoticia/<?php echo $bn['imagem']; ?>" alt="Postagem 1"/>
 
-                <div  style="position: absolute; top: 300px; left: 40px;"><!--nome do titulo da noticia por id-->
-                  <h1 style="font-size: 60px; text-align: left; text-shadow: 2px 2px 4px rgba(0,0,0,.7);"> 
-                    <div href="noticia.php?id=<?php echo $bn['id_noticia']; ?>" style="color: #f0f0fa; display:inline; text-decoration: none;"   onmouseover="this.style.color='#D8D8D8'" onmouseout="this.style.color='#f0f0fa'"><?php echo $bn['titulo'];?></div>
+                <div  style="position: absolute; top: 320px; left: 40px;"><!--nome do titulo da noticia por id-->
+                  <h1 style="font-size: 50px; text-align: left; text-shadow: 2px 2px 4px rgba(0,0,0,.7); "> 
+                    <div href="noticia.php?id=<?php echo $bn['id_noticia']; ?>" style="color: white;"><?php echo $bn['titulo'];?></div>
                     <div>
                   </h1>
                 </div>
 
 
-                <div  style="position: absolute; top: 250px; left: 40px;"><!--texto slider categoria da noticia por id-->
+
+                    <!--CODIDO FEITO PARA ALTERAR A COR DA CATEGORIA DE MODO PERSONALISADO-->
+                <div  style="position: absolute; top: 280px; left: 40px;"><!--texto slider categoria da noticia por id-->
                   <h1 style="font-size: 35px; text-align: center; text-shadow: 1px 1px 2px rgba(0,0,0,.7);"> 
-                    <b><div href="noticia.php?id=<?php echo $bn['id_noticia']; ?>" style="color: greenyellow; text-shadow: 1px 1px 2px rgba(0,0,0,.7);"><?php echo $bn['nome_categoria'];?></div></b>  
+                    <b><div href="noticia.php?id=<?php echo $bn['id_noticia']; ?>" style="color: greenyellow; text-shadow: 1px 1px 2px rgba(0,0,0,.7);"><?php if ($bn['nome_categoria'] == 'Tecnologia') {  ?>                           
+                            <b style="color: red;"><?php echo "Tecnologia"; ?></b>
+                            <?php } ?>
+
+                            <?php if ($bn['nome_categoria'] == 'Games') {  ?>                           
+                            <b style="color: yellowgreen;"><?php echo "Games"; ?></b>
+                            <?php } ?>
+
+                            <?php if ($bn['nome_categoria'] == 'Atualidades') {  ?>                           
+                            <b style="color: yellow;"><?php echo "Atualidades"; ?></b>
+                            <?php } ?>
+
+                            <?php if ($bn['nome_categoria'] == 'Diversos') {  ?>                           
+                            <b style="color: orange;"><?php echo "Diversos"; ?></b>
+                            <?php } ?>
+
+
+
+
+                    </div></b>                   
                     <div>
                   </h1>
                 </div>
-
+                <!--CODIDO FEITO PARA ALTERAR A COR DA CATEGORIA DE MODO PERSONALISADO-->
                 </a>
 
                 
@@ -139,7 +160,7 @@
     <br>
 <div class="container">
         <div class="row-fluid">
-         <button class="btn btn-warning btn-rounded" style="position: fixed; z-index: 98; top: 85%; margin-left: 85%; border-radius: 30px; padding: 10px; background-color: greenyellow;"><a href="#"><i class="fa fa-arrow-up" style="color: #000000;"></i></a></button>
+        <button class="btn btn-warning btn-rounded" style="position: fixed; z-index: 98; top: 85%; margin-left: 85%; border-radius: 30px; padding: 10px; background-color: greenyellow;"><a href="#"><i class="fa fa-arrow-up" style="color: #000000;"></i></a></button>
 <?php
     //A qunatidade de noticias a ser exibida a ser exibida
     $quantidade = 8;//Altere a quantidade 
@@ -148,7 +169,7 @@
     //Calcula a pagina de qual valor será exibido
     $inicio     = ($quantidade * $pagina) - $quantidade;
     //Monta o SQL com LIMIT para exibição dos dados  
-    $SQL_B = "SELECT * FROM noticias INNER JOIN categoria ON (noticias.categoria = categoria.id_categoria) WHERE status = '1' ORDER BY  id_noticia DESC LIMIT $inicio, $quantidade";
+    $SQL_B = "SELECT * FROM noticias INNER JOIN categoria ON (noticias.categoria = categoria.id_categoria) WHERE status = '1' ORDER BY  dataPub DESC LIMIT $inicio, $quantidade";
     //Executa o SQL
     $qr  = mysql_query($SQL_B) or die(mysql_error());
     //Percorre os campos da tabela
@@ -179,7 +200,25 @@
                             <div  style="position: absolute; top: -20px; left: 0px;"><!--texto categoria da noticia por id-->
                               <h1 style="font-size: 20px; text-align: left; text-shadow: 3px 3px 4px rgba(0,0,0,.7); background-color: rgba(0,0,0,1.5); padding: 3px;"> 
 
-                                <b><div href="noticia.php?id=<?php echo $pusha['id_categoria']; ?>" style="color: greenyellow; text-shadow: 1px 1px 2px rgba(0,0,0,.7);"><span><?php echo $pusha['nome_categoria'];?></div></b></span> <!--nome da categoria em cima da imagem-->
+                                <b>
+                                <div href="noticia.php?id=<?php echo $pusha['id_categoria']; ?>" style="color: greenyellow; text-shadow: 1px 1px 2px rgba(0,0,0,.7);"><span><?php  if ($pusha['nome_categoria'] == 'Tecnologia') {?>
+                                <b style="color: red;"><?php echo "Tecnologia"; ?></b>
+                                <?php } ?>
+
+
+                                <?php  if ($pusha['nome_categoria'] == 'Games') {?>
+                                <b style="color: yellowgreen;"><?php echo "Games"; ?></b>
+                                <?php } ?>
+
+                                <?php  if ($pusha['nome_categoria'] == 'Atualidades') {?>
+                                <b style="color: yellow;"><?php echo "Atualidades"; ?></b>
+                                <?php } ?>
+
+                                <?php  if ($pusha['nome_categoria'] == 'Diversos') {?>
+                                <b style="color: orange;"><?php echo "Diversos"; ?></b>
+                                <?php } ?>
+                                </div>
+                                </b></span> <!--nome da categoria em cima da imagem-->
                              <div>
                               </h1>
                             </div>
@@ -190,7 +229,7 @@
 
 
                        
-                    </div >
+                    </div>
                     <!--/.Card image-->
 
                     <!--Card content-->
@@ -198,11 +237,10 @@
                         <!--Title-->
                         <!--h5 class="price"><a href="categoria.php?id=<?php //echo $pusha['id_categoria']; ?>"> <span class="badge btn-elegant"> <?php //echo $pusha['nome_categoria']; ?></span></a></h5>--> 
                               
-                <span style="color: #C0C0C0" ><i class="fa fa-clock-o" ></i> Publicado dia:  
-                 <?php 
-                 $dataE = explode ( "-", $pusha ['datapub'] );
-                 echo $dataE [2] . "/" . $dataE [1] . "/" . $dataE [0]; 
-                 ?></span>
+                <span style="color: #C0C0C0" ><i class="fa fa-clock-o" ></i> Publicado dia: <?php 
+$dataE = explode ( "-", $pusha ['datapub'] );
+                            
+                            echo $dataE [2] . "/" . $dataE [1] . "/" . $dataE [0]; ?></p></span> 
                         <h1 class="card-title"> <a href="noticia.php?id=<?php echo $pusha['id_noticia']; ?>" style="color: #000"><?php echo $pusha['titulo'];?></a></h1> 
                                                 
                         <!--Text-->
@@ -222,6 +260,16 @@
                 <!--/.Card--> <br> <br> 
             </div>
             <!--First columnn-->
+
+
+
+
+
+
+
+
+
+
 
 
 
