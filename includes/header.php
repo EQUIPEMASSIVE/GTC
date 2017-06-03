@@ -148,6 +148,33 @@
         body.cor-fundo{
             background-color: gray;
         }
+        b#hover-cat1:hover{
+             border-bottom: 3px solid red;
+             transition: 0.5s;
+        }
+        b#hover-cat2:hover{
+             border-bottom: 3px solid yellowgreen; 
+             transition: 0.5s;
+             top: -5px;
+        }
+        b#hover-cat3:hover{
+             border-bottom: 3px solid yellow;
+             transition: 0.5s;
+        }
+        b#hover-cat4:hover{
+             border-bottom: 3px solid orange;
+             transition: 0.5s;
+        }
+
+        b#hover-ev:hover{
+             border-bottom: 3px solid #aa80ff;
+             transition: 0.5s;
+        }
+
+        b#hover-home:hover{
+             color: red;
+             transition: 0.5s;
+        }
     </style>
 </head>
 
@@ -174,21 +201,56 @@
                     </div>
                     <div id="navbar" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
-                            <li><a href="index.php">Home</a></li>
+                            <li><a href="index.php" style="font-size: 18px; color: white"><b id="hover-home">Home</b></a></li>
                             
+
+
+
+
+
                             <li>
                             <?php  
                             $SQL = mysql_query("SELECT * FROM categoria");
                             while ($lh = mysql_fetch_assoc($SQL)) {
                             ?>
                             <li class="nav-item">
-                                  <a class="nav-link" href="categoria.php?id=<?php echo $lh['id_categoria']; ?>"><?php echo $lh['nome_categoria']; ?></a> 
+                                  <a class="nav-link" style="font-size: 18px;" href="categoria.php?id=<?php echo $lh['id_categoria']; ?>">
+
+                                  <?php if ($lh['nome_categoria'] == 'Tecnologia') {?>
+                                     <b id="hover-cat1"  style="color: red;"><?php echo "Tecnologia"; ?></b>
+                                  <?php } ?> 
+
+ 
+                                  <?php if ($lh['nome_categoria'] == 'Games') {?>
+                                     <b id="hover-cat2"  style="color: yellowgreen;"><?php echo "Games"; ?></b>
+                                  <?php } ?>
+
+
+                                  <?php if ($lh['nome_categoria'] == 'Atualidades') {?>
+                                     <b id="hover-cat3"  style="color: yellow;"><?php echo "Atualidades"; ?></b>
+                                  <?php } ?>  
+
+
+                                  <?php if ($lh['nome_categoria'] == 'Diversos') {?>
+                                     <b id="hover-cat4"  style="color: orange; "><?php echo "Diversos"; ?></b>
+                                  <?php } ?>
+
+                                  </a> 
                             </li>
                             <?php } ?> 
                             </li>
 
-                            <li><a href="cp/index.php">Login CP</a></li>
-                            <li><a href="pEvento.php" style="color: red;">Eventos</a></li>
+
+
+
+
+
+
+
+
+                            
+                            <li><a href="pEvento.php" style="color: #aa80ff; font-size: 18px;"><b id="hover-ev">Eventos</b></a></li>
+                            <li><a href="cp/index.php"><i class="fa fa-user-secret" aria-hidden="true" style="font-size: 18px;"></i></a></li>
                         </ul>
 
                        <div style="margin-left: 10px;"> 
