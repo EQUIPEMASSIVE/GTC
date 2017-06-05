@@ -154,12 +154,12 @@ $SQL = mysql_query("SELECT nome, imgPerfil FROM administradores WHERE usuario= '
                             </li> 
 
 
-                            <li><div id="menu-pagina-inicial" class="btn btn-success"><a  href="inicial.php">Home</a></div></li>
-                            <li><div id="menu-gerenciar-noticia" class="btn btn-info"><a href="gerenciar-noticia.php">Compor</a></div></li>
-                            <li><div id="menu-gerenciar-categoria" class="btn btn-warning"><a href="gerenciar-categoria.php">Categorias</a></div></li>
-                            <li><div id="menu-administracao-portal" class="btn btn-danger"><a href="administracao-portal.php">Admins</a></div></li>
+                            <li><div class="btn btn-success" style="width: 130px;"><a  href="inicial.php">Home</a></div></li>
+                            <li><div class="btn btn-info" style="width: 130px;"><a href="gerenciar-noticia.php">Compor</a></div></li>
+                            <li><div class="btn btn-warning" style="width: 130px;"><a href="gerenciar-categoria.php">Categorias</a></div></li>
+                            <li><div class="btn btn-danger" style="width: 130px;"><a href="administracao-portal.php">Admins</a></div></li>
                             <li>
-                            <div class="btn btn-danger">
+                            <div class="btn btn-danger" style="width: 130px; background-color: gray; border-color: gray;">
                             <a href="testeUP.php">Eventos
 
                             <?php 
