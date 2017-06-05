@@ -143,6 +143,14 @@ $SQL = mysql_query("SELECT nome, imgPerfil FROM administradores WHERE usuario= '
                                         $SQL = mysql_query ( "SELECT * FROM categoria" );
                                         echo mysql_num_rows ( $SQL );
                                         ?></label>
+
+                                        <br>
+
+                                        <label>Eventos Ativos</label>
+                                        <label class="badge" style="background-color: yellowgreen;"><?php
+                                        $SQL = mysql_query ( "SELECT id_evento FROM eventos WHERE status='1'" );
+                                        echo mysql_num_rows ( $SQL );
+                                        ?></label>
                             </li> 
 
 
