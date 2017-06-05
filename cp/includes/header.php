@@ -165,7 +165,7 @@ $SQL = mysql_query("SELECT nome, imgPerfil FROM administradores WHERE usuario= '
                             <?php 
 
                                 $SQL = mysql_query("SELECT id_evento FROM eventos WHERE status='0'");//procura toda informação pelo id com status 0
-                                if (mysql_num_rows($SQL) != 0)//se a quantida de campos em numeros for diferente de 0 exibe >>
+                                if (mysql_num_rows($SQL) != 0){//se a quantida de campos em numeros for diferente de 0 exibe >>
                                 ?>
                             <label class="badge" style="position: absolute; top: -8px; background-color: red; color: white; left: 100px;">
                                 <?php echo mysql_num_rows($SQL); ?><!--exibe os campos com status zero atraves de numeros-->
