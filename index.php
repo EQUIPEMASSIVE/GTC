@@ -40,19 +40,19 @@
                 <div  style="position: absolute; top: 280px; left: 40px;"><!--texto slider categoria da noticia por id-->
                   <h1 style="font-size: 35px; text-align: center; text-shadow: 1px 1px 2px rgba(0,0,0,.7);"> 
                     <b><div href="noticia.php?id=<?php echo $bn['id_noticia']; ?>" style="color: greenyellow; text-shadow: 1px 1px 2px rgba(0,0,0,.7);"><?php if ($bn['nome_categoria'] == 'Tecnologia') {  ?>                           
-                            <b style="color: red;"><?php echo "Tecnologia"; ?></b>
+                            <b style="color: yellowgreen;"><?php echo "Tecnologia"; ?></b>
                             <?php } ?>
 
                             <?php if ($bn['nome_categoria'] == 'Games') {  ?>                           
-                            <b style="color: yellowgreen;"><?php echo "Games"; ?></b>
+                            <b style="color: red;"><?php echo "Games"; ?></b>
                             <?php } ?>
 
                             <?php if ($bn['nome_categoria'] == 'Atualidades') {  ?>                           
-                            <b style="color: yellow;"><?php echo "Atualidades"; ?></b>
+                            <b style="color: orange;"><?php echo "Atualidades"; ?></b>
                             <?php } ?>
 
                             <?php if ($bn['nome_categoria'] == 'Diversos') {  ?>                           
-                            <b style="color: orange;"><?php echo "Diversos"; ?></b>
+                            <b style="color: yelllow;"><?php echo "Diversos"; ?></b>
                             <?php } ?>
 
 
