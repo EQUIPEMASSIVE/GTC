@@ -154,11 +154,31 @@ $SQL = mysql_query("SELECT nome, imgPerfil FROM administradores WHERE usuario= '
                             </li> 
 
 
-                            <li><div id="menu-pagina-inicial" class="btn btn-success"><a  href="inicial.php">Página Inicial</a></div></li>
-                            <li><div id="menu-gerenciar-noticia" class="btn btn-info"><a href="gerenciar-noticia.php">Gerenciar Noticia</a></div></li>
-                            <li><div id="menu-gerenciar-categoria" class="btn btn-warning"><a href="gerenciar-categoria.php">Gerenciar Categorias</a></div></li>
-                            <li><div id="menu-administracao-portal" class="btn btn-danger"><a href="administracao-portal.php">Administração do Portal</a></div></li>
-                            <li><div class="btn btn-danger"><a href="testeUP.php">CP-Evento</a></div></li>
+                            <li><div id="menu-pagina-inicial" class="btn btn-success"><a  href="inicial.php">Home</a></div></li>
+                            <li><div id="menu-gerenciar-noticia" class="btn btn-info"><a href="gerenciar-noticia.php">Compor</a></div></li>
+                            <li><div id="menu-gerenciar-categoria" class="btn btn-warning"><a href="gerenciar-categoria.php">Categorias</a></div></li>
+                            <li><div id="menu-administracao-portal" class="btn btn-danger"><a href="administracao-portal.php">Admins</a></div></li>
+                            <li>
+                            <div class="btn btn-danger">
+                            <a href="testeUP.php">Eventos
+
+                            <?php 
+
+                                $SQL = mysql_query("SELECT id_evento FROM eventos WHERE status='0'");//procura toda informação pelo id com status 0
+                                if (mysql_num_rows($SQL) != 0)//se a quantida de campos em numeros for diferente de 0 exibe >>
+                                ?>
+                            <label class="badge" style="position: absolute; top: -8px; background-color: red; color: white; left: 100px;">
+                                <?php echo mysql_num_rows($SQL); ?><!--exibe os campos com status zero atraves de numeros-->
+                            </label>
+
+                            <?php }else{ ?><!--se nao-->
+
+                            <label></label><!--se a quantidades de campos com status igual a zero, nao aparecerá a notificação-->
+
+                            <?php } ?>
+                            </a>
+                            </div>
+                            </li>
                              
 
                         </ul>
