@@ -22,7 +22,7 @@ require_once "includes/configuration.php";
                             Eventos Pendentes
                         </div>
                         <div class="panel-body">
-                            <div class="table-responsive">
+                            <div class="table-responsive" style="overflow: auto; height: 400px;">
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>
@@ -94,7 +94,7 @@ require_once "includes/configuration.php";
                             Eventos Publicados
                         </div>
                         <div class="panel-body">
-                            <div class="table-responsive">
+                            <div class="table-responsive" style="overflow: auto; height: 400px;">
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>
