@@ -202,20 +202,20 @@
 
                                 <b>
                                 <div href="noticia.php?id=<?php echo $pusha['id_categoria']; ?>" style="color: greenyellow; text-shadow: 1px 1px 2px rgba(0,0,0,.7);"><span><?php  if ($pusha['nome_categoria'] == 'Tecnologia') {?>
-                                <b style="color: red;"><?php echo "Tecnologia"; ?></b>
+                                <b style="color: yellowgreen;"><?php echo "Tecnologia"; ?></b>
                                 <?php } ?>
 
 
                                 <?php  if ($pusha['nome_categoria'] == 'Games') {?>
-                                <b style="color: yellowgreen;"><?php echo "Games"; ?></b>
+                                <b style="color: red;"><?php echo "Games"; ?></b>
                                 <?php } ?>
 
                                 <?php  if ($pusha['nome_categoria'] == 'Atualidades') {?>
-                                <b style="color: yellow;"><?php echo "Atualidades"; ?></b>
+                                <b style="color: orange;"><?php echo "Atualidades"; ?></b>
                                 <?php } ?>
 
                                 <?php  if ($pusha['nome_categoria'] == 'Diversos') {?>
-                                <b style="color: orange;"><?php echo "Diversos"; ?></b>
+                                <b style="color: purple;"><?php echo "Diversos"; ?></b>
                                 <?php } ?>
                                 </div>
                                 </b></span> <!--nome da categoria em cima da imagem-->
