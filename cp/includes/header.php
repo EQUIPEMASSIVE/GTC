@@ -155,9 +155,13 @@ $SQL = mysql_query("SELECT nome, imgPerfil FROM administradores WHERE usuario= '
 
 
                             <li><div class="btn btn-success" style="width: 130px;"><a  href="inicial.php">Home</a></div></li>
+                            <li>|</li>
                             <li><div class="btn btn-info" style="width: 130px;"><a href="gerenciar-noticia.php">Compor</a></div></li>
+                            <li>|</li>
                             <li><div class="btn btn-warning" style="width: 130px;"><a href="gerenciar-categoria.php">Categorias</a></div></li>
+                            <li>|</li>
                             <li><div class="btn btn-danger" style="width: 130px;"><a href="administracao-portal.php">Admins</a></div></li>
+                            <li>|</li>
                             <li>
                             <div class="btn btn-danger" style="width: 130px; background-color: gray; border-color: gray;">
                             <a href="testeUP.php">Eventos
