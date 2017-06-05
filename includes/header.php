@@ -217,12 +217,12 @@
                                   <a class="nav-link" style="font-size: 18px;" href="categoria.php?id=<?php echo $lh['id_categoria']; ?>">
 
                                   <?php if ($lh['nome_categoria'] == 'Tecnologia') {?>
-                                     <b id="hover-cat1"  style="color: red;"><?php echo "Tecnologia"; ?></b>
+                                     <b id="hover-cat1"  style="color: yellowgreen;"><?php echo "Tecnologia"; ?></b>
                                   <?php } ?> 
 
  
                                   <?php if ($lh['nome_categoria'] == 'Games') {?>
-                                     <b id="hover-cat2"  style="color: yellowgreen;"><?php echo "Games"; ?></b>
+                                     <b id="hover-cat2"  style="color: red;"><?php echo "Games"; ?></b>
                                   <?php } ?>
 
 
@@ -232,7 +232,7 @@
 
 
                                   <?php if ($lh['nome_categoria'] == 'Diversos') {?>
-                                     <b id="hover-cat4"  style="color: orange; "><?php echo "Diversos"; ?></b>
+                                     <b id="hover-cat4"  style="color: purple; "><?php echo "Diversos"; ?></b>
                                   <?php } ?>
 
                                   </a> 
@@ -249,7 +249,7 @@
 
 
                             
-                            <li><a href="pEvento.php" style="color: #aa80ff; font-size: 18px;"><b id="hover-ev">Eventos</b></a></li>
+                            <li><a href="pEvento.php" style="color: #orange; font-size: 18px;"><b id="hover-ev">Eventos</b></a></li>
                             <li><a href="cp/index.php"><i class="fa fa-user-secret" aria-hidden="true" style="font-size: 18px;"></i></a></li>
                         </ul>
 
