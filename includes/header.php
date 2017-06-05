@@ -227,7 +227,7 @@
 
 
                                   <?php if ($lh['nome_categoria'] == 'Atualidades') {?>
-                                     <b id="hover-cat3"  style="color: yellow;"><?php echo "Atualidades"; ?></b>
+                                     <b id="hover-cat3"  style="color: orange;"><?php echo "Atualidades"; ?></b>
                                   <?php } ?>  
 
 
@@ -249,7 +249,7 @@
 
 
                             
-                            <li><a href="pEvento.php" style="color: #orange; font-size: 18px;"><b id="hover-ev">Eventos</b></a></li>
+                            <li><a href="pEvento.php" style="color: yellow; font-size: 18px;"><b id="hover-ev">Eventos</b></a></li>
                             <li><a href="cp/index.php"><i class="fa fa-user-secret" aria-hidden="true" style="font-size: 18px;"></i></a></li>
                         </ul>
 
