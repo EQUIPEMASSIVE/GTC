@@ -27,10 +27,7 @@
                             $data = explode("-", $rn["dataPub"]);
                             $dataEX = $data[2]."/".$data[1]."/".$data[0];
 
-                            $meses=$Array("Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro");
-
-                  echo $dataE [2] . " de " . $meses [$dataE - 1] . " de " . $dataE [0];
-                        
+                            
 
                 ?>
 
