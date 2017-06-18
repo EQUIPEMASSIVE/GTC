@@ -5,9 +5,9 @@ require_once "includes/header.php"?>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6 col-sm-6">
-				<div class="panel panel-primary">
+				<div class="panel panel-primary" style="border: 1px solid #333;">
 
-					<div class="panel-heading">Alterar Perfil</div>
+					<div class="panel-heading" style="background-color: #333; border: 1px solid #333; color: white;">Alterar Perfil</div>
 					<div class="panel-body">
                         <?php
 																								
@@ -30,8 +30,8 @@ require_once "includes/header.php"?>
 							method="POST" enctype="multipart/form-data">
 
 
-							<img src="imagens/perfil/<?php echo $im_adm; ?>" width="100"
-								height="80"> <br /> <label>Nome: </label> <label><?php echo $nm_adm; ?></label>
+							<img src="imagens/perfil/<?php echo $im_adm; ?>" width="520"
+								height="400""> <br /> <label>Nome: </label> <label><?php echo $nm_adm; ?></label>
 
 							<br /> <label>Email: </label> <br /> <input type="text"
 								name="adm-email-up" value="<?php echo $em_adm; ?>" /> <br /> <label>Usuário:</label>
@@ -56,8 +56,7 @@ require_once "includes/header.php"?>
 			</div>
 			<div class="row">
 				<div class="col-xs-6 col-md-4">
-						<span class="hidden-xs hidden-sm visible-md visible-lg fa fa-refresh" style="font-size: 17em;text-shadow: 11px 22px 5px rgb(51, 51, 51);color: #337ab7;margin: 107px 226px;">
-						</span>					
+									
 				</div>
 			</div>
 			<!--Fim div row-->

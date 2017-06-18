@@ -9,8 +9,8 @@
   	       <div class="row">
   			   <div class="col-md-5 col-sm-6">
                       <!--    Striped Rows Table  -->
-         <div class="panel panel-danger">
-              <div class="panel-heading">Cadastar Novo Administrador</div>
+         <div class="panel panel-danger" style="border: 1px solid #333;">
+              <div class="panel-heading" style="background-color: #333; border: 1px solid #333; color: white;">Cadastar Novo Administrador</div>
                   <div class="panel-body">
                       <div class="table-responsive">
   		
@@ -44,13 +44,13 @@
                 
             		<div class="col-md-7 col-sm-6">
                       <!--    Striped Rows Table  -->
-                    <div class="panel panel-danger">
-                        <div class="panel-heading">
+                    <div class="panel panel-danger" style="border: 1px solid #333;">
+                        <div class="panel-heading" style="background-color: #333; border: 1px solid #333; color: white;">
                             Categorias Cadastradas
                         </div>
                         <div class="panel-body">
-                            <div class="table-responsive">
-                                <table class="table table-striped">
+                            <div class="table-responsive" style="overflow: auto; height: 400px;">
+                                <table class="table table-striped" >
                                     <thead>
                                         <tr>
                                             <th>Nome</th>
@@ -70,7 +70,7 @@
 													  ?>
 											        <tr>
 											            <td><?php echo $lh['nome']; ?></td>
-														<td><img src="imagens/perfil/<?php echo $lh['imgPerfil']; ?>" alt="Foto-Perfil" width="100" height="80" /></td>
+														<td><img src="imagens/perfil/<?php echo $lh['imgPerfil']; ?>" alt="Foto-Perfil" width="100" height="100" / style="border-radius: 60px;"></td>
 														<td><?php echo $lh['email']; ?></td>
 														<td><?php echo $lh['usuario']; ?></td>
 														<td><?php echo $SQL_COUNT; ?></td>

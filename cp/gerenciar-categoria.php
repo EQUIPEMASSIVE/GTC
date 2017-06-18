@@ -7,8 +7,8 @@ require_once "includes/header.php"
   	       <div class="row">
   			   <div class="col-md-6 col-sm-6">
                       <!--    Striped Rows Table  -->
-         <div class="panel panel-warning">
-              <div class="panel-heading">Cadastrar nova categoria</div>
+         <div class="panel panel-warning" style="border: 1px solid #333;">
+              <div class="panel-heading" style="background-color: #333; border: 1px solid #333; color: white;">Cadastrar nova categoria</div>
                   <div class="panel-body">
                       <div class="table-responsive">
   		
@@ -32,8 +32,8 @@ require_once "includes/header.php"
                 
             		<div class="col-md-6 col-sm-6">
                       <!--    Striped Rows Table  -->
-                    <div class="panel panel-warning">
-                        <div class="panel-heading">
+                    <div class="panel panel-warning" style="border: 1px solid #333;">
+                        <div class="panel-heading" style="background-color: #333; border: 1px solid #333; color: white;">
                             Categorias Cadastradas
                         </div>
                         <div class="panel-body">
@@ -59,7 +59,7 @@ require_once "includes/header.php"
         <tr>
           <td><?php echo $CTN['nome_categoria']; ?></td>
           <td><?php echo $COUNT_NUM; ?></td>
-           <td><a href="acoes/excluir-categoria.php?id_ct=<?php echo $id_ct; ?>">Excluir Categoria</a></td>
+           <td><a href="acoes/excluir-categoria.php?id_ct=<?php echo $id_ct; ?>"><i class="fa fa-trash" aria-hidden="true" style="color: red; margin-left: 15px;"></i></a></td>
         </tr>  
         <?php } ?>
                                     </tbody>

@@ -15,8 +15,8 @@ require "includes/header.php";
 
 			<div class="col-md-6">
 				<div class="Compose-Message">
-					<div class="panel panel-success">
-						<div class="panel-heading">Publicar Notícia Rápida/Rascunho</div>
+					<div class="panel panel-success" style="border: 1px solid #333;">
+						<div class="panel-heading" style="background-color: #333; border: 1px solid #333; color: white;">Publicar Notícia Rápida/Rascunho</div>
 						<div class="panel-body">
 							<form action="acoes/publicar-notaR.php" method="POST">
 								<label>Titulo da Postagem: </label> <input type="text"
