@@ -30,8 +30,7 @@
 
                 <div style="position: absolute; top: 300px; left: 40px;"><!--nome do titulo da noticia por id-->
                   <h1 style="font-size: 50px; text-align: left; text-shadow: 2px 2px 4px rgba(0,0,0,.7); "> 
-                            <div class="mask pattern-6" style="position: absolute; left: -15px;">
-                            </div>
+                            
                     <div href="noticia.php?id=<?php echo $bn['id_noticia']; ?>" style="color: white;"><?php echo $bn['titulo'];?></div>
                     <div>
                   </h1>                 
@@ -42,8 +41,7 @@
                     <!--CODIDO FEITO PARA ALTERAR A COR DA CATEGORIA DE MODO PERSONALISADO-->
                 <div class="view hm-black-strong" style="position: absolute; top: 260px; left: 40px;"><!--texto slider categoria da noticia por id-->
                   <h1 style="font-size: 35px; text-align: center; text-shadow: 1px 1px 2px rgba(0,0,0,.7);"> 
-                <div class="mask pattern-6">
-                  </div>
+                
 
                     <b><div href="noticia.php?id=<?php echo $bn['id_noticia']; ?>" style="color: greenyellow; text-shadow: 1px 1px 2px rgba(0,0,0,.7);"><?php if ($bn['nome_categoria'] == 'Tecnologia') {  ?>                           
                             <b style="color: yellowgreen;"><?php echo "Tecnologia"; ?></b>
