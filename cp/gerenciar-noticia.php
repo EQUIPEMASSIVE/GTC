@@ -19,13 +19,16 @@ require_once "includes/header.php";
 					
 					?>
 <br>					
-<table>
-		<tr >
+<table style="margin-left: 30px;">
+		<tr  >
 			<td>
 			<button style="border-radius: 4px;margin-right: 10px;margin-bottom: 5px;" type="submit" id="publicar-noticia-menu" class="btn btn-primary" >Compor Texto</button>
-			<button style="border-radius: 4px;margin-right: 10px;margin-bottom: 5px;background-color: #0099cc;color: white;" type="submit" id="todas-noticias-menu" class="btn">Ver todas as notícias <?php if($CNT_TN != 0): echo "($CNT_TN)"; endif; ?></button>
-			<button style="border-radius: 4px;margin-right: 10px;margin-bottom: 5px;background-color: #33b5e5;color: white;" type="submit" id="rascunhos-menu" class="btn" >Rascunhos <?php if($CNT_RS != 0): echo "($CNT_RS)"; endif; ?></button>
-			<button style="border-radius: 4px;margin-right: 10px;margin-bottom: 5px;" type="submit" id="lixeira-menu" class="btn btn-danger" >Lixeira<?php if($CNT_LX != 0): echo "($CNT_LX)"; endif; ?></button>
+
+			<button style="border-radius: 4px;margin-right: 10px;margin-bottom: 5px;background-color: #0099cc;color: white;" type="submit" id="todas-noticias-menu" class="btn">Ver todas as notícias <label class="badge" style="padding: 3px;"><?php if($CNT_TN != 0): echo "$CNT_TN"; endif; ?></label></button>
+
+			<button style="border-radius: 4px;margin-right: 10px;margin-bottom: 5px;background-color: #33b5e5;color: white;" type="submit" id="rascunhos-menu" class="btn" >Rascunhos <label class="badge" style="padding: 3px;"><?php if($CNT_RS != 0): echo "$CNT_RS"; endif; ?></label></button>
+
+			<button style="border-radius: 4px;margin-right: 10px;margin-bottom: 5px;" type="submit" id="lixeira-menu" class="btn btn-danger" >Lixeira <label class="badge" style="padding: 3px;"><?php if($CNT_LX != 0): echo "$CNT_LX"; endif; ?></label></button>
 			</td>	
 		</tr>
 </table>
@@ -258,7 +261,7 @@ require_once "includes/header.php";
 		<!-- Todas as Noticias -->
 		<div id="todas-as-noticias" >
 			<div id="container" >
-				<div class="table-responsive">
+				<div class="table-responsive" style="overflow: auto; height: 400px;">
 
 					<table class="table table-bordered table-hover">
 						<tbody>
@@ -269,7 +272,7 @@ require_once "includes/header.php";
 								<td>Tags</td>
 								<td>Data</td>
 								<td>Editar</td>
-								<td>Excluir</td>
+								<td>Lixeira</td>
 							</tr>
 						<?php
 						$SQL_TDN = mysql_query ( "SELECT id_noticia, titulo, datapub, autorPub, tags, nome_categoria FROM noticias INNER JOIN categoria ON(noticias.categoria = categoria.id_categoria) WHERE status=1" ) or die ( mysql_error () );
@@ -292,7 +295,7 @@ require_once "includes/header.php";
 								<td><a
 									href="gerenciar-noticia.php?id_nt_ed=<?php echo $TND["id_noticia"]; ?>">Editar</a></td>
 								<td><a
-									href="acoes/lixeira.php?idN=<?php echo $TND["id_noticia"]; ?>">Excluir</a></td>
+									href="acoes/lixeira.php?idN=<?php echo $TND["id_noticia"]; ?>"><i class="fa fa-trash" aria-hidden="true" style="color: red; margin-left: 15px;"></i></a></td>
 							</tr>
 						<?php } ?>
 
@@ -306,7 +309,7 @@ require_once "includes/header.php";
 		<!-- inicio rascunho -->
 		<div id="noticias-rascunhos">
 			<div id="container">
-				<div class="table-responsive">
+				<div class="table-responsive" style="overflow: auto; height: 400px;">
 
 					<table class="table table-bordered table-hover">
 						<tbody>
@@ -353,7 +356,7 @@ require_once "includes/header.php";
 		<!-- inicio lixeira -->
 		<div id="noticias-lixeira">
 			<div id="container">
-				<div class="table-responsive">
+				<div class="table-responsive" style="overflow: auto; height: 400px;">
 
 					<table class="table table-bordered table-hover">
 						<tbody>
@@ -363,7 +366,7 @@ require_once "includes/header.php";
 								<td>Categoria</td>
 								<td>Tags</td>
 								<td>Data</td>
-								<td>Editar</td>
+								<td>Excluir</td>
 
 							</tr>
 						<?php
@@ -385,7 +388,7 @@ require_once "includes/header.php";
 							
 							?></td>
 								<td><a
-									href="acoes/excluir-noticia.php?idNX=<?php echo $TND["id_noticia"]; ?>">Excluir</a></td>
+									href="acoes/excluir-noticia.php?idNX=<?php echo $TND["id_noticia"]; ?>"><i class="fa fa-trash" aria-hidden="true" style="color: red;"></i></a></td>
 							</tr>
 						<?php } ?>
 					</tbody>
