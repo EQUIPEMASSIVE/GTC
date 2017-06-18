@@ -11,7 +11,7 @@
         <button class="btn btn-warning btn-rounded" style="position: fixed; z-index: 98; top: 85%; margin-left: 85%; border-radius: 30px; padding: 10px; background-color: greenyellow;"><a href="#"><i class="fa fa-arrow-up" style="color: #000000;"></i></a></button>
 
 
-        <h1><a href="teste.php" style="color: red;s"><button type="button" class="btn btn-default">Enviar Evento</button></a></h1>
+        <h1><a href="teste.php" style="color: red; margin-left: 15px;" class="btn btn-success">Enviar Evento</a></h1>
 <?php
     //A qunatidade de noticias a ser exibida a ser exibida
     $quantidade = 4;//Altere a quantidade 
@@ -41,9 +41,9 @@
                     <!--Card image-->
                     <div class="card-block">  
                      
-                      <div class="view overlay hm-zoom" style="max-width: 50%; max-height: auto; " ><!--codigo para por nome da categoria em cima da imagem da noticia-->
+                      <div class="view overlay hm-zoom"><!--codigo para por nome da categoria em cima da imagem da noticia-->
                             <!--   <a href="noticia.php?id=<?php echo $pusha['id_evento']; ?>" -->                            
-                              <img class="img-fluid" src="fotos/<?php echo $pusha['imagem']; ?>" alt="Postagem 1"/>
+                             <a <a href="noticiaE.php?id=<?php echo $pusha['id_evento']; ?>"> <img class="img-fluid" src="fotos/<?php echo $pusha['imagem']; ?>" alt="Postagem 1"/></a>
                                
                               
                       
@@ -70,11 +70,9 @@
                         <!--Title-->
                         <!--h5 class="price"><a href="categoria.php?id=<?php //echo $pusha['id_categoria']; ?>"> <span class="badge btn-elegant"> <?php //echo $pusha['nome_categoria']; ?></span></a></h5>--> 
                               
-                <span style="color: #C0C0C0" ><i class="fa fa-clock-o" ></i> Publicado dia: <?php 
-$dataE = explode ( "-", $pusha ['dataPub'] );
-                            
-                            echo $dataE [2] . "/" . $dataE [1] . "/" . $dataE [0]; ?></p></span> 
-                       <h1 class="card-title"> <a href="noticia.php?id=<?php echo $pusha['id_noticia']; ?>" style="color: #000"><?php echo $pusha['titulo'];?></a></h1> 
+                 
+
+                       <h1 class="card-title"> <a href="noticiaE.php?id=<?php echo $pusha['id_evento']; ?>" style="color: #000"><?php echo $pusha['titulo'];?></a></h1> 
                                                 
                         <!--Text-->
                        
@@ -83,13 +81,15 @@ $dataE = explode ( "-", $pusha ['dataPub'] );
                         
 
                         
-
-                        
                     </div>
                     <!--/.Card content-->
                 
                 </div>
-                 
+                 <div style="margin-left: 180px;  ;position: absolute; margin-top: -20px;">
+                        <span style="color: #C0C0C0; ";><i class="fa fa-clock-o" ></i> Publicado dia: <?php 
+                        $dataE = explode ( "-", $pusha ['dataPub'] );                           
+                        echo $dataE [2] . "/" . $dataE [1] . "/" . $dataE [0]; ?></p></span> 
+                        </div>
                 <!--/.Card--> <br> <br> 
             </div>
             <!--First columnn-->
@@ -115,7 +115,7 @@ $dataE = explode ( "-", $pusha ['dataPub'] );
    * SEGUNDA PARTE DA PAGINAÇÃO
    */
   //SQL para saber o total
-  $sqlTotal   = "SELECT id_noticia FROM noticias";
+  $sqlTotal   = "SELECT id_evento FROM eventos";
   //Executa o SQL
   $qrTotal    = mysql_query($sqlTotal) or die(mysql_error());
   //Total de Registro na tabela
@@ -125,7 +125,7 @@ $dataE = explode ( "-", $pusha ['dataPub'] );
    /**
     * Defini o valor máximo a ser exibida na página tanto para direita quando para esquerda
     */
-   $exibir = 3;
+   $exibir = 2;
    /**
     * Aqui montará o link que voltará uma pagina
     * Caso o valor seja zero, por padrão ficará o valor 1
@@ -143,38 +143,21 @@ $dataE = explode ( "-", $pusha ['dataPub'] );
     */
   /**
     * Agora monta o Link para Próxima Página
-        * Depois O link para Última Página
+    * Depois O link para Última Página
     */
     ?>
 
 
 
-
-     
-
-
-
-<!--Pagination dark -->
-<nav id="navegacao" style="text-align: center;">
-    <ul class="pagination pg-dark">
-
-
-
-        <!-- ABRE COMENTARIO   primeira paginA
-        <li class="page-item active">
-        <a  class="page-link" href=< PHP ECH0 "\"?pagina=1\">PRIMEIRA PAGINA</a>"
-        ?>
-        </li>
-             FECHA COMENTARIO-->
-
-
-          <!--Pagina anterior << -->
-        <li class="page-item">
-        <a  class="page-link" href=<?php echo "\"?pagina=$anterior\">&laquo;</a>";
-        ?>
-        </li>
-        
-
+<!--Pagination blue-->
+        <nav id="navegacao" style="text-align: center;">
+         
+       
+    | <a  class="badge btn-outline-danger" href=<?php echo "\"?pagina=1\"><<</a> | ";
+    ?>
+     <a class="badge btn-danger" href=<?php echo "\"?pagina=$anterior\">anterior</a> | ";          
+ 
+    ?>
          
          
         <?php
@@ -183,16 +166,12 @@ $dataE = explode ( "-", $pusha ['dataPub'] );
     */
    for($i = $pagina-$exibir; $i <= $pagina-1; $i++){
        if($i > 0)
-        echo '<li class="page-item"><a class="page-link" href="?pagina='.$i.'">'.$i.' </a></li>';
+        echo '<a style="color: red;" href="?pagina='.$i.'"> '.$i.' </a>';
   }
-
-
-  echo '<li class="page-item active"><a class="page-link" href="?pagina='.$pagina.'">'.$pagina.'</a></li>';
-
-
+  echo '<a style="color: greenyellow; " href="?pagina='.$pagina.'"><strong>'.$pagina.'</strong></a>';
   for($i = $pagina+1; $i < $pagina+$exibir; $i++){
        if($i <= $totalPagina)
-        echo '<li class="page-item"><a class="page-link" href="?pagina='.$i.'">'.$i.' </a></li>';
+        echo '<a style="color:red ;" href="?pagina='.$i.'"> '.$i.' </a>';
   }
    /**
     * Depois o link da página atual
@@ -201,36 +180,23 @@ $dataE = explode ( "-", $pusha ['dataPub'] );
     * O loop para exibir os valores à direita
     */
     ?>
+     | <a class="badge btn-light-green" href=<?php echo "\"?pagina=$posterior\">próxima</a> | ";
+    ?>
+     <a class="badge btn-outline-success" href=<?php echo "\"?pagina=$totalPagina\">>></a> | ";          
+ 
+    ?>
 
-
-
-
-
-          <!--Proxima Pagina -->
-        <li class="page-item">
-        <a  class="page-link" href=<?php echo "\"?pagina=$posterior\">&raquo;</a>";
-        ?>    
-        </li>
-
-
-                <!--ABRECOMENTARIO  ultima pagina 
-        <li class="page-item active">
-        <a  class="page-link" href=< PHP ECH0 "\"?pagina=$totalPagina\">ULTIMAPAGINA</a>" 
-        ?>
-        </li>
-             FECHACOMENTARIO-->
-
-
-    </ul>
-</nav>
-
-<!--/Pagination Dark-->
-
-
-
-
+    </nav>
+         
 
 </main>
+
+
+
+
+
+
+
 
 
 <?php require_once 'includes/footer.php'; ?>

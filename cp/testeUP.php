@@ -13,12 +13,13 @@ require_once "includes/configuration.php";
 
         <div class="container">
         <div class="row-fluid">
+        
 
 
                 <div class="col-md-6 col-sm-6">
                       <!--    Striped Rows Table  -->
-                    <div class="panel panel-danger">
-                        <div class="panel-heading">
+                    <div class="panel panel-danger" style="border: 1px solid #333;">
+                        <div class="panel-heading" style="background-color: #333; border: 1px solid #333; color: white;">
                             Eventos Pendentes
                         </div>
                         <div class="panel-body">
@@ -27,6 +28,7 @@ require_once "includes/configuration.php";
                                     <thead>
                                         <tr>
                                             <th>Nome do Evento</th>
+                                            <th>Hora</th>
                                             <th>Status</th>
                                             <th>Data de Cadastro</th>
                                             <th>Visualizar</th>
@@ -46,6 +48,11 @@ require_once "includes/configuration.php";
         <tr>
           <td><?php echo $CTN['titulo']; ?></td>
           <!--<td><?php echo $COUNT_NUM; ?></td>-->
+          <td><?php 
+
+            echo $CTN['horaPub'];
+            
+             ?></td>
 
           <td><?php if ($CTN['status'] == '0')  {
 
@@ -53,7 +60,7 @@ require_once "includes/configuration.php";
             
           }
           ?> 
-          <i class="fa fa-exclamation-triangle" aria-hidden="true" style="color: red; margin-left: 15px;"></i>       
+          <i class="fa fa-close" aria-hidden="true" style="color: red; margin-left: 15px;"></i>       
           </td>
 
           <td>
@@ -89,8 +96,8 @@ require_once "includes/configuration.php";
 
 <div class="col-md-6 col-sm-6">
                       <!--    Striped Rows Table  -->
-                    <div class="panel panel-success">
-                        <div class="panel-heading">
+                    <div class="panel panel-success" style="border: 1px solid #333;">
+                        <div class="panel-heading" style="background-color: #333; border: 1px solid #333; color: white;">
                             Eventos Publicados
                         </div>
                         <div class="panel-body">
@@ -103,6 +110,7 @@ require_once "includes/configuration.php";
                                             <th>Data de Cadastro</th>
                                           <!--  <th>Visualizar</th> -->
                                             <th>Excluir</th>
+                                            <th>Cheked</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -118,13 +126,8 @@ require_once "includes/configuration.php";
         <tr>
           <td><?php echo $CTN['titulo']; ?></td>
           <!--<td><?php echo $COUNT_NUM; ?></td>-->
-          <td><?php if ($CTN['status'] == '1')  {
-
-            echo "OK";
-            
-          }
-          ?>  
-          <i class="fa fa-check" aria-hidden="true" style="color: yellowgreen;"></i>       
+          <td><?php $CTN['status'];?>  
+          <i class="fa fa-check" aria-hidden="true" style="color: yellowgreen; margin-left: 15px;"></i>       
           </td>
 
 
@@ -134,6 +137,7 @@ echo $dataE [2] . "/" . $dataE [1] . "/" . $dataE [0];
 ?> </td>
          <!-- <td><a href="visu-evento.php?id_ct=<?php echo $id_ct; ?>">Visualizar</a></td> -->
            <td><a href="excluir-evento.php?id_ct=<?php echo $id_ct; ?>"><i class="fa fa-trash" aria-hidden="true" style="color: red; margin-left: 15px;"></i></a></td>
+            <td><?php echo $CTN['autorPub']; ?></td>
         </tr>  
         <?php } ?>
                                     </tbody>

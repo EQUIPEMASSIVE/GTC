@@ -138,13 +138,9 @@ $SQL = mysql_query("SELECT nome, imgPerfil FROM administradores WHERE usuario= '
                                         ?></label>
 
                                             <label>•</label>
-                                        <label>Categorias Ativas</label>
-                                        <label class="badge"><?php
-                                        $SQL = mysql_query ( "SELECT * FROM categoria" );
-                                        echo mysql_num_rows ( $SQL );
-                                        ?></label>
+                                        
 
-                                        <br>
+                                       
 
                                         <label>Eventos Ativos</label>
                                         <label class="badge" style="background-color: yellowgreen;"><?php
@@ -158,9 +154,45 @@ $SQL = mysql_query("SELECT nome, imgPerfil FROM administradores WHERE usuario= '
                             <li>|</li>
                             <li><div class="btn btn-info" style="width: 130px;"><a href="gerenciar-noticia.php">Compor</a></div></li>
                             <li>|</li>
-                            <li><div class="btn btn-warning" style="width: 130px;"><a href="gerenciar-categoria.php">Categorias</a></div></li>
+                            <li><div class="btn btn-warning" style="width: 130px;"><a href="gerenciar-categoria.php">Categorias
+
+                                 <?php 
+
+                                    $SQL = mysql_query("SELECT id_categoria FROM categoria");//procura toda informação pelo id com status 0
+                                    if (mysql_num_rows($SQL) != 0){//se a quantida de campos em numeros for diferente de 0 exibe >>
+                                    ?>
+                                    <label class="badge" style="position: absolute; top: -8px; background-color: #333333;  color: white; left: 100px; z-index: 1;">
+                                        <?php echo mysql_num_rows($SQL); ?><!--exibe os campos com status zero atraves de numeros-->
+                                    </label>
+
+                                    <?php }else{ ?><!--se nao-->
+
+                                    <label></label><!--se a quantidades de campos com status igual a zero, nao aparecerá a notificação-->
+
+                                <?php } ?>   
+
+
+                            </a></div></li>
                             <li>|</li>
-                            <li><div class="btn btn-danger" style="width: 130px;"><a href="administracao-portal.php">Admins</a></div></li>
+                            <li><div class="btn btn-danger" style="width: 130px;"><a href="administracao-portal.php">Admins
+
+                                 <?php 
+
+                                    $SQL = mysql_query("SELECT id FROM administradores");//procura toda informação pelo id com status 0
+                                    if (mysql_num_rows($SQL) != 0){//se a quantida de campos em numeros for diferente de 0 exibe >>
+                                    ?>
+                                    <label class="badge" style="position: absolute; top: -8px; background-color: #333333;  color: white; left: 100px; z-index: 1;">
+                                        <?php echo mysql_num_rows($SQL); ?><!--exibe os campos com status zero atraves de numeros-->
+                                    </label>
+
+                                    <?php }else{ ?><!--se nao-->
+
+                                    <label></label><!--se a quantidades de campos com status igual a zero, nao aparecerá a notificação-->
+
+                                <?php } ?>   
+
+
+                            </a></div></li>
                             <li>|</li>
                             <li>
                             <div class="btn btn-danger" style="width: 130px; background-color: gray; border-color: gray;">
@@ -171,13 +203,13 @@ $SQL = mysql_query("SELECT nome, imgPerfil FROM administradores WHERE usuario= '
                                 $SQL = mysql_query("SELECT id_evento FROM eventos WHERE status='0'");//procura toda informação pelo id com status 0
                                 if (mysql_num_rows($SQL) != 0){//se a quantida de campos em numeros for diferente de 0 exibe >>
                                 ?>
-                            <label class="badge" style="position: absolute; top: -8px; background-color: red; color: white; left: 120px;">
-                                <?php echo mysql_num_rows($SQL); ?><!--exibe os campos com status zero atraves de numeros-->
-                            </label>
+                                <label class="badge" style="position: absolute; top: -8px; background-color: red; color: white; left: 100px;">
+                                    <?php echo mysql_num_rows($SQL); ?><!--exibe os campos com status zero atraves de numeros-->
+                                </label>
 
-                            <?php }else{ ?><!--se nao-->
+                                <?php }else{ ?><!--se nao-->
 
-                            <label></label><!--se a quantidades de campos com status igual a zero, nao aparecerá a notificação-->
+                                <label></label><!--se a quantidades de campos com status igual a zero, nao aparecerá a notificação-->
 
                             <?php } ?>
                             </a>

@@ -10,6 +10,8 @@ if (isset($_POST['cadastrar'])) {
 	$imagem = $_FILES["imagem"];//TEm que receber o nome que está no fomrulario
 	$data = date("Y-m-d");//a variavel recebe a data do dia e grava no banco pelo insert into
 	$status = 0;// status 0 vai ser cadastrado no banco
+	$autor = 0;
+	$horaPub   = date('Y-m-d h:i:s');
 	
 	// Se a foto estiver sido selecionada
 	if (!empty($imagem["name"])) {
@@ -62,7 +64,7 @@ if (isset($_POST['cadastrar'])) {
 			move_uploaded_file($imagem["tmp_name"], $caminho_imagem);
 		
 			// Insere os dados no banco
-			$sql = mysql_query("INSERT INTO eventos VALUES ('', '".$titulo."', '".$data."', '".$nome_imagem."', '".$conteudo."', '".$status."')")or die(mysql_error());// para cadastrar cada informação, as variaveis tem que está na mesma ordem que no banco
+			$sql = mysql_query("INSERT INTO eventos VALUES ('', '".$autor."', '".$titulo."', '".$data."', '".$horaPub."', '".$nome_imagem."', '".$conteudo."', '".$status."')")or die(mysql_error());// para cadastrar cada informação, as variaveis tem que está na mesma ordem que no banco
 		
 			// Se os dados forem inseridos com sucesso
 			if ($sql){
